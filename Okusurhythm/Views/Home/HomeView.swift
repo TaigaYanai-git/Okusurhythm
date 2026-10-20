@@ -160,12 +160,21 @@ struct DoseRow: View {
     let dose: Dose
     let log: DoseLog?
     @Environment(\.modelContext) private var context
+    @State private var showPhoto = false
 
     private var state: DoseState { DoseState(log: log, scheduledAt: dose.scheduledAt) }
 
     var body: some View {
         HStack(spacing: 14) {
             SlotIcon(slot: dose.slot)
+            if let photo = dose.medication.photoData {
+                // 写真があれば、どの薬かすぐ分かるように表示する（タップで拡大）
+                Button { showPhoto = true } label: {
+                    MedicationThumbnail(data: photo, size: 48)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("\(dose.medication.name)の写真を拡大")
+            }
             VStack(alignment: .leading, spacing: 3) {
                 HStack(spacing: 6) {
                     Text(dose.slot.label).font(.subheadline.bold())
@@ -192,6 +201,9 @@ struct DoseRow: View {
             .sensoryFeedback(.success, trigger: state == .taken) { _, new in new }
         }
         .card()
+        .sheet(isPresented: $showPhoto) {
+            MedicationPhotoView(medication: dose.medication)
+        }
         .contextMenu {
             if log == nil {
                 Button("スキップする", systemImage: "forward") {
@@ -279,5 +291,34 @@ enum MedicationEditTarget: Identifiable {
     var medication: Medication? {
         if case .edit(let med) = self { return med }
         return nil
+    }
+}
+
+/// 薬の写真を大きく表示する
+struct MedicationPhotoView: View {
+    let medication: Medication
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 16) {
+                if let data = medication.photoData, let image = UIImage(data: data) {
+                    Image(uiImage: image)
+                        .resizable()
+                        .scaledToFit()
+                        .clipShape(RoundedRectangle(cornerRadius: Theme.corner, style: .continuous))
+                }
+                VStack(spacing: 4) {
+                    Text(medication.name).font(.title3.bold())
+                    Text(medication.dosageSummary).foregroundStyle(.secondary)
+                    if !medication.memo.isEmpty { Text(medication.memo).font(.subheadline) }
+                }
+                Spacer()
+            }
+            .padding()
+            .background(Theme.background)
+            .toolbar { ToolbarItem(placement: .confirmationAction) { Button("閉じる") { dismiss() } } }
+        }
+        .presentationDetents([.medium, .large])
     }
 }

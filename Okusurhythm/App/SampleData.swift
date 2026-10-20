@@ -1,3 +1,4 @@
+import UIKit
 import Foundation
 import SwiftData
 
@@ -15,6 +16,7 @@ enum SampleData {
         amlodipine.startDate = start
         amlodipine.remainingCount = 24
         amlodipine.memo = "朝食後に服用"
+        amlodipine.photoData = samplePhoto()
 
         let magnesium = Medication(name: "マグミット錠330mg")
         magnesium.drugID = "magnesium_oxide"
@@ -52,5 +54,20 @@ enum SampleData {
         context.insert(HealthNote(kind: .allergy, title: "ペニシリン系", detail: "20歳ごろ発疹"))
         context.insert(HealthNote(kind: .condition, title: "高血圧"))
         try? context.save()
+    }
+
+    /// 白い錠剤の写真の代わり（スクリーンショット用）
+    private static func samplePhoto() -> Data? {
+        let size = CGSize(width: 300, height: 300)
+        return UIGraphicsImageRenderer(size: size).image { ctx in
+            UIColor(red: 0.90, green: 0.93, blue: 0.96, alpha: 1).setFill()
+            ctx.fill(CGRect(origin: .zero, size: size))
+            UIColor.white.setFill()
+            UIBezierPath(ovalIn: CGRect(x: 70, y: 105, width: 160, height: 90)).fill()
+            UIColor(white: 0.8, alpha: 1).setStroke()
+            let line = UIBezierPath()
+            line.move(to: CGPoint(x: 150, y: 115)); line.addLine(to: CGPoint(x: 150, y: 185))
+            line.lineWidth = 3; line.stroke()
+        }.jpegData(compressionQuality: 0.8)
     }
 }
