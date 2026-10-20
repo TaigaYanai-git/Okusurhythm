@@ -1,0 +1,115 @@
+import Foundation
+import SwiftData
+
+/// 利用者が登録した処方薬。
+@Model
+final class Medication {
+    var id: UUID = UUID()
+    var name: String = ""
+    /// 同梱データベース（drugs.json）の薬 ID。照合できたときだけ入る。
+    var drugID: String?
+    /// 1回に飲む量（0.5錠刻み）
+    var amountPerDose: Double = 1
+    var unit: String = "錠"
+    /// 飲むタイミング（DoseSlot.rawValue の配列）
+    var slotRawValues: [String] = [DoseSlot.morning.rawValue]
+    var frequencyRaw: String = Frequency.daily.rawValue
+    /// 「◯日ごと」のときの間隔
+    var intervalDays: Int = 2
+    /// 「曜日指定」のときの曜日（Calendar の weekday: 1=日曜〜7=土曜）
+    var weekdays: [Int] = []
+    var startDate: Date = Date()
+    /// 処方日数から計算した最終服用日。nil なら期限なし
+    var endDate: Date?
+    var memo: String = ""
+    @Attribute(.externalStorage) var photoData: Data?
+    /// 残りの数。nil なら残数管理をしない
+    var remainingCount: Double?
+    /// 残りがこの数以下になったら補充を知らせる
+    var refillThreshold: Double = 7
+    /// 補充の通知を一度出したら、残数が閾値を上回るまで再通知しない
+    var refillNotified: Bool = false
+    var isActive: Bool = true
+    var createdAt: Date = Date()
+
+    init(name: String) {
+        self.name = name
+    }
+
+    var slots: [DoseSlot] {
+        get { slotRawValues.compactMap(DoseSlot.init(rawValue:)).sorted() }
+        set { slotRawValues = newValue.sorted().map(\.rawValue) }
+    }
+
+    var frequency: Frequency {
+        get { Frequency(rawValue: frequencyRaw) ?? .daily }
+        set { frequencyRaw = newValue.rawValue }
+    }
+
+    /// 「1日2回 1錠」のような表示
+    var dosageSummary: String {
+        let perDay = slots.count
+        let prefix: String
+        switch frequency {
+        case .daily: prefix = "1日\(perDay)回"
+        case .everyNDays: prefix = "\(intervalDays)日ごと 1日\(perDay)回"
+        case .weekdays:
+            let names = weekdays.sorted().map { Calendar.japanese.shortWeekdaySymbols[$0 - 1] }.joined()
+            prefix = "\(names.isEmpty ? "曜日未設定" : names) 1日\(perDay)回"
+        }
+        return "\(prefix) \(amountText)"
+    }
+
+    var amountText: String { "\(amountPerDose.formattedAmount)\(unit)" }
+
+    /// その日に飲む予定があるか
+    func isScheduled(on day: Date, calendar: Calendar = .japanese) -> Bool {
+        guard isActive else { return false }
+        let target = calendar.startOfDay(for: day)
+        let start = calendar.startOfDay(for: startDate)
+        if target < start { return false }
+        if let endDate, target > calendar.startOfDay(for: endDate) { return false }
+        switch frequency {
+        case .daily:
+            return true
+        case .everyNDays:
+            let days = calendar.dateComponents([.day], from: start, to: target).day ?? 0
+            return days % max(intervalDays, 1) == 0
+        case .weekdays:
+            return weekdays.contains(calendar.component(.weekday, from: target))
+        }
+    }
+
+    var needsRefill: Bool {
+        guard let remainingCount else { return false }
+        return remainingCount <= refillThreshold
+    }
+}
+
+enum Frequency: String, CaseIterable, Identifiable {
+    case daily, everyNDays, weekdays
+    var id: String { rawValue }
+    var label: String {
+        switch self {
+        case .daily: "毎日"
+        case .everyNDays: "◯日ごと"
+        case .weekdays: "曜日を指定"
+        }
+    }
+}
+
+extension Double {
+    /// 1.0 → "1"、0.5 → "0.5"
+    var formattedAmount: String {
+        truncatingRemainder(dividingBy: 1) == 0 ? String(Int(self)) : String(format: "%.1f", self)
+    }
+}
+
+extension Calendar {
+    static var japanese: Calendar {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.locale = Locale(identifier: "ja_JP")
+        calendar.timeZone = .current
+        return calendar
+    }
+}
