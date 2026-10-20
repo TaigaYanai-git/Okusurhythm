@@ -161,6 +161,8 @@ struct DoseRow: View {
     let log: DoseLog?
     @Environment(\.modelContext) private var context
     @State private var showPhoto = false
+    @State private var showActions = false
+    @State private var editing = false
 
     private var state: DoseState { DoseState(log: log, scheduledAt: dose.scheduledAt) }
 
@@ -201,6 +203,25 @@ struct DoseRow: View {
             .sensoryFeedback(.success, trigger: state == .taken) { _, new in new }
         }
         .card()
+        .contentShape(Rectangle())
+        // 行をタップすると操作を選ぶポップアップを出す（チェックと写真のボタンはそれぞれの操作のまま）
+        .onTapGesture { showActions = true }
+        .confirmationDialog(dose.medication.name, isPresented: $showActions, titleVisibility: .visible) {
+            Button("編集する") { editing = true }
+            if log == nil {
+                Button("スキップする") {
+                    DoseRecorder.record(dose, status: .skipped, existing: nil, context: context)
+                }
+            } else {
+                Button("記録を取り消す") {
+                    if let log { DoseRecorder.undo(log, medication: dose.medication, context: context) }
+                }
+            }
+            Button("キャンセル", role: .cancel) {}
+        }
+        .sheet(isPresented: $editing) {
+            MedicationEditView(medication: dose.medication)
+        }
         .sheet(isPresented: $showPhoto) {
             MedicationPhotoView(medication: dose.medication)
         }
