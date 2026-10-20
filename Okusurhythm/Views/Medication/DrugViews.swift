@@ -3,13 +3,33 @@ import SwiftUI
 /// 収録している薬から成分を選ぶ
 struct DrugPickerView: View {
     let onPick: (Drug) -> Void
+    /// 見つからないとき「この名前のまま登録する」を出す（お薬の登録画面から開いたときだけ）
+    var onUseName: ((String) -> Void)? = nil
     @Environment(\.dismiss) private var dismiss
     @State private var query = ""
+
+    private var results: [Drug] { DrugDatabase.shared.search(query) }
+    private var trimmedQuery: String { query.trimmingCharacters(in: .whitespaces) }
 
     var body: some View {
         NavigationStack {
             List {
-                ForEach(DrugDatabase.shared.search(query)) { drug in
+                if let onUseName, !trimmedQuery.isEmpty, results.isEmpty {
+                    Section {
+                        Button {
+                            onUseName(trimmedQuery)
+                            dismiss()
+                        } label: {
+                            Label("「\(trimmedQuery)」の名前のまま登録する", systemImage: "square.and.pencil")
+                                .font(.body.bold())
+                        }
+                    } header: {
+                        Text("収録している成分に見つかりませんでした")
+                    } footer: {
+                        Text("通知・服薬記録・残薬管理は、どのお薬でも使えます。飲み合わせのチェックは行われないので、薬剤師に確認してください。")
+                    }
+                }
+                ForEach(results) { drug in
                     Button {
                         onPick(drug)
                         dismiss()
@@ -19,12 +39,13 @@ struct DrugPickerView: View {
                     .buttonStyle(.plain)
                 }
                 Section {
-                    Text("見つからない薬は、名前だけで登録できます（飲み合わせのチェックは行われません）。収録外の薬の飲み合わせは薬剤師に確認してください。")
+                    Text("見つからない薬も、名前だけで登録できます（飲み合わせのチェックは行われません）。収録外の薬の飲み合わせは薬剤師に確認してください。")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
             }
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "一般名・商品名で検索")
+            .themedList()
             .navigationTitle("成分を選ぶ")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { ToolbarItem(placement: .cancellationAction) { Button("閉じる") { dismiss() } } }
@@ -90,6 +111,7 @@ struct DrugDetailView: View {
                 MedicalDisclaimer()
             }
         }
+        .themedList()
         .navigationTitle(drug.displayName)
         .navigationBarTitleDisplayMode(.inline)
     }

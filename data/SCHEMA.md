@@ -40,7 +40,7 @@
 
 | キー | 型 | 説明 |
 |---|---|---|
-| `item` | string | 次のいずれか: `grapefruit` `alcohol` `milk` `vitamin_k_foods` `st_johns_wort` `caffeine` `potassium_rich` `tyramine_foods` `smoking` `high_fat_meal` `iron_calcium_supplements` `other` |
+| `item` | string | 次のいずれか（漢方など「食前・食間に飲む」といった飲み方の注意は `other`）: `grapefruit` `alcohol` `milk` `vitamin_k_foods` `st_johns_wort` `caffeine` `potassium_rich` `tyramine_foods` `smoking` `high_fat_meal` `iron_calcium_supplements` `other` |
 | `itemLabel` | string | 表示名。例 `グレープフルーツジュース` |
 | `level` | `"avoid"` \| `"caution"` | 避ける / 注意 |
 | `effect` | string | 何が起きるか・どうすべきかを平易に |
@@ -87,3 +87,40 @@
 - `antihistamine` 抗ヒスタミン薬
 - `diuretic` 利尿薬（ループ・サイアザイド）
 - `fluvoxamine` フルボキサミン（CYP1A2強阻害）
+- `antihypertensive` 降圧作用のある薬全般
+- `beta_blocker` β遮断薬
+- `fibrate` フィブラート系
+- `azole_antifungal` アゾール系抗真菌薬
+- `hiv_protease_inhibitor` HIVプロテアーゼ阻害薬
+- `potassium_supplement` カリウム製剤
+- `iodinated_contrast` ヨード造影剤
+- `thrombolytic` 血栓溶解薬
+- `sglt2_inhibitor` SGLT2阻害薬
+- `tricyclic_antidepressant` 三環系抗うつ薬
+- `sulfonylurea` スルホニルウレア系
+- `thiazide_diuretic` サイアザイド系利尿薬
+- `oral_contraceptive` 経口避妊薬・LEP製剤
+- `oral_estrogen` 経口エストロゲン製剤
+- `anesthetic` 麻酔薬
+- `licorice_containing` 甘草含有製剤（漢方薬など）
+- `ephedra_containing` 麻黄含有製剤（エフェドリン類含有製剤を含む）
+- `antibiotic` 抗菌薬全般（生菌製剤の添付文書が「抗生物質」と書く場合など）
+- `opioid` オピオイド
+- `antipsychotic` 抗精神病薬
+- `antiepileptic` 抗てんかん薬
+- `triptan` トリプタン系
+- `pde5_inhibitor` PDE5阻害薬
+- `nitrate` 硝酸剤・NO供与剤
+- `anticholinergic` 抗コリン作用のある薬
+- `dopamine_antagonist` ドパミン拮抗薬
+- `xanthine_oxidase_inhibitor` キサンチンオキシダーゼ阻害薬
+- `immunosuppressant` 免疫抑制薬
+- `p_gp_inhibitor` P糖蛋白阻害薬
+- `insulin` インスリン製剤
+
+## 注意
+
+- `targets` は空にしない。相手が薬でなく手技などのときは `procedure:xxx` を使う。
+- 既存の drug id（data/drafts/*.json の `id`）と同じ成分を相手にするときは、その id を使う。
+- 漢方薬は `id` を `kampo_kakkonto` のように `kampo_` で始め、構成生薬に応じて `licorice_containing` などのタグを付ける。
+- 併用禁忌・併用注意が添付文書にない薬も収録する（`interactions: []`）。アプリで「記載なし」を出典付きで示せるため。

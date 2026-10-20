@@ -3,10 +3,8 @@ import SwiftUI
 enum Theme {
     static let primary = Color(red: 0.20, green: 0.55, blue: 0.91)
     static let primaryLight = Color(red: 0.88, green: 0.94, blue: 1.0)
-    static let background = Color(uiColor: UIColor { trait in
-        trait.userInterfaceStyle == .dark ? .systemBackground : UIColor(red: 0.96, green: 0.975, blue: 0.99, alpha: 1)
-    })
-    static let card = Color(uiColor: .secondarySystemGroupedBackground)
+    static let background = Color(red: 0.95, green: 0.97, blue: 0.99)
+    static let card = Color.white
     static let success = Color(red: 0.18, green: 0.72, blue: 0.42)
     static let warning = Color(red: 0.96, green: 0.60, blue: 0.10)
     static let danger = Color(red: 0.88, green: 0.25, blue: 0.25)
@@ -24,6 +22,11 @@ struct CardStyle: ViewModifier {
 
 extension View {
     func card() -> some View { modifier(CardStyle()) }
+
+    /// List / Form を参考デザインの淡い青の背景にする
+    func themedList() -> some View {
+        scrollContentBackground(.hidden).background(Theme.background)
+    }
 }
 
 /// 朝・昼・夜のアイコン

@@ -11,7 +11,7 @@ mkdir -p "$OUT"
 xcrun simctl boot "$DEVICE" 2>/dev/null || true
 xcrun simctl bootstatus "$DEVICE" -b >/dev/null
 xcrun simctl status_bar "$DEVICE" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularBars 4 --wifiBars 3
-xcrun simctl ui "$DEVICE" appearance light
+xcrun simctl ui "$DEVICE" appearance "${APPEARANCE:-light}"
 
 xcodebuild -project Okusurhythm.xcodeproj -scheme Okusurhythm -destination "platform=iOS Simulator,name=$DEVICE" \
   -derivedDataPath build/screens -quiet build

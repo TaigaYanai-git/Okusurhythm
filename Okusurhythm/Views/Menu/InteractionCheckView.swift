@@ -137,6 +137,7 @@ struct FoodWarningsView: View {
             }
             Section { MedicalDisclaimer() }
         }
+        .themedList()
         .navigationTitle("一緒にとってはいけない飲食物")
         .navigationBarTitleDisplayMode(.inline)
     }

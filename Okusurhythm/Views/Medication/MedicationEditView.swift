@@ -58,6 +58,7 @@ struct MedicationEditView: View {
                     }
                 }
             }
+            .themedList()
             .navigationTitle("お薬の登録・編集")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -71,10 +72,13 @@ struct MedicationEditView: View {
                 Task { photoData = try? await item?.loadTransferable(type: Data.self).flatMap(Self.downscale) }
             }
             .sheet(isPresented: $showDrugPicker) {
-                DrugPickerView { drug in
+                DrugPickerView(onPick: { drug in
                     drugID = drug.id
                     if name.isEmpty { name = drug.displayName }
-                }
+                }, onUseName: { typed in
+                    name = typed
+                    drugID = nil
+                })
             }
             .fullScreenCover(isPresented: $showCamera) {
                 CameraPicker { image in photoData = image.jpegData(compressionQuality: 0.7).flatMap(Self.downscale) }
@@ -139,7 +143,11 @@ struct MedicationEditView: View {
         } header: {
             Text("薬の名前")
         } footer: {
-            Text("成分を選ぶと、今飲んでいる薬との飲み合わせや、一緒にとってはいけない飲食物を確認できます。薬の袋やお薬手帳の名前で探せます。")
+            if linkedDrug == nil, !name.trimmingCharacters(in: .whitespaces).isEmpty {
+                Text("収録している成分と結びついていません。このまま保存すれば、通知と記録は使えます（飲み合わせのチェックは行われません）。")
+            } else {
+                Text("成分を選ぶと、今飲んでいる薬との飲み合わせや、一緒にとってはいけない飲食物を確認できます。薬の袋やお薬手帳の名前で探せます。")
+            }
         }
     }
 

@@ -49,6 +49,7 @@ struct AboutView: View {
                 }
             }
         }
+        .themedList()
         .navigationTitle("このアプリについて")
         .navigationBarTitleDisplayMode(.inline)
     }

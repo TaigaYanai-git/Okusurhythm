@@ -31,6 +31,8 @@ struct OkusurhythmApp: App {
         WindowGroup {
             RootView()
                 .tint(Theme.primary)
+                // 参考デザインの明るい配色に固定する（端末がダークモードでも黒くしない）
+                .preferredColorScheme(.light)
         }
         .modelContainer(AppContainer.shared)
         .onChange(of: scenePhase) { _, phase in

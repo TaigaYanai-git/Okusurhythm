@@ -38,6 +38,7 @@ struct MenuView: View {
                     }
                 }
             }
+            .themedList()
             .navigationTitle("メニュー")
         }
     }
@@ -88,6 +89,7 @@ struct MedicationListView: View {
                 }
             }
         }
+        .themedList()
         .navigationTitle("お薬の一覧")
         .toolbar {
             Button("お薬を追加", systemImage: "plus") { editing = .new }
@@ -105,6 +107,7 @@ struct DrugLibraryView: View {
             NavigationLink { DrugDetailView(drug: drug) } label: { DrugRow(drug: drug) }
         }
         .searchable(text: $query, prompt: "一般名・商品名で検索")
+        .themedList()
         .navigationTitle("お薬の情報")
     }
 }
@@ -145,6 +148,7 @@ struct HealthProfileView: View {
                 }
             }
         }
+        .themedList()
         .navigationTitle("わたしの健康情報")
         .sheet(item: $adding) { kind in
             NavigationStack {
@@ -153,6 +157,7 @@ struct HealthProfileView: View {
                     TextField("詳しく（任意）：いつ・どんな症状が出たか", text: $newDetail, axis: .vertical)
                         .lineLimit(2...4)
                 }
+                .themedList()
                 .navigationTitle("\(kind.label)を追加")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
@@ -217,6 +222,7 @@ struct NotificationSettingsView: View {
             }
             .disabled(!remindersEnabled)
         }
+        .themedList()
         .navigationTitle("通知設定")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
