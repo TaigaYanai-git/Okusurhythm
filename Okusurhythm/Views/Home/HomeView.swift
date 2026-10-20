@@ -184,7 +184,7 @@ struct DoseRow: View {
                     if state == .missed {
                         LevelBadge(text: "飲み忘れ", color: Theme.danger)
                     } else if state == .skipped {
-                        LevelBadge(text: "スキップ", color: .gray)
+                        LevelBadge(text: "飲まない", color: .gray)
                     }
                 }
                 Text("\(dose.medication.name)（\(dose.medication.amountText)）")
@@ -209,7 +209,7 @@ struct DoseRow: View {
         .confirmationDialog(dose.medication.name, isPresented: $showActions, titleVisibility: .visible) {
             Button("編集する") { editing = true }
             if log == nil {
-                Button("スキップする") {
+                Button("今回は飲まない") {
                     DoseRecorder.record(dose, status: .skipped, existing: nil, context: context)
                 }
             } else {
@@ -227,7 +227,7 @@ struct DoseRow: View {
         }
         .contextMenu {
             if log == nil {
-                Button("スキップする", systemImage: "forward") {
+                Button("今回は飲まない", systemImage: "forward") {
                     DoseRecorder.record(dose, status: .skipped, existing: nil, context: context)
                 }
             } else {
