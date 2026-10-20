@@ -37,6 +37,8 @@ struct OkusurhythmApp: App {
         .modelContainer(AppContainer.shared)
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
+                // 飲み忘れて残りが減っていなければ、飲み切る日を先に延ばす
+                RunOutPlanner.updateAll(context: AppContainer.shared.mainContext)
                 NotificationManager.shared.refresh(context: AppContainer.shared.mainContext)
             }
         }

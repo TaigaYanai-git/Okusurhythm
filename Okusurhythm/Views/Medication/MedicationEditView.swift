@@ -10,6 +10,7 @@ struct MedicationEditView: View {
     @Environment(\.modelContext) private var context
     @Query(filter: #Predicate<Medication> { $0.isActive }) private var activeMeds: [Medication]
     @Query private var healthNotes: [HealthNote]
+    @Query private var todayLogs: [DoseLog]
 
     @State private var name = ""
     @State private var drugID: String?
@@ -21,8 +22,9 @@ struct MedicationEditView: View {
     @State private var weekdays: Set<Int> = []
     @State private var startDate = Date()
     @State private var startSlot: DoseSlot = .morning
-    @State private var hasPeriod = false
+    @State private var endMode: EndMode = .none
     @State private var periodDays = 14
+    private var hasPeriod: Bool { endMode == .days }
     @State private var memo = ""
     @State private var photoData: Data?
     @State private var photoItem: PhotosPickerItem?
@@ -217,14 +219,25 @@ struct MedicationEditView: View {
                     ForEach(slots.sorted()) { Text("\($0.label)から").tag($0) }
                 }
             }
-            Toggle("処方日数を設定", isOn: $hasPeriod)
-            if hasPeriod {
+            Picker("飲み終わり", selection: $endMode) {
+                ForEach(EndMode.allCases) { Text($0.label).tag($0) }
+            }
+            if endMode == .days {
                 Stepper("\(periodDays)日分", value: $periodDays, in: 1...365)
+            }
+            if endMode == .runOut {
+                Stepper(value: $remaining, in: 0...999, step: 1) {
+                    HStack { Text("今の残り"); Spacer(); Text("\(remaining.formattedAmount)\(unit)").bold() }
+                }
             }
         } header: {
             Text("飲む日")
         } footer: {
             if let summary = startSummary { Text(summary) }
+        }
+        .onChange(of: endMode) { _, mode in
+            // 飲み切るまでの計算には残りの数が要る
+            if mode == .runOut { tracksRemaining = true }
         }
         .onChange(of: slots) { _, newSlots in
             // 選んでいないタイミングから始まらないようにする
@@ -238,9 +251,32 @@ struct MedicationEditView: View {
         guard let first = sorted.first else { return nil }
         let slot = slots.count > 1 ? startSlot : first
         let start = "\(startDate.japaneseDayText)の\(slot.label)から飲み始め"
+        if endMode == .runOut {
+            guard let end = runOutPreview else {
+                return "残りが1回分に足りないため、飲む予定はありません。"
+            }
+            return start + "て、残り\(remaining.formattedAmount)\(unit)を\(end.day.japaneseDayText)の\(end.slot.label)に飲み切る予定です。飲み忘れると、そのぶん後ろに延びます。"
+        }
         guard hasPeriod, let end = endDate(for: slot) else { return start + "ます。" }
         let lastSlot = slot > first ? sorted.last { $0 < slot } ?? first : sorted.last ?? first
         return start + "て、\(end.japaneseDayText)の\(lastSlot.label)で終わります。"
+    }
+
+    /// 今の入力内容で、残りを飲み切る最後の1回
+    private var runOutPreview: RunOutPlanner.End? {
+        let draft = Medication(name: name)
+        draft.slots = Array(slots)
+        draft.frequency = frequency
+        draft.intervalDays = intervalDays
+        draft.weekdays = weekdays.sorted()
+        draft.startDate = startDate
+        draft.startSlot = slots.contains(startSlot) ? startSlot : (slots.sorted().first ?? .morning)
+        draft.amountPerDose = amount
+        // 今日すでに記録した分は残りから引かれているので、予定からも外す
+        let todayKey = DayKey.string(from: Date())
+        let logged = Set(todayLogs.filter { $0.medicationID == medication?.id && $0.dayKey >= todayKey }
+            .map { "\($0.dayKey)-\($0.slotRaw)" })
+        return RunOutPlanner.lastDose(of: draft, remaining: remaining, logged: logged)
     }
 
     /// 処方日数から最終日を出す。途中のタイミングから始めるときは翌日の分まで続く
@@ -253,9 +289,13 @@ struct MedicationEditView: View {
     private var remainingSection: some View {
         Section {
             Toggle("残りの数を管理する", isOn: $tracksRemaining)
+                .disabled(endMode == .runOut)
             if tracksRemaining {
-                Stepper(value: $remaining, in: 0...999, step: 1) {
-                    HStack { Text("今の残り"); Spacer(); Text("\(remaining.formattedAmount)\(unit)").bold() }
+                // 「残りを飲み切るまで」のときは、飲む日の欄で入力する
+                if endMode != .runOut {
+                    Stepper(value: $remaining, in: 0...999, step: 1) {
+                        HStack { Text("今の残り"); Spacer(); Text("\(remaining.formattedAmount)\(unit)").bold() }
+                    }
                 }
                 Stepper(value: $refillThreshold, in: 1...60, step: 1) {
                     HStack { Text("お知らせする残数"); Spacer(); Text("\(refillThreshold.formattedAmount)\(unit)以下").bold() }
@@ -289,8 +329,10 @@ struct MedicationEditView: View {
         weekdays = Set(med.weekdays)
         startDate = med.startDate
         startSlot = med.startSlot
-        if let end = med.endDate {
-            hasPeriod = true
+        if med.untilRunsOut {
+            endMode = .runOut
+        } else if let end = med.endDate {
+            endMode = .days
             let days = Calendar.japanese.dateComponents([.day], from: Calendar.japanese.startOfDay(for: med.startDate),
                                                         to: Calendar.japanese.startOfDay(for: end)).day ?? 13
             periodDays = days + (med.startsMidDay ? 0 : 1)
@@ -327,13 +369,16 @@ struct MedicationEditView: View {
         med.weekdays = weekdays.sorted()
         med.startDate = startDate
         med.startSlot = slots.contains(startSlot) ? startSlot : (slots.sorted().first ?? .morning)
-        med.endDate = endDate(for: med.startSlot)
+        med.untilRunsOut = endMode == .runOut
+        med.endSlotRaw = nil
+        med.endDate = endMode == .days ? endDate(for: med.startSlot) : nil
         med.memo = memo
         med.photoData = photoData
         med.remainingCount = tracksRemaining ? remaining : nil
         med.refillThreshold = refillThreshold
         med.refillNotified = med.needsRefill
         if medication == nil { context.insert(med) }
+        RunOutPlanner.update(med, context: context)
         try? context.save()
         NotificationManager.shared.refresh(context: context)
         dismiss()
@@ -353,6 +398,18 @@ struct MedicationEditView: View {
         let size = CGSize(width: image.size.width * scale, height: image.size.height * scale)
         let resized = UIGraphicsImageRenderer(size: size).image { _ in image.draw(in: CGRect(origin: .zero, size: size)) }
         return resized.jpegData(compressionQuality: 0.7)
+    }
+}
+
+enum EndMode: String, CaseIterable, Identifiable {
+    case none, days, runOut
+    var id: String { rawValue }
+    var label: String {
+        switch self {
+        case .none: "決めない"
+        case .days: "処方日数で決める"
+        case .runOut: "残りを飲み切るまで"
+        }
     }
 }
 

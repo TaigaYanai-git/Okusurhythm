@@ -108,3 +108,47 @@ final class StartSlotTests: XCTestCase {
         XCTAssertEqual(med.slots(on: day(1)), [.evening])
     }
 }
+
+final class RunOutTests: XCTestCase {
+    private let calendar = Calendar.japanese
+    private func day(_ d: Int, _ h: Int = 0) -> Date {
+        calendar.date(from: DateComponents(year: 2026, month: 10, day: d, hour: h))!
+    }
+
+    func testRemainingDecidesLastDose() {
+        // 1日3回1錠、残り7錠を1日の朝から → 1日朝昼夜、2日朝昼夜、3日朝で終わり
+        let med = Medication(name: "test")
+        med.slots = [.morning, .noon, .evening]
+        med.startDate = day(1)
+        let end = RunOutPlanner.lastDose(of: med, remaining: 7, from: day(1))
+        XCTAssertEqual(end, RunOutPlanner.End(day: calendar.startOfDay(for: day(3)), slot: .morning))
+    }
+
+    func testAlreadyLoggedDosesAreSkipped() {
+        // 今日の朝は記録済み（残りから引かれている）→ 残り2錠は昼・夜
+        let med = Medication(name: "test")
+        med.slots = [.morning, .noon, .evening]
+        med.startDate = day(1)
+        let end = RunOutPlanner.lastDose(of: med, remaining: 2, from: day(5, 9), logged: ["2026-10-05-morning"])
+        XCTAssertEqual(end, RunOutPlanner.End(day: calendar.startOfDay(for: day(5)), slot: .evening))
+    }
+
+    func testEndSlotLimitsLastDay() {
+        let med = Medication(name: "test")
+        med.slots = [.morning, .noon, .evening]
+        med.startDate = day(1)
+        med.endDate = day(3)
+        med.endSlotRaw = DoseSlot.noon.rawValue
+        XCTAssertEqual(med.slots(on: day(3)), [.morning, .noon])
+        XCTAssertEqual(med.slots(on: day(4)), [])
+    }
+
+    func testHalfTablets() {
+        // 1回0.5錠・1日1回、残り2錠 → 4日分
+        let med = Medication(name: "test")
+        med.slots = [.evening]
+        med.amountPerDose = 0.5
+        med.startDate = day(1)
+        XCTAssertEqual(RunOutPlanner.lastDose(of: med, remaining: 2, from: day(1))?.day, calendar.startOfDay(for: day(4)))
+    }
+}

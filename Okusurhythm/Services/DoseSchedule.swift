@@ -70,6 +70,8 @@ enum DoseRecorder {
             if status == .taken { adjustRemaining(med, by: -med.amountPerDose) }
         }
         try? context.save()
+        RunOutPlanner.update(med, context: context)
+        try? context.save()
         NotificationManager.shared.refresh(context: context)
     }
 
@@ -77,6 +79,10 @@ enum DoseRecorder {
         if log.status == .taken, let medication { adjustRemaining(medication, by: log.amount) }
         context.delete(log)
         try? context.save()
+        if let medication {
+            RunOutPlanner.update(medication, context: context)
+            try? context.save()
+        }
         NotificationManager.shared.refresh(context: context)
     }
 
