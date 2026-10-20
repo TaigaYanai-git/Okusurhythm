@@ -75,3 +75,36 @@ final class ScheduleTests: XCTestCase {
         XCTAssertTrue(AllergyMatcher.matches(name: "ノルバスク", drug: nil, notes: [note]).isEmpty)
     }
 }
+
+final class StartSlotTests: XCTestCase {
+    private let calendar = Calendar.japanese
+    private func day(_ d: Int) -> Date { calendar.date(from: DateComponents(year: 2026, month: 10, day: d))! }
+
+    func testStartFromNoon() {
+        let med = Medication(name: "test")
+        med.slots = [.morning, .noon, .evening]
+        med.startDate = day(1)
+        med.startSlot = .noon
+        XCTAssertEqual(med.slots(on: day(1)), [.noon, .evening])
+        XCTAssertEqual(med.slots(on: day(2)), [.morning, .noon, .evening])
+    }
+
+    func testMidDayStartWithPeriodEndsNextMorning() {
+        // 3日分を昼から → 1日目 昼夜、2・3日目 朝昼夜、4日目 朝 = 9回
+        let med = Medication(name: "test")
+        med.slots = [.morning, .noon, .evening]
+        med.startDate = day(1)
+        med.startSlot = .noon
+        med.endDate = day(4)
+        XCTAssertEqual(med.slots(on: day(4)), [.morning])
+        XCTAssertEqual((1...5).map { med.slots(on: day($0)).count }.reduce(0, +), 9)
+    }
+
+    func testStartSlotNotSelectedIsIgnored() {
+        let med = Medication(name: "test")
+        med.slots = [.evening]
+        med.startDate = day(1)
+        med.startSlot = .morning
+        XCTAssertEqual(med.slots(on: day(1)), [.evening])
+    }
+}

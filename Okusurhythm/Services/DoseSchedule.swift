@@ -28,8 +28,7 @@ enum DoseState {
 enum DoseSchedule {
     static func doses(on day: Date, medications: [Medication]) -> [Dose] {
         medications
-            .filter { $0.isScheduled(on: day) }
-            .flatMap { med in med.slots.map { Dose(medication: med, day: day, slot: $0) } }
+            .flatMap { med in med.slots(on: day).map { Dose(medication: med, day: day, slot: $0) } }
             .sorted { ($0.slot, $0.medication.name) < ($1.slot, $1.medication.name) }
     }
 

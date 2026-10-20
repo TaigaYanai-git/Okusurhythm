@@ -19,6 +19,8 @@ final class Medication {
     /// 「曜日指定」のときの曜日（Calendar の weekday: 1=日曜〜7=土曜）
     var weekdays: [Int] = []
     var startDate: Date = Date()
+    /// 飲み始める日の最初のタイミング（例：昼から飲み始める）。その日はこれより前の分を予定に入れない
+    var startSlotRaw: String = DoseSlot.morning.rawValue
     /// 処方日数から計算した最終服用日。nil なら期限なし
     var endDate: Date?
     var memo: String = ""
@@ -39,6 +41,28 @@ final class Medication {
     var slots: [DoseSlot] {
         get { slotRawValues.compactMap(DoseSlot.init(rawValue:)).sorted() }
         set { slotRawValues = newValue.sorted().map(\.rawValue) }
+    }
+
+    var startSlot: DoseSlot {
+        get { DoseSlot(rawValue: startSlotRaw) ?? .morning }
+        set { startSlotRaw = newValue.rawValue }
+    }
+
+    /// 途中のタイミングから飲み始めるか（例：1日3回を昼から）
+    var startsMidDay: Bool { slots.first.map { startSlot > $0 } ?? false }
+
+    /// その日に飲むタイミング。
+    /// 飲み始める日は startSlot 以降だけ。途中から始めて処方日数があるときは、
+    /// 最終日は startSlot より前だけ（14日分を昼から飲むと、15日目の朝で終わる）
+    func slots(on day: Date, calendar: Calendar = .japanese) -> [DoseSlot] {
+        guard isScheduled(on: day, calendar: calendar) else { return [] }
+        if calendar.isDate(day, inSameDayAs: startDate) {
+            return slots.filter { $0 >= startSlot }
+        }
+        if let endDate, startsMidDay, calendar.isDate(day, inSameDayAs: endDate) {
+            return slots.filter { $0 < startSlot }
+        }
+        return slots
     }
 
     var frequency: Frequency {

@@ -21,7 +21,7 @@ struct HomeView: View {
 
     private var refillMeds: [Medication] { medications.filter(\.needsRefill) }
 
-    /// 「服薬を記録する」で記録する分（今の時刻までの未記録分）
+    /// 「まとめてチェックする」で記録する分（今の時刻までの未記録分）
     private var dueDoses: [Dose] {
         let now = Date()
         return doses.filter { logIndex[$0.id] == nil && (!isToday || $0.scheduledAt <= now.addingTimeInterval(3600)) }
@@ -65,7 +65,7 @@ struct HomeView: View {
                                     }
                                 }
                             } label: {
-                                Label("服薬を記録する", systemImage: "pill.fill")
+                                Label("まとめてチェックする", systemImage: "checkmark.circle")
                             }
                             .buttonStyle(PrimaryButtonStyle())
                             .sensoryFeedback(.success, trigger: logs.count)

@@ -20,6 +20,7 @@ struct MedicationEditView: View {
     @State private var intervalDays = 2
     @State private var weekdays: Set<Int> = []
     @State private var startDate = Date()
+    @State private var startSlot: DoseSlot = .morning
     @State private var hasPeriod = false
     @State private var periodDays = 14
     @State private var memo = ""
@@ -181,7 +182,7 @@ struct MedicationEditView: View {
     }
 
     private var scheduleSection: some View {
-        Section("飲む日") {
+        Section {
             Picker("頻度", selection: $frequency) {
                 ForEach(Frequency.allCases) { Text($0.label).tag($0) }
             }
@@ -203,11 +204,42 @@ struct MedicationEditView: View {
                 }
             }
             DatePicker("飲み始める日", selection: $startDate, displayedComponents: .date)
+            if slots.count > 1 {
+                Picker("最初に飲むタイミング", selection: $startSlot) {
+                    ForEach(slots.sorted()) { Text("\($0.label)から").tag($0) }
+                }
+            }
             Toggle("処方日数を設定", isOn: $hasPeriod)
             if hasPeriod {
                 Stepper("\(periodDays)日分", value: $periodDays, in: 1...365)
             }
+        } header: {
+            Text("飲む日")
+        } footer: {
+            if let summary = startSummary { Text(summary) }
         }
+        .onChange(of: slots) { _, newSlots in
+            // 選んでいないタイミングから始まらないようにする
+            if !newSlots.contains(startSlot), let first = newSlots.sorted().first { startSlot = first }
+        }
+    }
+
+    /// 「10/20（月）の昼から飲み始めて、11/3（月）の朝で終わります」
+    private var startSummary: String? {
+        let sorted = slots.sorted()
+        guard let first = sorted.first else { return nil }
+        let slot = slots.count > 1 ? startSlot : first
+        let start = "\(startDate.japaneseDayText)の\(slot.label)から飲み始め"
+        guard hasPeriod, let end = endDate(for: slot) else { return start + "ます。" }
+        let lastSlot = slot > first ? sorted.last { $0 < slot } ?? first : sorted.last ?? first
+        return start + "て、\(end.japaneseDayText)の\(lastSlot.label)で終わります。"
+    }
+
+    /// 処方日数から最終日を出す。途中のタイミングから始めるときは翌日の分まで続く
+    private func endDate(for slot: DoseSlot) -> Date? {
+        guard hasPeriod, let first = slots.sorted().first else { return nil }
+        let extra = slot > first ? 1 : 0
+        return Calendar.japanese.date(byAdding: .day, value: periodDays - 1 + extra, to: startDate)
     }
 
     private var remainingSection: some View {
@@ -233,7 +265,12 @@ struct MedicationEditView: View {
     // MARK: - Load / Save
 
     private func load() {
-        guard let med = medication else { return }
+        guard let med = medication else {
+            // 新しく登録するときは、今日これから来るタイミングから始める
+            let now = Date()
+            startSlot = DoseSlot.allCases.first { SlotSettings.date(for: $0, on: now) > now } ?? .morning
+            return
+        }
         name = med.name
         drugID = med.drugID
         amount = med.amountPerDose
@@ -243,10 +280,12 @@ struct MedicationEditView: View {
         intervalDays = med.intervalDays
         weekdays = Set(med.weekdays)
         startDate = med.startDate
+        startSlot = med.startSlot
         if let end = med.endDate {
             hasPeriod = true
-            periodDays = (Calendar.japanese.dateComponents([.day], from: Calendar.japanese.startOfDay(for: med.startDate),
-                                                           to: Calendar.japanese.startOfDay(for: end)).day ?? 13) + 1
+            let days = Calendar.japanese.dateComponents([.day], from: Calendar.japanese.startOfDay(for: med.startDate),
+                                                        to: Calendar.japanese.startOfDay(for: end)).day ?? 13
+            periodDays = days + (med.startsMidDay ? 0 : 1)
         }
         memo = med.memo
         photoData = med.photoData
@@ -278,7 +317,8 @@ struct MedicationEditView: View {
         med.intervalDays = intervalDays
         med.weekdays = weekdays.sorted()
         med.startDate = startDate
-        med.endDate = hasPeriod ? Calendar.japanese.date(byAdding: .day, value: periodDays - 1, to: startDate) : nil
+        med.startSlot = slots.contains(startSlot) ? startSlot : (slots.sorted().first ?? .morning)
+        med.endDate = endDate(for: med.startSlot)
         med.memo = memo
         med.photoData = photoData
         med.remainingCount = tracksRemaining ? remaining : nil
