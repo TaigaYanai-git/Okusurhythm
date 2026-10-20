@@ -306,9 +306,10 @@ struct MedicationEditView: View {
         let current = activeMeds.filter { $0.id != medication?.id }.compactMap { db.drug(id: $0.drugID) }
         let pairs = linkedDrug.map { InteractionChecker.check(candidate: $0, against: current) } ?? []
         let allergies = AllergyMatcher.matches(name: name, drug: linkedDrug, notes: healthNotes)
+        let duplicates = activeMeds.filter { $0.id != medication?.id && drugID != nil && $0.drugID == drugID }
         let changedDrug = medication?.drugID != drugID || medication == nil
-        if changedDrug, !pairs.isEmpty || !allergies.isEmpty {
-            pendingWarnings = SaveWarnings(pairs: pairs, allergies: allergies)
+        if changedDrug, !pairs.isEmpty || !allergies.isEmpty || !duplicates.isEmpty {
+            pendingWarnings = SaveWarnings(pairs: pairs, allergies: allergies, duplicateNames: duplicates.map(\.name))
         } else {
             save()
         }
@@ -361,6 +362,8 @@ struct SaveWarnings: Identifiable {
     let id = UUID()
     let pairs: [PairResult]
     let allergies: [HealthNote]
+    /// 同じ成分で登録済みの薬の名前
+    let duplicateNames: [String]
 }
 
 struct SaveWarningSheet: View {
@@ -372,6 +375,18 @@ struct SaveWarningSheet: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
+                    if !warnings.duplicateNames.isEmpty {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Label("同じ成分のお薬がすでに登録されています", systemImage: "square.on.square")
+                                .font(.headline)
+                                .foregroundStyle(Theme.danger)
+                            Text("登録済み：\(warnings.duplicateNames.joined(separator: "、"))")
+                            Text("別々の病院・薬局で同じ薬が出ている可能性があります。飲みすぎにならないよう確認してください。")
+                                .font(.subheadline)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .card()
+                    }
                     if !warnings.allergies.isEmpty {
                         VStack(alignment: .leading, spacing: 8) {
                             Label("登録しているアレルギー・副作用歴に一致します", systemImage: "allergens")

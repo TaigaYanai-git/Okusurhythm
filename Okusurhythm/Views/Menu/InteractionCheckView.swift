@@ -61,6 +61,18 @@ struct InteractionCheckView: View {
     private var currentSection: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text("今飲んでいる薬どうし").font(.title3.bold())
+            ForEach(InteractionChecker.duplicates(medications)) { dup in
+                VStack(alignment: .leading, spacing: 6) {
+                    HStack {
+                        LevelBadge(text: "成分の重複", color: Theme.danger)
+                        Text(dup.drug.displayName).font(.headline)
+                    }
+                    Text("「\(dup.names.joined(separator: "」「"))」は同じ成分です。別々の病院・薬局で同じ薬が出ている可能性があります。飲みすぎにならないよう、医師・薬剤師に確認してください。")
+                        .font(.subheadline)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .card()
+            }
             if currentDrugs.count < 2 {
                 resultMessage("成分を登録した薬が2つ以上あると、組み合わせを確認できます。", ok: nil)
             } else if currentResults.isEmpty {

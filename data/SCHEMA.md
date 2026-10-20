@@ -117,6 +117,15 @@
 - `immunosuppressant` 免疫抑制薬
 - `p_gp_inhibitor` P糖蛋白阻害薬
 - `insulin` インスリン製剤
+- `beta2_agonist` β2刺激薬
+- `xanthine` キサンチン系薬剤（テオフィリン等）
+- `catecholamine` カテコールアミン製剤
+- `alpha_blocker` α遮断薬
+- `carbapenem` カルバペネム系抗菌薬
+- `ergot_alkaloid` エルゴタミン・麦角アルカロイド
+- `vitamin_d` 活性型ビタミンD3製剤
+- `calcium_supplement` カルシウム製剤
+- `progestin` 黄体ホルモン製剤
 
 ## 注意
 

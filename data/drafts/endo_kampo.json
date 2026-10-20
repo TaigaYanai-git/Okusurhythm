@@ -1,0 +1,1952 @@
+{
+  "version": "2026-10-20",
+  "drugs": [
+    {
+      "id": "eldecalcitol",
+      "genericName": "エルデカルシトール",
+      "displayName": "エルデカルシトール",
+      "brandNames": [
+        "エディロール"
+      ],
+      "category": "骨粗しょう症治療薬（活性型ビタミンD3製剤）",
+      "classes": [
+        "vitamin_d"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジギタリス製剤（ジゴキシン等）",
+          "effect": "血液中のカルシウムが増えすぎた場合に、不整脈があらわれるおそれがあります。",
+          "mechanism": "高カルシウム血症になると、ジギタリス製剤の作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:calcium_supplement"
+          ],
+          "targetLabel": "カルシウム製剤（乳酸カルシウム、炭酸カルシウム等）",
+          "effect": "血液中のカルシウムが増えすぎる（高カルシウム血症）おそれがあります。",
+          "mechanism": "本剤が腸からのカルシウム吸収を高めるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "alfacalcidol",
+            "calcitriol",
+            "class:vitamin_d"
+          ],
+          "targetLabel": "ビタミンD及びその誘導体（アルファカルシドール、カルシトリオール等）",
+          "effect": "血液中のカルシウムが増えすぎる（高カルシウム血症）おそれがあります。",
+          "mechanism": "作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "teriparatide",
+            "abaloparatide"
+          ],
+          "targetLabel": "PTH製剤（テリパラチド等）、PTHrP製剤（アバロパラチド酢酸塩）",
+          "effect": "血液中のカルシウムが増えすぎる（高カルシウム血症）おそれがあります。",
+          "mechanism": "作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "magnesium_oxide",
+            "magnesium_carbonate"
+          ],
+          "targetLabel": "マグネシウムを含有する製剤（酸化マグネシウム、炭酸マグネシウム等）",
+          "effect": "血液中のマグネシウムが増えすぎること（高マグネシウム血症）や、ミルク・アルカリ症候群（高カルシウム血症、高窒素血症、アルカローシス等）が起こるおそれがあります。",
+          "mechanism": "本剤が腸からのマグネシウム吸収を高め、血中マグネシウムが増えることで尿細管でのカルシウム再吸収も増えると考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "エディロールカプセル0.5μg／0.75μg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/450045_3112006M1022_1_12",
+        "revised": "2024年2月改訂（第4版）"
+      }
+    },
+    {
+      "id": "alfacalcidol",
+      "genericName": "アルファカルシドール",
+      "displayName": "アルファカルシドール",
+      "brandNames": [
+        "アルファロール",
+        "ワンアルファ"
+      ],
+      "category": "活性型ビタミンD3製剤",
+      "classes": [
+        "vitamin_d"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "magnesium_oxide",
+            "magnesium_carbonate"
+          ],
+          "targetLabel": "マグネシウムを含有する製剤（酸化マグネシウム、炭酸マグネシウム等）",
+          "effect": "血液中のマグネシウムが増えすぎた（高マグネシウム血症）との報告があります。また、ミルク・アルカリ症候群（高カルシウム血症、高窒素血症、アルカローシス等）が起こるおそれがあります。",
+          "mechanism": "本剤が腸からのマグネシウム吸収を高め、血中マグネシウムが増えることで尿細管でのカルシウム再吸収も増えると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジギタリス製剤（ジゴキシン等）",
+          "effect": "不整脈があらわれるおそれがあります。",
+          "mechanism": "本剤で高カルシウム血症が起きた場合、ジギタリス製剤の作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:calcium_supplement"
+          ],
+          "targetLabel": "カルシウム製剤（乳酸カルシウム水和物、炭酸カルシウム等）",
+          "effect": "血液中のカルシウムが増えすぎる（高カルシウム血症）おそれがあります。",
+          "mechanism": "本剤が腸からのカルシウム吸収を高めるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "calcitriol",
+            "class:vitamin_d"
+          ],
+          "targetLabel": "ビタミンD及びその誘導体（カルシトリオール等）",
+          "effect": "血液中のカルシウムが増えすぎる（高カルシウム血症）おそれがあります。",
+          "mechanism": "作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "teriparatide",
+            "abaloparatide"
+          ],
+          "targetLabel": "PTH製剤（テリパラチド等）、PTHrP製剤（アバロパラチド酢酸塩）",
+          "effect": "血液中のカルシウムが増えすぎる（高カルシウム血症）おそれがあります。",
+          "mechanism": "作用が重なるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "アルファロールカプセル0.25μg／0.5μg／1μg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/450045_3112001M1046_1_11",
+        "revised": "2024年2月改訂（第2版）"
+      }
+    },
+    {
+      "id": "risedronate",
+      "genericName": "リセドロン酸ナトリウム水和物",
+      "displayName": "リセドロン酸",
+      "brandNames": [
+        "アクトネル",
+        "ベネット"
+      ],
+      "category": "骨粗しょう症治療薬（ビスホスホネート）",
+      "classes": [
+        "bisphosphonate"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antacid_metal",
+            "class:calcium_supplement",
+            "magnesium_oxide",
+            "ferrous_citrate"
+          ],
+          "targetLabel": "多価陽イオン（カルシウム、マグネシウム、鉄、アルミニウム等）含有製剤（制酸剤、ミネラル入りビタミン剤等）",
+          "effect": "同時に飲むと本剤の吸収が妨げられることがあります。本剤は起床後、最初の飲食前に飲み、飲んだ後少なくとも30分はこれらの薬を飲まないでください。",
+          "mechanism": "カルシウム等と錯体を作るためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "milk",
+          "itemLabel": "牛乳・乳製品などカルシウムの多い飲食物",
+          "level": "avoid",
+          "effect": "本剤と同時にとると吸収が妨げられることがあります。本剤は起床後、最初の飲食前に飲み、飲んだ後少なくとも30分はとらないでください。"
+        },
+        {
+          "item": "other",
+          "itemLabel": "水以外の飲み物・食べ物（カルシウムやマグネシウムの多いミネラルウォーターを含む）",
+          "level": "avoid",
+          "effect": "本剤はコップ1杯（約180mL）の水だけで飲んでください。水以外の飲み物や食べ物と一緒に飲むと吸収が妨げられることがあります。飲んだ後少なくとも30分は水以外の飲食を避け、横にならないでください。"
+        },
+        {
+          "item": "iron_calcium_supplements",
+          "itemLabel": "ミネラル入りビタミン剤など（カルシウム・マグネシウム・鉄等を含むもの）",
+          "level": "avoid",
+          "effect": "同時に飲むと本剤の吸収が妨げられることがあります。本剤を飲んでから少なくとも30分はあけてください。"
+        }
+      ],
+      "source": {
+        "title": "アクトネル錠17.5mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/111890_3999019F2022_2_19",
+        "revised": "2024年3月改訂（第4版）"
+      }
+    },
+    {
+      "id": "raloxifene",
+      "genericName": "ラロキシフェン塩酸塩",
+      "displayName": "ラロキシフェン",
+      "brandNames": [
+        "エビスタ"
+      ],
+      "category": "骨粗しょう症治療薬（SERM）",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "cholestyramine"
+          ],
+          "targetLabel": "陰イオン交換樹脂（コレスチラミン）",
+          "effect": "本剤の血中濃度が下がります。",
+          "mechanism": "本剤がコレスチラミンに吸着され、腸からの吸収が減るためです。ほかの陰イオン交換樹脂でも同様の可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "クマリン系抗凝血剤（ワルファリン）",
+          "effect": "プロトロンビン時間（血液の固まりやすさの指標）が短くなったとの報告があります。本剤を始めるときや止めるときは検査で確認されます。",
+          "mechanism": "機序は不明です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "ampicillin"
+          ],
+          "targetLabel": "アンピシリン",
+          "effect": "本剤の血中濃度が下がるおそれがあります。",
+          "mechanism": "アンピシリンで腸内細菌が減り、本剤の腸肝循環が低下するためと考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "エビスタ錠60mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/850372_3999021F1023_3_02",
+        "revised": "2026年3月改訂（第4版）"
+      }
+    },
+    {
+      "id": "thiamazole",
+      "genericName": "チアマゾール",
+      "displayName": "チアマゾール",
+      "brandNames": [
+        "メルカゾール"
+      ],
+      "category": "抗甲状腺薬",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "クマリン系抗凝血剤（ワルファリンカリウム）",
+          "effect": "甲状腺の状態の変化に応じてワルファリンの効き方が変わることがあります。血液検査をしながら量が調整されます。",
+          "mechanism": "甲状腺機能が正常化すると、強まっていたワルファリンの効果が弱まるとの報告があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジギタリス製剤（ジゴキシン等）",
+          "effect": "ジギタリス製剤の血中濃度が変わることがあります。必要に応じて量が調整されます。",
+          "mechanism": "本剤で甲状腺機能が正常化すると、ジギタリス製剤の代謝・排泄が元に戻り、血中濃度が上がるとの報告があります。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "メルカゾール錠2.5mg／5mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/470007_2432001F1033_2_06",
+        "revised": "2025年6月改訂（第3版）"
+      }
+    },
+    {
+      "id": "methotrexate",
+      "genericName": "メトトレキサート",
+      "displayName": "メトトレキサート",
+      "brandNames": [
+        "リウマトレックス"
+      ],
+      "category": "抗リウマチ薬",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "aspirin",
+            "loxoprofen",
+            "celecoxib"
+          ],
+          "targetLabel": "サリチル酸等の非ステロイド性抗炎症剤",
+          "effect": "メトトレキサートの副作用（骨髄抑制、肝臓・腎臓・消化管の障害等）が強まることがあります。必要に応じて検査や量の調整が行われます。",
+          "mechanism": "解熱鎮痛薬が腎臓の血流を減らし、メトトレキサートの排泄が遅れるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "tetracycline",
+            "chloramphenicol",
+            "phenytoin",
+            "phenobarbital"
+          ],
+          "targetLabel": "スルホンアミド系薬剤、テトラサイクリン、クロラムフェニコール、フェニトイン、バルビツール酸誘導体",
+          "effect": "メトトレキサートの副作用（骨髄抑制、肝臓・腎臓・消化管の障害等）が強まることがあります。必要に応じて検査や量の調整が行われます。",
+          "mechanism": "これらの薬が血漿蛋白と結合しているメトトレキサートを追い出し、濃度を上げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "sulfamethoxazole_trimethoprim"
+          ],
+          "targetLabel": "スルファメトキサゾール・トリメトプリム",
+          "effect": "メトトレキサートの副作用（骨髄抑制、肝臓・腎臓・消化管の障害等）が強まることがあります。必要に応じて検査や量の調整が行われます。",
+          "mechanism": "両方の薬の葉酸代謝を妨げる作用が重なるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "amoxicillin",
+            "piperacillin",
+            "probenecid"
+          ],
+          "targetLabel": "ペニシリン（ピペラシリン等）、プロベネシド",
+          "effect": "メトトレキサートの副作用（骨髄抑制、肝臓・腎臓・消化管の障害等）が強まることがあります。必要に応じて検査や量の調整が行われます。",
+          "mechanism": "これらの薬がメトトレキサートの腎臓からの排泄を妨げるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "ciprofloxacin"
+          ],
+          "targetLabel": "シプロフロキサシン",
+          "effect": "メトトレキサートの副作用（骨髄抑制、肝臓・腎臓・消化管の障害等）が強まることがあります。必要に応じて検査や量の調整が行われます。",
+          "mechanism": "メトトレキサートの腎尿細管からの排泄が妨げられるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "leflunomide"
+          ],
+          "targetLabel": "レフルノミド",
+          "effect": "メトトレキサートの副作用（骨髄抑制、肝臓・腎臓・消化管の障害等）が強まることがあります。必要に応じて検査や量の調整が行われます。",
+          "mechanism": "骨髄抑制等の副作用が強まるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ppi",
+            "lansoprazole",
+            "omeprazole",
+            "rabeprazole"
+          ],
+          "targetLabel": "プロトンポンプ阻害剤（オメプラゾール、ラベプラゾール、ランソプラゾール等）",
+          "effect": "メトトレキサートの副作用（骨髄抑制、肝臓・腎臓・消化管の障害等）が強まることがあります。必要に応じて検査や量の調整が行われます。",
+          "mechanism": "機序は不明ですが、メトトレキサートの血中濃度が上がることがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "talaporfin"
+          ],
+          "targetLabel": "タラポルフィンナトリウム",
+          "effect": "光線過敏症を起こすことがあります。",
+          "mechanism": "タラポルフィンが光への感受性を高めるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（常飲）",
+          "level": "caution",
+          "effect": "お酒をいつも飲む方では、肝臓の障害が悪くなるおそれがあります。飲酒習慣があれば医師に伝えてください。"
+        }
+      ],
+      "source": {
+        "title": "リウマトレックスカプセル2mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/672212_3999016M1021_3_06",
+        "revised": "2026年3月改訂（第4版）"
+      }
+    },
+    {
+      "id": "ferrous_citrate",
+      "genericName": "クエン酸第一鉄ナトリウム",
+      "displayName": "クエン酸第一鉄",
+      "brandNames": [
+        "フェロミア"
+      ],
+      "category": "鉄剤（貧血治療薬）",
+      "classes": [
+        "antacid_metal"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "cefdinir"
+          ],
+          "targetLabel": "セフジニル",
+          "effect": "セフジニルの吸収が約10分の1に下がることがあります。3時間以上あけて本剤を飲みます。",
+          "mechanism": "本剤と結合（キレート形成）して、相手の薬の吸収が妨げられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:quinolone",
+            "ciprofloxacin",
+            "levofloxacin"
+          ],
+          "targetLabel": "キノロン系抗菌剤（シプロフロキサシン、ノルフロキサシン等）",
+          "effect": "抗菌薬の吸収が妨げられることがあります。",
+          "mechanism": "本剤と結合（キレート形成）して、相手の薬の吸収が妨げられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:tetracycline",
+            "minocycline"
+          ],
+          "targetLabel": "テトラサイクリン系抗生物質",
+          "effect": "お互いの吸収が妨げられます。",
+          "mechanism": "本剤と結合（キレート形成）して、お互いの吸収が妨げられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "levothyroxine",
+            "class:thyroid_hormone"
+          ],
+          "targetLabel": "甲状腺ホルモン製剤（レボチロキシンナトリウム水和物、リオチロニンナトリウム等）",
+          "effect": "甲状腺ホルモン薬の吸収が妨げられるおそれがあります。",
+          "mechanism": "本剤と結合（キレート形成）して、相手の薬の吸収が妨げられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "magnesium_oxide",
+            "class:antacid_metal"
+          ],
+          "targetLabel": "制酸剤",
+          "effect": "鉄の吸収が妨げられることがあります。",
+          "mechanism": "pHが上がることで、鉄が溶けにくい形になると報告されています（試験管内）。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "タンニン酸を含有する食品",
+          "level": "caution",
+          "effect": "鉄の吸収が妨げられるおそれがあります。"
+        }
+      ],
+      "source": {
+        "title": "フェロミア錠50mg／顆粒8.3% 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/530258_3222013D1059_3_03",
+        "revised": "2025年2月改訂（第2版）"
+      }
+    },
+    {
+      "id": "mecobalamin",
+      "genericName": "メコバラミン",
+      "displayName": "メコバラミン",
+      "brandNames": [
+        "メチコバール"
+      ],
+      "category": "ビタミンB12製剤",
+      "classes": [],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "メチコバール錠250μg／500μg・細粒0.1% 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/170033_3136004C1038_1_05",
+        "revised": "2023年4月改訂（第1版）"
+      }
+    },
+    {
+      "id": "dienogest",
+      "genericName": "ジエノゲスト",
+      "displayName": "ジエノゲスト",
+      "brandNames": [
+        "ディナゲスト"
+      ],
+      "category": "子宮内膜症・子宮腺筋症治療薬（黄体ホルモン製剤）",
+      "classes": [
+        "progestin"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:strong_cyp3a4_inhibitor",
+            "class:azole_antifungal",
+            "erythromycin",
+            "clarithromycin",
+            "itraconazole",
+            "fluconazole"
+          ],
+          "targetLabel": "CYP3A4阻害剤（エリスロマイシン、クラリスロマイシン、アゾール系抗真菌剤〔イトラコナゾール、フルコナゾール等〕）",
+          "effect": "本剤の血中濃度が上がるおそれがあります。",
+          "mechanism": "これらの薬が本剤を分解する酵素（CYP3A4）を阻害するためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:cyp3a4_inducer",
+            "rifampicin",
+            "phenytoin",
+            "phenobarbital",
+            "carbamazepine"
+          ],
+          "targetLabel": "CYP3A4誘導剤（リファンピシン、フェニトイン、フェノバルビタール、カルバマゼピン等）",
+          "effect": "本剤の血中濃度が下がり、効き目が弱まるおそれがあります。",
+          "mechanism": "これらの薬が本剤を分解する酵素（CYP3A4）を増やすためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:oral_estrogen",
+            "class:oral_contraceptive"
+          ],
+          "targetLabel": "卵胞ホルモン含有製剤（エストラジオール誘導体、エストリオール誘導体、結合型エストロゲン製剤等）",
+          "effect": "本剤の効果が弱まる可能性があります。",
+          "mechanism": "子宮内膜症はエストロゲンで悪化する病気のため、卵胞ホルモンにより治療効果が弱まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:progestin",
+            "class:oral_contraceptive"
+          ],
+          "targetLabel": "黄体ホルモン含有製剤（プロゲステロン製剤、メドロキシプロゲステロン酢酸エステル製剤、ノルエチステロン製剤、ジドロゲステロン製剤等）",
+          "effect": "黄体ホルモンの作用が強まる可能性があります。",
+          "mechanism": "どちらも黄体ホルモン受容体に作用するため、作用が重なる可能性があります。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ディナゲスト錠1mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/790005_2499010F1023_1_16",
+        "revised": "2025年10月改訂（第4版）"
+      }
+    },
+    {
+      "id": "drospirenone_ethinylestradiol",
+      "genericName": "ドロスピレノン・エチニルエストラジオール ベータデクス",
+      "displayName": "ドロスピレノン・エチニルエストラジオール",
+      "brandNames": [
+        "ヤーズ配合錠",
+        "ヤーズフレックス配合錠"
+      ],
+      "category": "月経困難症治療薬（黄体ホルモン・卵胞ホルモン配合剤）",
+      "classes": [
+        "oral_contraceptive"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:corticosteroid",
+            "prednisolone",
+            "class:tricyclic_antidepressant",
+            "imipramine",
+            "selegiline",
+            "cyclosporine",
+            "omeprazole"
+          ],
+          "targetLabel": "副腎皮質ホルモン（プレドニゾロン等）、三環系抗うつ剤（イミプラミン等）、セレギリン塩酸塩、シクロスポリン、オメプラゾール",
+          "effect": "これらの薬の作用が強まるおそれがあります。",
+          "mechanism": "本剤がこれらの薬の代謝を抑えると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline",
+            "tizanidine"
+          ],
+          "targetLabel": "テオフィリン、チザニジン塩酸塩",
+          "effect": "これらの薬の血中濃度が上がるおそれがあります。",
+          "mechanism": "本剤がこれらの薬を分解する酵素（CYP1A2）を阻害すると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:cyp3a4_inducer",
+            "rifampicin",
+            "phenobarbital",
+            "phenytoin",
+            "carbamazepine",
+            "bosentan",
+            "modafinil",
+            "topiramate"
+          ],
+          "targetLabel": "リファンピシン、バルビツール酸系製剤（フェノバルビタール等）、ヒダントイン系製剤（フェニトイン等）、カルバマゼピン、ボセンタン、モダフィニル、トピラマート",
+          "effect": "本剤の効果が弱まったり、不正性器出血が起こりやすくなったりするおそれがあります。",
+          "mechanism": "これらの薬が薬物代謝酵素を増やし、本剤の分解を早めると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:tetracycline",
+            "minocycline",
+            "tetracycline",
+            "ampicillin",
+            "amoxicillin"
+          ],
+          "targetLabel": "テトラサイクリン系抗生物質（テトラサイクリン等）、ペニシリン系抗生物質（アンピシリン等）",
+          "effect": "本剤の効果が弱まったり、不正性器出血が起こりやすくなったりするおそれがあります。",
+          "mechanism": "腸内細菌が変化し、本剤の腸肝循環による再吸収が減ると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:hiv_protease_inhibitor",
+            "ritonavir",
+            "darunavir",
+            "lopinavir_ritonavir",
+            "nevirapine"
+          ],
+          "targetLabel": "HIVプロテアーゼ阻害剤（リトナビル、ダルナビル等）、非ヌクレオシド系逆転写酵素阻害剤（ネビラピン）",
+          "effect": "本剤の作用が弱まるおそれがあります。",
+          "mechanism": "エチニルエストラジオールの血中量（AUC）が減ります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "fluconazole",
+            "voriconazole"
+          ],
+          "targetLabel": "フルコナゾール、ボリコナゾール",
+          "effect": "本剤の血中濃度が上がるおそれがあります。ボリコナゾールでは、ボリコナゾールの血中濃度も上がるおそれがあります。",
+          "mechanism": "これらの薬が本剤を分解する酵素（CYP3A4）を阻害すると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic"
+          ],
+          "targetLabel": "血糖降下剤（インスリン製剤、スルフォニル尿素系製剤、ビグアナイド系製剤等）",
+          "effect": "血糖を下げる薬の効き目が弱まるおそれがあります。血糖値を確認しながら量が調整されます。",
+          "mechanism": "本剤が耐糖能（血糖を処理する力）を低下させると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:potassium_supplement",
+            "class:ace_inhibitor",
+            "class:arb",
+            "class:potassium_sparing_diuretic",
+            "class:nsaid",
+            "enalapril",
+            "candesartan",
+            "spironolactone"
+          ],
+          "targetLabel": "カリウム製剤、ACE阻害剤、アンジオテンシンII受容体拮抗剤、カリウム保持性利尿薬、非ステロイド性消炎鎮痛剤（インドメタシン等）",
+          "effect": "血液中のカリウムが増えすぎる（高カリウム血症）ことがあります。血清カリウム値の確認が必要です。",
+          "mechanism": "これらの薬による血清カリウム上昇と、ドロスピレノンの抗ミネラルコルチコイド作用によると考えられています。腎障害のある方やカリウム値が高い方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "acetaminophen"
+          ],
+          "targetLabel": "アセトアミノフェン",
+          "effect": "本剤の血中濃度が上がり、アセトアミノフェンの血中濃度が下がるおそれがあります。",
+          "mechanism": "お互いの代謝（硫酸抱合・グルクロン酸抱合）に影響すると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lamotrigine",
+            "morphine"
+          ],
+          "targetLabel": "ラモトリギン、モルヒネ、サリチル酸",
+          "effect": "これらの薬の血中濃度が下がるおそれがあります。",
+          "mechanism": "本剤がこれらの薬のグルクロン酸抱合を促進すると考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "st_johns_wort",
+          "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+          "level": "avoid",
+          "effect": "本剤の効果が弱まったり、不正性器出血が起こりやすくなったりするおそれがあります。本剤を飲んでいる間はとらないでください。"
+        },
+        {
+          "item": "smoking",
+          "itemLabel": "喫煙",
+          "level": "avoid",
+          "effect": "喫煙により心筋梗塞などの心血管系の副作用の危険性が高まります。35歳以上で1日15本以上たばこを吸う方は本剤を使えません。服用中は禁煙が勧められます。"
+        }
+      ],
+      "source": {
+        "title": "ヤーズ配合錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/630004_2482011F1020_1_16",
+        "revised": "2026年8月改訂（第2版）"
+      }
+    },
+    {
+      "id": "colchicine",
+      "genericName": "コルヒチン",
+      "displayName": "コルヒチン",
+      "brandNames": [
+        "コルヒチン錠「タカタ」"
+      ],
+      "category": "痛風発作治療薬",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "class:strong_cyp3a4_inhibitor",
+            "atazanavir",
+            "clarithromycin",
+            "itraconazole",
+            "ritonavir",
+            "lopinavir_ritonavir",
+            "nirmatrelvir_ritonavir",
+            "darunavir",
+            "cobicistat",
+            "ensitrelvir",
+            "lonafarnib",
+            "ceritinib"
+          ],
+          "targetLabel": "CYP3A4を強く阻害する薬剤（アタザナビル、クラリスロマイシン、イトラコナゾール、リトナビル含有製剤、ダルナビル含有製剤、コビシスタット含有製剤、エンシトレルビル、ロナファルニブ、セリチニブ等）※肝臓又は腎臓に障害のある方の場合",
+          "effect": "肝臓や腎臓に障害のある方では、本剤の作用が強まることがあるため一緒に使えません。",
+          "mechanism": "本剤を分解する酵素（CYP3A4）が阻害され、本剤の血中濃度が上がることがあります。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "class:p_gp_inhibitor",
+            "cyclosporine"
+          ],
+          "targetLabel": "P糖蛋白を阻害する薬剤（シクロスポリン等）※肝臓又は腎臓に障害のある方の場合",
+          "effect": "肝臓や腎臓に障害のある方では、本剤の作用が強まることがあるため一緒に使えません。",
+          "mechanism": "P糖蛋白の働きが阻害され、本剤の血中濃度が上がることがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:strong_cyp3a4_inhibitor",
+            "atazanavir",
+            "clarithromycin",
+            "itraconazole",
+            "ritonavir",
+            "lopinavir_ritonavir",
+            "nirmatrelvir_ritonavir",
+            "darunavir",
+            "cobicistat",
+            "ensitrelvir",
+            "lonafarnib",
+            "ceritinib",
+            "aprepitant",
+            "diltiazem",
+            "erythromycin",
+            "fluconazole",
+            "fosamprenavir",
+            "verapamil"
+          ],
+          "targetLabel": "CYP3A4を阻害する薬剤（クラリスロマイシン、イトラコナゾール等の強い阻害薬、ジルチアゼム、エリスロマイシン、フルコナゾール、ベラパミル等の中等度阻害薬）※肝臓又は腎臓に障害のない方の場合",
+          "effect": "本剤の作用が強まることがあります。併用する場合は本剤を減らすか少量から始めます。",
+          "mechanism": "本剤を分解する酵素（CYP3A4）が阻害され、本剤の血中濃度が上がることがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:p_gp_inhibitor",
+            "cyclosporine"
+          ],
+          "targetLabel": "P糖蛋白を阻害する薬剤（シクロスポリン等）※肝臓又は腎臓に障害のない方の場合",
+          "effect": "本剤の作用が強まることがあります。併用する場合は本剤を減らすか少量から始めます。",
+          "mechanism": "P糖蛋白の働きが阻害され、本剤の血中濃度が上がることがあります。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "grapefruit",
+          "itemLabel": "グレープフルーツジュース",
+          "level": "caution",
+          "effect": "本剤の作用が強まることがあります。本剤の血中濃度が上がると重い中毒症状が出ることがあるため注意が必要です。"
+        }
+      ],
+      "source": {
+        "title": "コルヒチン錠0.5mg「タカタ」 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400186_3941001F1077_1_11",
+        "revised": "2026年6月改訂（第4版）"
+      }
+    },
+    {
+      "id": "betamethasone",
+      "genericName": "ベタメタゾン",
+      "displayName": "ベタメタゾン",
+      "brandNames": [
+        "リンデロン"
+      ],
+      "category": "副腎皮質ステロイド",
+      "classes": [
+        "corticosteroid"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "desmopressin"
+          ],
+          "targetLabel": "デスモプレシン酢酸塩水和物〔ミニリンメルト〕（男性における夜間多尿による夜間頻尿）",
+          "effect": "低ナトリウム血症（血液中のナトリウムが減りすぎる状態）が起こるおそれがあります。一緒に使えません。",
+          "mechanism": "機序は不明です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "phenobarbital",
+            "phenytoin",
+            "rifampicin"
+          ],
+          "targetLabel": "バルビツール酸誘導体（フェノバルビタール）、フェニトイン、リファンピシン",
+          "effect": "本剤の効き目が弱まることが報告されています。",
+          "mechanism": "これらの薬が薬物代謝酵素（CYP）を増やし、本剤の分解を早めるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "aspirin"
+          ],
+          "targetLabel": "サリチル酸誘導体（アスピリン等）",
+          "effect": "併用中に本剤を減らすと、サリチル酸中毒を起こすことが報告されています。",
+          "mechanism": "本剤がサリチル酸誘導体の排泄と代謝を促進し、その血中濃度を下げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "抗凝血剤（ワルファリンカリウム）",
+          "effect": "ワルファリンの作用が弱まることが報告されています。",
+          "mechanism": "本剤には血液を固まりやすくする作用があるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic",
+            "class:insulin"
+          ],
+          "targetLabel": "糖尿病用薬（ビグアナイド系、スルホニルウレア剤、DPP-4阻害剤、SGLT2阻害剤、インスリン製剤等）",
+          "effect": "糖尿病の薬の効果が弱まることが報告されています。",
+          "mechanism": "本剤が肝臓での糖の産生を促し、体の組織での糖の利用を抑えるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "furosemide",
+            "class:diuretic"
+          ],
+          "targetLabel": "利尿剤（カリウム保持性利尿剤を除く：フロセミド、アセタゾラミド、トリクロルメチアジド等）",
+          "effect": "低カリウム血症があらわれることがあります。",
+          "mechanism": "本剤に尿細管でのカリウム排泄を促す作用があるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cyclosporine"
+          ],
+          "targetLabel": "シクロスポリン",
+          "effect": "ほかのステロイドの大量投与で、シクロスポリンの血中濃度が上がったとの報告があります。",
+          "mechanism": "ステロイドがシクロスポリンの代謝を抑えるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "erythromycin"
+          ],
+          "targetLabel": "エリスロマイシン",
+          "effect": "本剤の作用が強まるとの報告があります。",
+          "mechanism": "本剤の代謝が抑えられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "levofloxacin",
+            "class:quinolone"
+          ],
+          "targetLabel": "キノロン系抗菌剤（レボフロキサシン水和物、メシル酸ガレノキサシン水和物等）",
+          "effect": "腱の障害のリスクが高まるとの報告があります。",
+          "mechanism": "機序は不明です。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "リンデロン錠0.5mg／散0.1%／シロップ0.01% 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/343018_2454004B1040_2_08",
+        "revised": "2026年3月改訂（第4版）"
+      }
+    },
+    {
+      "id": "dexamethasone",
+      "genericName": "デキサメタゾン",
+      "displayName": "デキサメタゾン",
+      "brandNames": [
+        "デカドロン"
+      ],
+      "category": "副腎皮質ステロイド",
+      "classes": [
+        "corticosteroid"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "desmopressin"
+          ],
+          "targetLabel": "デスモプレシン酢酸塩水和物〔ミニリンメルト〕（男性における夜間多尿による夜間頻尿）",
+          "effect": "低ナトリウム血症（血液中のナトリウムが減りすぎる状態）が起こるおそれがあります。一緒に使えません。",
+          "mechanism": "機序は不明です。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "rilpivirine",
+            "rilpivirine_tenofovir_alafenamide_emtricitabine",
+            "dolutegravir_rilpivirine"
+          ],
+          "targetLabel": "リルピビリン〔エジュラント〕、リルピビリン塩酸塩・テノホビル アラフェナミドフマル酸塩・エムトリシタビン〔オデフシィ〕、リルピビリン塩酸塩・ドルテグラビルナトリウム〔ジャルカ〕",
+          "effect": "これらの薬の血中濃度が下がり、効き目が弱まるおそれがあります。一緒に使えません。",
+          "mechanism": "本剤がCYP3A4を増やし、これらの薬の分解を早める可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "imatinib",
+            "eplerenone",
+            "eletriptan",
+            "donepezil"
+          ],
+          "targetLabel": "主にCYP3A4で代謝される薬剤（イマチニブ、エプレレノン、エレトリプタン、ドネペジル等）",
+          "effect": "これらの薬の血中濃度が下がり、効き目が弱まるおそれがあります。",
+          "mechanism": "本剤がCYP3A4を増やし、これらの薬の分解を早める可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:cyp3a4_inducer",
+            "phenobarbital",
+            "rifampicin",
+            "carbamazepine",
+            "phenytoin"
+          ],
+          "targetLabel": "CYP3A4を誘導する薬剤（フェノバルビタール、リファンピシン、カルバマゼピン等）、フェニトイン",
+          "effect": "本剤の効き目が弱まることが報告されています。フェニトインでは、フェニトインの血中濃度が上がったり下がったりしたとの報告もあります。",
+          "mechanism": "これらの薬が薬物代謝酵素（チトクロームP450）を増やし、本剤の分解を早めるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "erythromycin",
+            "class:macrolide",
+            "itraconazole",
+            "class:azole_antifungal"
+          ],
+          "targetLabel": "マクロライド系抗生物質（エリスロマイシン）、アゾール系抗真菌剤（イトラコナゾール）",
+          "effect": "ステロイドの作用が強まるとの報告があります。",
+          "mechanism": "本剤の代謝が妨げられるおそれがあるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cyclosporine"
+          ],
+          "targetLabel": "シクロスポリン",
+          "effect": "ステロイドの大量投与で、シクロスポリンの血中濃度が上がったとの報告があります。",
+          "mechanism": "シクロスポリンの代謝が妨げられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "aspirin"
+          ],
+          "targetLabel": "サリチル酸誘導体（アスピリン等）",
+          "effect": "併用中に本剤を減らすと、サリチル酸中毒を起こすことが報告されています。",
+          "mechanism": "本剤がサリチル酸誘導体の排泄と代謝を促進し、その血中濃度を下げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "抗凝血剤（ワルファリンカリウム）",
+          "effect": "ワルファリンの作用が弱まることが報告されています。",
+          "mechanism": "本剤には血液を固まりやすくする作用があるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic",
+            "class:insulin"
+          ],
+          "targetLabel": "糖尿病用薬（ビグアナイド系、スルホニルウレア剤、DPP-4阻害剤、SGLT2阻害剤、インスリン製剤等）",
+          "effect": "糖尿病の薬の効果が弱まることが報告されています。",
+          "mechanism": "本剤が肝臓での糖の産生を促し、体の組織での糖の利用を抑えるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antihypertensive"
+          ],
+          "targetLabel": "血圧降下剤",
+          "effect": "血圧を下げる薬の作用が弱まるおそれがあります。",
+          "mechanism": "機序は不明です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "furosemide",
+            "class:diuretic"
+          ],
+          "targetLabel": "利尿剤（カリウム保持性利尿剤を除く：トリクロルメチアジド、フロセミド）",
+          "effect": "利尿薬の作用が弱まるおそれがあります。また、低カリウム血症があらわれることがあります。",
+          "mechanism": "本剤に尿細管でのカリウム排泄を促す作用があるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "デカドロン錠0.5mg／4mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/530169_2454002F1183_3_18",
+        "revised": "2026年4月改訂（第5版）"
+      }
+    },
+    {
+      "id": "tranexamic_acid",
+      "genericName": "トラネキサム酸",
+      "displayName": "トラネキサム酸",
+      "brandNames": [
+        "トランサミン"
+      ],
+      "category": "止血薬（抗プラスミン薬）",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "thrombin"
+          ],
+          "targetLabel": "トロンビン",
+          "effect": "血栓ができやすくなるおそれがあります。一緒に使えません。",
+          "mechanism": "トロンビンの血栓をつくる作用に本剤が加わり、血栓ができやすくなるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "hemocoagulase"
+          ],
+          "targetLabel": "ヘモコアグラーゼ",
+          "effect": "大量に併用すると血栓ができやすくなるおそれがあります。",
+          "mechanism": "ヘモコアグラーゼでできた血の塊が、本剤の作用で長く残るおそれがあるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "batroxobin"
+          ],
+          "targetLabel": "バトロキソビン",
+          "effect": "血栓・塞栓症を起こすおそれがあります。",
+          "mechanism": "バトロキソビンでできるフィブリンの分解を本剤が妨げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "eptacog_alfa"
+          ],
+          "targetLabel": "凝固因子製剤（エプタコグアルファ等）",
+          "effect": "口の中など、血栓を溶かす働きが強い部位で血液が固まりやすくなるおそれがあります。",
+          "mechanism": "凝固因子製剤は血液を固める仕組みを活性化し、本剤は血栓を溶かす仕組みを抑えるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "トランサミン錠250mg／500mg・カプセル250mg・散50% 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/430574_3327002B1027_2_07",
+        "revised": "2023年1月改訂（第1版）"
+      }
+    },
+    {
+      "id": "carbazochrome",
+      "genericName": "カルバゾクロムスルホン酸ナトリウム水和物",
+      "displayName": "カルバゾクロム",
+      "brandNames": [
+        "アドナ"
+      ],
+      "category": "止血薬（血管強化薬）",
+      "classes": [],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "アドナ錠10mg／30mg・散10％ 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/530100_3321002B1139_3_01",
+        "revised": "2025年4月作成（第1版）"
+      }
+    },
+    {
+      "id": "kampo_kakkonto",
+      "genericName": "葛根湯エキス",
+      "displayName": "葛根湯",
+      "brandNames": [
+        "ツムラ葛根湯エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing",
+        "ephedra_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:ephedra_containing"
+          ],
+          "targetLabel": "マオウ含有製剤（小青竜湯、麻黄湯、麻黄附子細辛湯 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "ephedrine",
+            "methylephedrine",
+            "fexofenadine_pseudoephedrine"
+          ],
+          "targetLabel": "エフェドリン類含有製剤（エフェドリン塩酸塩、dl-メチルエフェドリン塩酸塩、フェキソフェナジン塩酸塩・塩酸プソイドエフェドリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:maoi",
+            "selegiline",
+            "rasagiline"
+          ],
+          "targetLabel": "モノアミン酸化酵素（MAO）阻害剤（セレギリン塩酸塩、ラサギリンメシル酸塩 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "levothyroxine",
+            "liothyronine",
+            "class:thyroid_hormone"
+          ],
+          "targetLabel": "甲状腺製剤（チロキシン、リオチロニン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:catecholamine",
+            "epinephrine",
+            "isoprenaline"
+          ],
+          "targetLabel": "カテコールアミン製剤（アドレナリン、イソプレナリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline",
+            "class:xanthine"
+          ],
+          "targetLabel": "キサンチン系製剤（テオフィリン、ジプロフィリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（芍薬甘草湯、補中益気湯、抑肝散 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ葛根湯エキス顆粒（医療用）（ツムラ1）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200013D1123_1_14",
+        "revised": "2026年8月改訂（第2版）"
+      }
+    },
+    {
+      "id": "kampo_shakuyakukanzoto",
+      "genericName": "芍薬甘草湯エキス",
+      "displayName": "芍薬甘草湯",
+      "brandNames": [
+        "ツムラ芍薬甘草湯エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（補中益気湯、抑肝散、六君子湯 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "furosemide",
+            "azosemide",
+            "torasemide",
+            "class:diuretic"
+          ],
+          "targetLabel": "ループ系利尿剤（アゾセミド、トラセミド、フロセミド 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "グリチルリチン酸と利尿剤のどちらにも尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "trichlormethiazide",
+            "hydrochlorothiazide",
+            "class:thiazide_diuretic"
+          ],
+          "targetLabel": "チアジド系利尿剤（トリクロルメチアジド、ヒドロクロロチアジド、ベンチルヒドロクロロチアジド 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "グリチルリチン酸と利尿剤のどちらにも尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ芍薬甘草湯エキス顆粒（医療用）（ツムラ68）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200067D1049_1_16",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_yokukansan",
+      "genericName": "抑肝散エキス",
+      "displayName": "抑肝散",
+      "brandNames": [
+        "ツムラ抑肝散エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（芍薬甘草湯、補中益気湯、六君子湯 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ抑肝散エキス顆粒（医療用）（ツムラ54）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200139D1037_1_19",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_daikenchuto",
+      "genericName": "大建中湯エキス",
+      "displayName": "大建中湯",
+      "brandNames": [
+        "ツムラ大建中湯エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [],
+      "interactions": [],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ大建中湯エキス顆粒（医療用）（ツムラ100）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200092D1020_1_20",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_rikkunshito",
+      "genericName": "六君子湯エキス",
+      "displayName": "六君子湯",
+      "brandNames": [
+        "ツムラ六君子湯エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（芍薬甘草湯、補中益気湯、抑肝散 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ六君子湯エキス顆粒（医療用）（ツムラ43）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200141D1034_1_15",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_maoto",
+      "genericName": "麻黄湯エキス",
+      "displayName": "麻黄湯",
+      "brandNames": [
+        "ツムラ麻黄湯エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing",
+        "ephedra_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:ephedra_containing"
+          ],
+          "targetLabel": "マオウ含有製剤（葛根湯、小青竜湯、麻黄附子細辛湯 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "ephedrine",
+            "methylephedrine",
+            "fexofenadine_pseudoephedrine"
+          ],
+          "targetLabel": "エフェドリン類含有製剤（エフェドリン塩酸塩、dl-メチルエフェドリン塩酸塩、フェキソフェナジン塩酸塩・塩酸プソイドエフェドリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:maoi",
+            "selegiline",
+            "rasagiline"
+          ],
+          "targetLabel": "モノアミン酸化酵素（MAO）阻害剤（セレギリン塩酸塩、ラサギリンメシル酸塩 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "levothyroxine",
+            "liothyronine",
+            "class:thyroid_hormone"
+          ],
+          "targetLabel": "甲状腺製剤（チロキシン、リオチロニン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:catecholamine",
+            "epinephrine",
+            "isoprenaline"
+          ],
+          "targetLabel": "カテコールアミン製剤（アドレナリン、イソプレナリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline",
+            "class:xanthine"
+          ],
+          "targetLabel": "キサンチン系製剤（テオフィリン、ジプロフィリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（芍薬甘草湯、補中益気湯、抑肝散 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ麻黄湯エキス顆粒（医療用）（ツムラ27）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200132D1035_1_12",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_shoseiryuto",
+      "genericName": "小青竜湯エキス",
+      "displayName": "小青竜湯",
+      "brandNames": [
+        "ツムラ小青竜湯エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing",
+        "ephedra_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:ephedra_containing"
+          ],
+          "targetLabel": "マオウ含有製剤（葛根湯、麻黄湯、麻黄附子細辛湯 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "ephedrine",
+            "methylephedrine",
+            "fexofenadine_pseudoephedrine"
+          ],
+          "targetLabel": "エフェドリン類含有製剤（エフェドリン塩酸塩、dl-メチルエフェドリン塩酸塩、フェキソフェナジン塩酸塩・塩酸プソイドエフェドリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:maoi",
+            "selegiline",
+            "rasagiline"
+          ],
+          "targetLabel": "モノアミン酸化酵素（MAO）阻害剤（セレギリン塩酸塩、ラサギリンメシル酸塩 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "levothyroxine",
+            "liothyronine",
+            "class:thyroid_hormone"
+          ],
+          "targetLabel": "甲状腺製剤（チロキシン、リオチロニン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:catecholamine",
+            "epinephrine",
+            "isoprenaline"
+          ],
+          "targetLabel": "カテコールアミン製剤（アドレナリン、イソプレナリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline",
+            "class:xanthine"
+          ],
+          "targetLabel": "キサンチン系製剤（テオフィリン、ジプロフィリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（芍薬甘草湯、補中益気湯、抑肝散 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "furosemide",
+            "azosemide",
+            "torasemide",
+            "class:diuretic"
+          ],
+          "targetLabel": "ループ系利尿剤（アゾセミド、トラセミド、フロセミド 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "グリチルリチン酸と利尿剤のどちらにも尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "trichlormethiazide",
+            "hydrochlorothiazide",
+            "class:thiazide_diuretic"
+          ],
+          "targetLabel": "チアジド系利尿剤（トリクロルメチアジド、ヒドロクロロチアジド、ベンチルヒドロクロロチアジド 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "グリチルリチン酸と利尿剤のどちらにも尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ小青竜湯エキス顆粒（医療用）（ツムラ19）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200075D1086_1_17",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_bofutsushosan",
+      "genericName": "防風通聖散エキス",
+      "displayName": "防風通聖散",
+      "brandNames": [
+        "ツムラ防風通聖散エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing",
+        "ephedra_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:ephedra_containing"
+          ],
+          "targetLabel": "マオウ含有製剤（葛根湯、小青竜湯、麻黄湯 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "ephedrine",
+            "methylephedrine",
+            "fexofenadine_pseudoephedrine"
+          ],
+          "targetLabel": "エフェドリン類含有製剤（エフェドリン塩酸塩、dl-メチルエフェドリン塩酸塩、フェキソフェナジン塩酸塩・塩酸プソイドエフェドリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:maoi",
+            "selegiline",
+            "rasagiline"
+          ],
+          "targetLabel": "モノアミン酸化酵素（MAO）阻害剤（セレギリン塩酸塩、ラサギリンメシル酸塩 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "levothyroxine",
+            "liothyronine",
+            "class:thyroid_hormone"
+          ],
+          "targetLabel": "甲状腺製剤（チロキシン、リオチロニン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:catecholamine",
+            "epinephrine",
+            "isoprenaline"
+          ],
+          "targetLabel": "カテコールアミン製剤（アドレナリン、イソプレナリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline",
+            "class:xanthine"
+          ],
+          "targetLabel": "キサンチン系製剤（テオフィリン、ジプロフィリン 等）",
+          "effect": "眠れない、汗が多く出る、脈が速くなる、動悸、全身のだるさ、気持ちが高ぶるなどの症状が出やすくなります。必要に応じて量が減らされます。",
+          "mechanism": "交感神経を刺激する作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（芍薬甘草湯、補中益気湯、抑肝散 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ防風通聖散エキス顆粒（医療用）（ツムラ62）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200130D1060_1_18",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_kamishoyosan",
+      "genericName": "加味逍遙散エキス",
+      "displayName": "加味逍遙散",
+      "brandNames": [
+        "ツムラ加味逍遙散エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（芍薬甘草湯、補中益気湯、抑肝散 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ加味逍遙散エキス顆粒（医療用）（ツムラ24）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200017D1083_1_13",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_tokishakuyakusan",
+      "genericName": "当帰芍薬散エキス",
+      "displayName": "当帰芍薬散",
+      "brandNames": [
+        "ツムラ当帰芍薬散エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [],
+      "interactions": [],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ当帰芍薬散エキス顆粒（医療用）（ツムラ23）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200111D1076_1_12",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_goreisan",
+      "genericName": "五苓散エキス",
+      "displayName": "五苓散",
+      "brandNames": [
+        "ツムラ五苓散エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [],
+      "interactions": [],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ五苓散エキス顆粒（医療用）（ツムラ17）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200048D1070_1_11",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_hochuekkito",
+      "genericName": "補中益気湯エキス",
+      "displayName": "補中益気湯",
+      "brandNames": [
+        "ツムラ補中益気湯エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（芍薬甘草湯、抑肝散、六君子湯 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ補中益気湯エキス顆粒（医療用）（ツムラ41）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200131D1065_1_17",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_hangekobokuto",
+      "genericName": "半夏厚朴湯エキス",
+      "displayName": "半夏厚朴湯",
+      "brandNames": [
+        "ツムラ半夏厚朴湯エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [],
+      "interactions": [],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ半夏厚朴湯エキス顆粒（医療用）（ツムラ16）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200122D1074_1_09",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "kampo_bakumondoto",
+      "genericName": "麦門冬湯エキス",
+      "displayName": "麦門冬湯",
+      "brandNames": [
+        "ツムラ麦門冬湯エキス顆粒（医療用）"
+      ],
+      "category": "漢方薬",
+      "classes": [
+        "licorice_containing"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:licorice_containing"
+          ],
+          "targetLabel": "カンゾウ含有製剤（芍薬甘草湯、補中益気湯、抑肝散 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "glycyrrhizin"
+          ],
+          "targetLabel": "グリチルリチン酸及びその塩類を含有する製剤（グリチルリチン酸一アンモニウム・グリシン・L-システイン 等）",
+          "effect": "偽アルドステロン症（むくみ、血圧上昇、体のカリウム不足など）があらわれやすくなります。また、カリウム不足の結果、ミオパチー（手足のだるさ・力が入らない等の筋肉の障害）があらわれやすくなります。",
+          "mechanism": "甘草に含まれるグリチルリチン酸には尿細管でカリウム排泄を促す作用があり、血清カリウム値の低下が進むと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "other",
+          "itemLabel": "飲むタイミング（食前・食間）",
+          "level": "caution",
+          "effect": "この薬は食前（食事の前）または食間（食事と食事の間、食後約2時間）に飲む薬です。医師の指示どおりに飲んでください。"
+        }
+      ],
+      "source": {
+        "title": "ツムラ麦門冬湯エキス顆粒（医療用）（ツムラ29）添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/460026_5200119D1030_1_17",
+        "revised": "2023年12月改訂（第1版）"
+      }
+    }
+  ]
+}

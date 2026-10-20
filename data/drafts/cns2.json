@@ -1,0 +1,2920 @@
+{
+ "version": "2026-10-20",
+ "drugs": [
+  {
+   "id": "diclofenac",
+   "genericName": "ジクロフェナクナトリウム",
+   "displayName": "ジクロフェナク",
+   "brandNames": [
+    "ボルタレン"
+   ],
+   "category": "解熱鎮痛薬（NSAID）",
+   "classes": [
+    "nsaid"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "triamterene"
+     ],
+     "targetLabel": "トリアムテレン（トリテレン）",
+     "effect": "腎臓に急な障害（急性腎障害）が起きたとの報告があるため、一緒に使えません。",
+     "mechanism": "この薬が腎臓のプロスタグランジンを作るのを抑え、トリアムテレンによる腎機能障害を強めると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin",
+      "clopidogrel",
+      "class:anticoagulant",
+      "class:antiplatelet"
+     ],
+     "targetLabel": "抗凝血剤及び抗血小板薬（ワルファリン、レビパリン、クロピドグレル、エノキサパリン等）、デフィブロチド",
+     "effect": "出血しやすくなるとの報告があります。血液の検査などで確認します。",
+     "mechanism": "この薬の血小板の働きを抑える作用と相手の薬の作用が重なるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "levofloxacin",
+      "class:quinolone"
+     ],
+     "targetLabel": "ニューキノロン系抗菌剤（レボフロキサシン等）",
+     "effect": "けいれんが起こるおそれがあります。",
+     "mechanism": "ニューキノロン系抗菌剤による脳内のGABA受容体の阻害が、ある種のNSAIDとの併用で強まることが動物で報告されている。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lithium",
+      "digoxin",
+      "class:digitalis",
+      "methotrexate"
+     ],
+     "targetLabel": "リチウム、強心配糖体（ジゴキシン等）、メトトレキサート",
+     "effect": "相手の薬の血中濃度が上がり、作用が強まることがあります。必要に応じて量が調整されます。",
+     "mechanism": "この薬が腎臓のプロスタグランジンを作るのを抑え、相手の薬が腎臓から出にくくなるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "aspirin",
+      "class:nsaid",
+      "prednisolone",
+      "class:corticosteroid"
+     ],
+     "targetLabel": "アスピリン、非ステロイド性消炎鎮痛剤、副腎皮質ステロイド剤（プレドニゾロン等）",
+     "effect": "胃腸障害などの副作用が強まることがあります。アスピリンとはお互いの作用が弱まることもあります。",
+     "mechanism": "どちらの薬も胃腸を傷つける作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:antihypertensive",
+      "class:beta_blocker",
+      "class:ace_inhibitor",
+      "class:arb"
+     ],
+     "targetLabel": "降圧剤（β-遮断剤、ACE阻害剤、アンジオテンシンⅡ受容体拮抗剤等）",
+     "effect": "血圧を下げる作用が弱まることがあります。また、腎臓の働きが悪くなるおそれがあります（特に高齢の方）。",
+     "mechanism": "この薬が腎臓のプロスタグランジンを作るのを抑え、腎血流量が低下するなどのため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "hydrochlorothiazide",
+      "furosemide",
+      "class:diuretic",
+      "spironolactone",
+      "eplerenone",
+      "class:potassium_sparing_diuretic"
+     ],
+     "targetLabel": "利尿剤（ヒドロクロロチアジド、フロセミド等）、カリウム保持性利尿剤（スピロノラクトン等）、エプレレノン",
+     "effect": "利尿薬の作用が弱まることがあります。カリウム保持性利尿剤では、腎臓の悪い方で血液中のカリウムが高くなるおそれがあります。",
+     "mechanism": "この薬が腎臓のプロスタグランジンを作るのを抑えるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "fluvoxamine",
+      "paroxetine",
+      "class:ssri"
+     ],
+     "targetLabel": "選択的セロトニン再取り込み阻害剤（SSRI）（フルボキサミン、パロキセチン）",
+     "effect": "胃腸からの出血が起こることがあります。",
+     "mechanism": "SSRIにより血小板の凝集が妨げられ、出血傾向が強まると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "voriconazole"
+     ],
+     "targetLabel": "CYP2C9を阻害する薬剤（ボリコナゾール等）",
+     "effect": "この薬の血中濃度が上がることがあります。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP2C9）を阻害するため。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "ボルタレン錠25mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/300242_1147002F1560_1_11",
+    "revised": "2024年10月改訂（第2版）"
+   }
+  },
+  {
+   "id": "ibuprofen",
+   "genericName": "イブプロフェン",
+   "displayName": "イブプロフェン",
+   "brandNames": [
+    "ブルフェン"
+   ],
+   "category": "解熱鎮痛薬（NSAID）",
+   "classes": [
+    "nsaid"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "zidovudine"
+     ],
+     "targetLabel": "ジドブジン（レトロビル）",
+     "effect": "血友病の患者さんで出血しやすくなったとの報告があるため、一緒に使えません。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin"
+     ],
+     "targetLabel": "クマリン系抗凝血剤（ワルファリン）",
+     "effect": "ワルファリンの作用が強まるおそれがあります。必要に応じて量が調整されます。",
+     "mechanism": "ワルファリンと血液中のたんぱく質への結合を奪い合い、作用するワルファリンが増えるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "aspirin"
+     ],
+     "targetLabel": "アスピリン製剤（抗血小板剤として投与している場合）",
+     "effect": "アスピリンの血液を固まりにくくする作用が弱まるとの報告があります。",
+     "mechanism": "アスピリンが血小板のCOX-1に結合するのを妨げるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin",
+      "clopidogrel",
+      "class:anticoagulant",
+      "class:antiplatelet",
+      "fluvoxamine",
+      "paroxetine",
+      "class:ssri"
+     ],
+     "targetLabel": "抗凝血剤（ワルファリン等）、抗血小板剤（クロピドグレル等）、選択的セロトニン再取り込み阻害剤（SSRI）（フルボキサミン、パロキセチン等）",
+     "effect": "胃腸からの出血が起こりやすくなるおそれがあります。",
+     "mechanism": "お互いの作用を強めると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lithium"
+     ],
+     "targetLabel": "リチウム製剤（炭酸リチウム）",
+     "effect": "リチウムの血中濃度が上がり、リチウム中毒を起こしたとの報告があります。血中濃度の確認が必要です。",
+     "mechanism": "腎臓でのナトリウム排泄が減り、リチウムが体から出にくくなるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "hydrochlorothiazide",
+      "furosemide",
+      "class:thiazide_diuretic",
+      "class:diuretic"
+     ],
+     "targetLabel": "チアジド系利尿薬（ヒドロクロロチアジド）、ループ利尿薬（フロセミド）",
+     "effect": "利尿薬の作用が弱まるとの報告があります。",
+     "mechanism": "水分やナトリウムが体にたまりやすくなるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "enalapril",
+      "class:ace_inhibitor",
+      "class:beta_blocker"
+     ],
+     "targetLabel": "ACE阻害剤（エナラプリル等）、β遮断剤（プロプラノロール等）",
+     "effect": "血圧を下げる作用が弱まるおそれがあります。",
+     "mechanism": "血管を広げる作用や水・ナトリウムの排泄が抑えられるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "levofloxacin",
+      "class:quinolone"
+     ],
+     "targetLabel": "ニューキノロン系抗菌剤（エノキサシン水和物等）",
+     "effect": "ほかのNSAIDとの併用で、けいれんが起きたとの報告があります。",
+     "mechanism": "ニューキノロン系抗菌剤のGABA阻害作用が強まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "methotrexate"
+     ],
+     "targetLabel": "メトトレキサート",
+     "effect": "メトトレキサートの作用が強まるおそれがあります。必要に応じて量が調整されます。",
+     "mechanism": "腎血流が減り、メトトレキサートが腎臓から出にくくなるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:sulfonylurea"
+     ],
+     "targetLabel": "スルホニル尿素系血糖降下剤（クロルプロパミド、グリベンクラミド等）",
+     "effect": "血糖が下がりすぎる（低血糖）ことがあります。",
+     "mechanism": "血液中のたんぱく質への結合を奪い合い、作用する薬が増えるため。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "ブルフェン錠100／ブルフェン錠200／ブルフェン顆粒20% 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/200022_1149001D1160_1_12",
+    "revised": "2024年10月改訂（第2版）"
+   }
+  },
+  {
+   "id": "meloxicam",
+   "genericName": "メロキシカム",
+   "displayName": "メロキシカム",
+   "brandNames": [
+    "モービック"
+   ],
+   "category": "解熱鎮痛薬（NSAID）",
+   "classes": [
+    "nsaid"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin",
+      "dabigatran",
+      "class:anticoagulant"
+     ],
+     "targetLabel": "抗凝固剤（ダビガトランエテキシラート等のトロンビン阻害剤、ワルファリン等のクマリン系抗凝血剤、ヘパリン）",
+     "effect": "出血しやすくなるおそれがあります。血液の検査などで確認します。",
+     "mechanism": "相手の薬が血液を固まりにくくする作用をもつため。ワルファリンとはCYP2C9による代謝でも影響し合うおそれがある。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "ticlopidine",
+      "class:antiplatelet",
+      "class:thrombolytic"
+     ],
+     "targetLabel": "抗血小板剤（チクロピジン）、血栓溶解剤",
+     "effect": "出血しやすくなるおそれがあります。",
+     "mechanism": "相手の薬が血小板の凝集を抑える・血栓を溶かす作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:ssri"
+     ],
+     "targetLabel": "選択的セロトニン再取り込み阻害剤",
+     "effect": "出血しやすくなるおそれがあります。",
+     "mechanism": "SSRIは血小板の凝集を抑える作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:corticosteroid",
+      "class:nsaid",
+      "aspirin"
+     ],
+     "targetLabel": "プロスタグランジン合成阻害剤（糖質コルチコイド、他の非ステロイド性消炎鎮痛剤、サリチル酸塩（アスピリンを含む））",
+     "effect": "胃潰瘍や胃腸からの出血のリスクが高まる可能性があります。",
+     "mechanism": "どちらもプロスタグランジンを作るのを抑える作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:ace_inhibitor",
+      "class:arb"
+     ],
+     "targetLabel": "ACE阻害薬、アンジオテンシンⅡ受容体拮抗剤",
+     "effect": "腎臓の働きが悪い方では、急な腎障害を起こす可能性があります。",
+     "mechanism": "腎血流量が低下するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:antihypertensive",
+      "class:diuretic"
+     ],
+     "targetLabel": "降圧薬（β受容体遮断薬、ACE阻害薬、血管拡張薬、利尿剤等）、利尿剤",
+     "effect": "血圧を下げる作用が弱まることがあります。利尿剤を使っている方では急な腎障害を起こすおそれがあります。",
+     "mechanism": "プロスタグランジンを作るのを抑え、腎血流量の低下や水・ナトリウムの貯留が起こるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lithium"
+     ],
+     "targetLabel": "リチウム",
+     "effect": "リチウムの血中濃度が上がります。血中濃度の確認が必要です。",
+     "mechanism": "リチウムが腎臓から出にくくなるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "methotrexate"
+     ],
+     "targetLabel": "メトトレキサート",
+     "effect": "メトトレキサートによる血液の障害が悪化するおそれがあります。血液検査で確認します。",
+     "mechanism": "メトトレキサートの腎臓からの排泄が抑えられるため。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "モービック錠5mg／モービック錠10mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/650168_1149035F1020_1_19",
+    "revised": "2025年4月改訂（第4版）"
+   }
+  },
+  {
+   "id": "tramadol",
+   "genericName": "トラマドール塩酸塩",
+   "displayName": "トラマドール",
+   "brandNames": [
+    "トラマール"
+   ],
+   "category": "鎮痛薬（オピオイド）",
+   "classes": [
+    "opioid",
+    "serotonergic",
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "selegiline",
+      "rasagiline",
+      "safinamide",
+      "class:maoi"
+     ],
+     "targetLabel": "MAO阻害剤（セレギリン塩酸塩〈エフピー〉、ラサギリンメシル酸塩〈アジレクト〉、サフィナミドメシル酸塩〈エクフィナ〉）",
+     "effect": "セロトニン症候群（混乱、興奮、発熱、発汗など）や呼吸・血圧などの重い副作用が報告されているため、一緒に使えません。MAO阻害剤の中止後14日以内も使えません。",
+     "mechanism": "作用が重なり、脳内にセロトニンがたまると考えられる。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "nalmefene"
+     ],
+     "targetLabel": "ナルメフェン塩酸塩（セリンクロ）",
+     "effect": "離脱症状が起きたり、痛み止めの効果が弱まったりするおそれがあるため、一緒に使えません。ナルメフェンの中止後1週間以内も使えません。",
+     "mechanism": "ナルメフェンがこの薬の作用するμオピオイド受容体をふさぐため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:opioid",
+      "class:cns_depressant",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "オピオイド鎮痛剤、中枢神経抑制剤（フェノチアジン系薬剤、催眠鎮静剤等）",
+     "effect": "けいれんが起こりやすくなったり、呼吸が弱くなったりするおそれがあります。",
+     "mechanism": "作用が重なって強まると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:tricyclic_antidepressant",
+      "class:serotonergic",
+      "class:ssri"
+     ],
+     "targetLabel": "三環系抗うつ剤、セロトニン作用薬（選択的セロトニン再取り込み阻害剤（SSRI）等）",
+     "effect": "セロトニン症候群（混乱、興奮、発熱、発汗、ふるえ、下痢など）が起こるおそれがあります。けいれんの危険も高まるおそれがあります。",
+     "mechanism": "作用が重なり、脳内にセロトニンがたまると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "linezolid",
+      "methylthioninium"
+     ],
+     "targetLabel": "リネゾリド、メチルチオニニウム塩化物水和物（メチレンブルー）",
+     "effect": "セロトニン症候群（混乱、興奮、発熱、発汗など）が起こるおそれがあります。",
+     "mechanism": "相手の薬のMAO阻害作用によりセロトニンの作用が強まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin"
+     ],
+     "targetLabel": "クマリン系抗凝血剤（ワルファリン）",
+     "effect": "出血しやすくなる（血液が固まるまでの時間が延びる）との報告があります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "digoxin"
+     ],
+     "targetLabel": "ジゴキシン",
+     "effect": "ジゴキシン中毒が起きたとの報告があります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "buprenorphine",
+      "pentazocine"
+     ],
+     "targetLabel": "ブプレノルフィン、ペンタゾシン等",
+     "effect": "この薬の痛み止めの効果が弱まったり、離脱症状が出たりするおそれがあります。",
+     "mechanism": "相手の薬がμオピオイド受容体の部分作動薬であるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine"
+     ],
+     "targetLabel": "カルバマゼピン",
+     "effect": "この薬の痛み止めの効果が弱まり、効いている時間が短くなる可能性があります。",
+     "mechanism": "この薬を分解する酵素が誘導されるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "呼吸が弱くなるおそれがあります。服用中はお酒を控えてください。"
+    }
+   ],
+   "source": {
+    "title": "トラマールOD錠25mg／トラマールOD錠50mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/530263_1149038F1024_1_12",
+    "revised": "2024年6月改訂（第3版）"
+   }
+  },
+  {
+   "id": "tramadol_acetaminophen",
+   "genericName": "トラマドール塩酸塩・アセトアミノフェン",
+   "displayName": "トラマドール・アセトアミノフェン",
+   "brandNames": [
+    "トラムセット"
+   ],
+   "category": "鎮痛薬（オピオイド・アセトアミノフェン配合）",
+   "classes": [
+    "opioid",
+    "serotonergic",
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "acetaminophen",
+      "tramadol"
+     ],
+     "targetLabel": "トラマドール又はアセトアミノフェンを含む他の薬剤（一般用医薬品を含む）〔警告1.2〕",
+     "effect": "成分を飲みすぎること（過量投与）になるおそれがあるため、一緒に使うのを避けてください。カロナールや市販のかぜ薬・解熱鎮痛薬など、アセトアミノフェンを含む薬に注意してください。",
+     "mechanism": "本剤にトラマドールとアセトアミノフェンが含まれているため、合計量が多くなる。アセトアミノフェンは高用量で重い肝障害を起こすおそれがある（警告1.1）。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "selegiline",
+      "rasagiline",
+      "safinamide",
+      "class:maoi"
+     ],
+     "targetLabel": "MAO阻害剤（セレギリン塩酸塩〈エフピー〉、ラサギリンメシル酸塩〈アジレクト〉、サフィナミドメシル酸塩〈エクフィナ〉）",
+     "effect": "セロトニン症候群（混乱、興奮、発熱、発汗など）や呼吸・血圧などの重い副作用が報告されているため、一緒に使えません。MAO阻害剤の中止後14日以内も使えません。",
+     "mechanism": "作用が重なり、脳内にセロトニンがたまると考えられる。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "nalmefene"
+     ],
+     "targetLabel": "ナルメフェン塩酸塩（セリンクロ）",
+     "effect": "離脱症状が起きたり、痛み止めの効果が弱まったりするおそれがあるため、一緒に使えません。ナルメフェンの中止後1週間以内も使えません。",
+     "mechanism": "ナルメフェンがこの薬の作用するμオピオイド受容体をふさぐため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:opioid",
+      "class:cns_depressant",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "オピオイド鎮痛剤、中枢神経抑制剤（フェノチアジン系薬剤、催眠鎮静剤等）",
+     "effect": "けいれんが起こりやすくなったり、呼吸が弱くなったりするおそれがあります。",
+     "mechanism": "作用が重なって強まると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:tricyclic_antidepressant",
+      "class:serotonergic",
+      "class:ssri"
+     ],
+     "targetLabel": "三環系抗うつ剤、セロトニン作用薬（選択的セロトニン再取り込み阻害剤（SSRI）等）",
+     "effect": "セロトニン症候群（混乱、興奮、発熱、発汗、ふるえ、下痢など）が起こるおそれがあります。けいれんの危険も高まるおそれがあります。",
+     "mechanism": "作用が重なり、脳内にセロトニンがたまると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "linezolid",
+      "methylthioninium"
+     ],
+     "targetLabel": "リネゾリド、メチルチオニニウム塩化物水和物（メチレンブルー）",
+     "effect": "セロトニン症候群（混乱、興奮、発熱、発汗など）が起こるおそれがあります。",
+     "mechanism": "相手の薬のMAO阻害作用によりセロトニンの作用が強まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin"
+     ],
+     "targetLabel": "クマリン系抗凝血剤（ワルファリン）",
+     "effect": "出血しやすくなる（血液が固まるまでの時間が延びる）との報告があります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "digoxin"
+     ],
+     "targetLabel": "ジゴキシン",
+     "effect": "ジゴキシン中毒が起きたとの報告があります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "buprenorphine",
+      "pentazocine"
+     ],
+     "targetLabel": "ブプレノルフィン、ペンタゾシン等",
+     "effect": "この薬の痛み止めの効果が弱まったり、離脱症状が出たりするおそれがあります。",
+     "mechanism": "相手の薬がμオピオイド受容体の部分作動薬であるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine",
+      "phenobarbital",
+      "phenytoin",
+      "primidone",
+      "rifampicin",
+      "isoniazid",
+      "class:cyp3a4_inducer"
+     ],
+     "targetLabel": "カルバマゼピン、フェノバルビタール、フェニトイン、プリミドン、リファンピシン、イソニアジド",
+     "effect": "トラマドールの効きが弱まる可能性があります。長く使っている方では、アセトアミノフェンによる肝障害が起こりやすくなるとの報告があります。",
+     "mechanism": "相手の薬が肝臓の代謝酵素を誘導し、トラマドールの分解や、アセトアミノフェンから肝臓に有害な物質への変化が進むため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "呼吸が弱くなるおそれがあります。また、お酒をたくさん飲む習慣のある方では肝臓の障害が起こりやすくなります。服用中はお酒を控えてください。"
+    }
+   ],
+   "source": {
+    "title": "トラムセット配合錠 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/800155_1149117F1020_1_26",
+    "revised": "2026年8月改訂（第7版）"
+   }
+  },
+  {
+   "id": "pregabalin",
+   "genericName": "プレガバリン",
+   "displayName": "プレガバリン",
+   "brandNames": [
+    "リリカ"
+   ],
+   "category": "神経障害性疼痛治療薬",
+   "classes": [
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:opioid",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "中枢神経抑制剤、オピオイド系鎮痛剤",
+     "effect": "呼吸が弱くなる（呼吸不全）、意識がなくなる（昏睡）などがみられたとの報告があります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "oxycodone",
+      "lorazepam"
+     ],
+     "targetLabel": "オキシコドン、ロラゼパム",
+     "effect": "考える力や体の動きが低下する副作用が強まるおそれがあります。",
+     "mechanism": "作用が重なるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "enalapril",
+      "class:ace_inhibitor"
+     ],
+     "targetLabel": "血管浮腫を引き起こす薬剤（アンジオテンシン変換酵素阻害薬等）",
+     "effect": "顔・口・首などが腫れる血管浮腫が起こるリスクが高まるおそれがあります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "pioglitazone"
+     ],
+     "targetLabel": "末梢性浮腫を引き起こす薬剤（チアゾリジン系薬剤等）",
+     "effect": "手足のむくみが起こりやすくなるおそれがあります。チアゾリジン系薬剤では心不全が起きたり悪化したりすることもあります。",
+     "mechanism": "機序は分かっていない。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "caution",
+     "effect": "考える力や体の動きが低下する副作用が強まるおそれがあります。"
+    }
+   ],
+   "source": {
+    "title": "リリカカプセル25mg／75mg／150mg、リリカOD錠25mg／75mg／150mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/671450_1190017F1029_3_07",
+    "revised": "2025年12月改訂（第8版）"
+   }
+  },
+  {
+   "id": "mirogabalin",
+   "genericName": "ミロガバリンベシル酸塩",
+   "displayName": "ミロガバリン",
+   "brandNames": [
+    "タリージェ"
+   ],
+   "category": "神経障害性疼痛治療薬",
+   "classes": [
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "probenecid"
+     ],
+     "targetLabel": "プロベネシド",
+     "effect": "この薬の作用が強まるおそれがあります。",
+     "mechanism": "プロベネシドがこの薬の排泄・代謝にかかわるOAT1・OAT3・UGTを阻害し、血中濃度が上がるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "cimetidine"
+     ],
+     "targetLabel": "シメチジン",
+     "effect": "この薬の作用が強まるおそれがあります。",
+     "mechanism": "シメチジンがこの薬の排泄にかかわるMATE1・MATE2-Kを阻害し、血中濃度が上がるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lorazepam"
+     ],
+     "targetLabel": "ロラゼパム",
+     "effect": "注意力やバランス感覚の低下が強まるおそれがあります。",
+     "mechanism": "お互いに中枢神経を抑える作用を強めると考えられる。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "caution",
+     "effect": "注意力やバランス感覚の低下が強まるおそれがあります。"
+    }
+   ],
+   "source": {
+    "title": "タリージェ錠2.5mg／5mg／10mg／15mg、タリージェOD錠2.5mg／5mg／10mg／15mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/430574_1190026F1028_1_13",
+    "revised": "2025年1月改訂（第9版）"
+   }
+  },
+  {
+   "id": "duloxetine",
+   "genericName": "デュロキセチン塩酸塩",
+   "displayName": "デュロキセチン",
+   "brandNames": [
+    "サインバルタ"
+   ],
+   "category": "抗うつ薬（SNRI）",
+   "classes": [
+    "serotonergic"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "selegiline",
+      "rasagiline",
+      "safinamide",
+      "class:maoi"
+     ],
+     "targetLabel": "MAO阻害剤（セレギリン塩酸塩〈エフピー〉、ラサギリンメシル酸塩〈アジレクト〉、サフィナミドメシル酸塩〈エクフィナ〉）",
+     "effect": "汗、落ち着かなさ、けいれん、高い熱、昏睡などが起こるおそれがあるため、一緒に使えません。MAO阻害剤の中止後2週間以内も使えず、この薬からMAO阻害剤に切り替えるときは5日間あけます。",
+     "mechanism": "MAO阻害剤と抗うつ剤の作用で、神経の外のアミンが増えるためと考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:serotonergic",
+      "class:ssri",
+      "lithium",
+      "tramadol",
+      "class:triptan",
+      "linezolid",
+      "methylthioninium"
+     ],
+     "targetLabel": "セロトニン作用薬（炭酸リチウム、SNRI、SSRI、トラマドール、トリプタン系薬剤、L-トリプトファン含有製剤、リネゾリド等）、メチルチオニニウム塩化物水和物（メチレンブルー）",
+     "effect": "セロトニン症候群（混乱、興奮、発熱、発汗、ふるえなど）が起こることがあります。",
+     "mechanism": "この薬もセロトニンの再取り込みを抑えるため、セロトニンの作用が強まる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "fluvoxamine",
+      "class:fluvoxamine",
+      "ciprofloxacin",
+      "enoxacin"
+     ],
+     "targetLabel": "フルボキサミン、シプロフロキサシン、エノキサシン等",
+     "effect": "この薬の血中濃度が上がることがあります。必要に応じて量が調整されます。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP1A2）を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "paroxetine",
+      "quinidine"
+     ],
+     "targetLabel": "パロキセチン、キニジン等",
+     "effect": "この薬の血中濃度が上がることがあります。必要に応じて量が調整されます。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP2D6）を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:tricyclic_antidepressant",
+      "perphenazine",
+      "propafenone",
+      "flecainide"
+     ],
+     "targetLabel": "三環系抗うつ剤（アミトリプチリン等）、ペルフェナジン、抗不整脈剤（プロパフェノン、フレカイニド）",
+     "effect": "相手の薬の血中濃度が上がることがあります。",
+     "mechanism": "この薬がCYP2D6を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "pimozide"
+     ],
+     "targetLabel": "ピモジド",
+     "effect": "心電図の異常（QT延長）や危険な不整脈が起こることがあります。",
+     "mechanism": "この薬がピモジドの分解を妨げ、血中濃度を上げると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "lorazepam",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "中枢神経抑制剤（バルビツール酸誘導体、ロラゼパム等）",
+     "effect": "お互いの作用が強まることがあります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin",
+      "class:anticoagulant",
+      "class:antiplatelet",
+      "class:nsaid",
+      "aspirin",
+      "class:antipsychotic",
+      "class:tricyclic_antidepressant"
+     ],
+     "targetLabel": "出血傾向が増強する薬剤（非定型抗精神病剤、フェノチアジン系薬剤、三環系抗うつ剤、アスピリン等の非ステロイド系抗炎症剤、ワルファリン等）",
+     "effect": "出血しやすくなることがあります。ワルファリンとは、お互いの作用が強まることもあります。",
+     "mechanism": "SNRIとこれらの薬の併用で出血傾向が強まると考えられる。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール",
+     "level": "avoid",
+     "effect": "お互いに眠気などの作用が強まることがあり、肝臓の働きが悪くなるおそれがあります。"
+    },
+    {
+     "item": "st_johns_wort",
+     "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+     "level": "caution",
+     "effect": "セロトニンの作用が強まり、セロトニン症候群などが起こることがあります。"
+    }
+   ],
+   "source": {
+    "title": "サインバルタカプセル20mg／サインバルタカプセル30mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/340018_1179052M1022_2_25",
+    "revised": "2026年5月改訂（第5版）"
+   }
+  },
+  {
+   "id": "mirtazapine",
+   "genericName": "ミルタザピン",
+   "displayName": "ミルタザピン",
+   "brandNames": [
+    "リフレックス",
+    "レメロン"
+   ],
+   "category": "抗うつ薬（NaSSA）",
+   "classes": [
+    "serotonergic",
+    "cns_depressant",
+    "qt_prolonging"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "selegiline",
+      "rasagiline",
+      "safinamide",
+      "class:maoi"
+     ],
+     "targetLabel": "MAO阻害剤（セレギリン塩酸塩〈エフピー〉、ラサギリンメシル酸塩〈アジレクト〉、サフィナミドメシル酸塩〈エクフィナ〉）",
+     "effect": "セロトニン症候群が起こることがあるため、一緒に使えません。MAO阻害剤の中止後2週間以内も使えず、この薬からMAO阻害剤に切り替えるときも2週間以上あけます。",
+     "mechanism": "脳内のノルアドレナリン・セロトニンの神経伝達が高まると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "clarithromycin",
+      "itraconazole",
+      "erythromycin",
+      "class:strong_cyp3a4_inhibitor",
+      "class:hiv_protease_inhibitor",
+      "class:azole_antifungal"
+     ],
+     "targetLabel": "CYP3A4阻害剤（HIVプロテアーゼ阻害剤、アゾール系抗真菌薬（ケトコナゾール等）、エリスロマイシン等）",
+     "effect": "この薬の作用が強まるおそれがあります。相手の薬をやめた後は、この薬の作用が弱まるおそれがあります。",
+     "mechanism": "CYP3A4が阻害され、この薬の血中濃度が上がる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine",
+      "phenytoin",
+      "rifampicin",
+      "class:cyp3a4_inducer"
+     ],
+     "targetLabel": "CYP3A4誘導剤（カルバマゼピン、フェニトイン、リファンピシン等）",
+     "effect": "この薬の作用が弱まるおそれがあります。相手の薬をやめるときは、この薬の作用が強まる可能性があります。",
+     "mechanism": "CYP3A4が誘導され、この薬の血中濃度が下がる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "cimetidine"
+     ],
+     "targetLabel": "シメチジン",
+     "effect": "この薬の作用が強まるおそれがあります。",
+     "mechanism": "シメチジンが複数の代謝酵素（CYP1A2、CYP2D6、CYP3A4等）を阻害し、この薬の血中濃度が上がる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "diazepam",
+      "class:benzodiazepine",
+      "class:cns_depressant"
+     ],
+     "targetLabel": "鎮静剤（ベンゾジアゼピン系薬剤（ジアゼパム）等）",
+     "effect": "眠気などの鎮静作用が強まるおそれがあります。ジアゼパムとの併用で、体の動きや学習する力が落ちたとの報告があります。",
+     "mechanism": "鎮静作用が重なるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:ssri",
+      "class:serotonergic",
+      "class:triptan",
+      "tramadol",
+      "linezolid",
+      "methylthioninium",
+      "lithium"
+     ],
+     "targetLabel": "セロトニン作用薬（選択的セロトニン再取り込み阻害剤、L-トリプトファン含有製剤、トリプタン系薬剤、トラマドール、リネゾリド、メチレンブルー、炭酸リチウム等）",
+     "effect": "セロトニン症候群などが起こるおそれがあります。",
+     "mechanism": "セロトニンの作用が強まるおそれがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin"
+     ],
+     "targetLabel": "ワルファリンカリウム",
+     "effect": "血液が固まるまでの時間が延びるおそれがあります。INR（血液検査）で確認します。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:qt_prolonging"
+     ],
+     "targetLabel": "QT延長を起こすことが知られている薬剤",
+     "effect": "心電図の異常（QT延長）や危険な不整脈が起こるおそれがあります。",
+     "mechanism": "QT延長作用が重なるおそれがあるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "眠気などの鎮静作用が強まるおそれがあります。服用中はお酒を避けてください。"
+    },
+    {
+     "item": "st_johns_wort",
+     "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+     "level": "caution",
+     "effect": "セロトニンの作用が強まり、セロトニン症候群などが起こるおそれがあります。"
+    }
+   ],
+   "source": {
+    "title": "リフレックス錠15mg／リフレックス錠30mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/780009_1179051F1029_1_26",
+    "revised": "2021年1月改訂（第5版）"
+   }
+  },
+  {
+   "id": "trazodone",
+   "genericName": "トラゾドン塩酸塩",
+   "displayName": "トラゾドン",
+   "brandNames": [
+    "デジレル",
+    "レスリン"
+   ],
+   "category": "抗うつ薬",
+   "classes": [
+    "serotonergic",
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "class:antihypertensive"
+     ],
+     "targetLabel": "降圧剤",
+     "effect": "立ちくらみや失神を含む低血圧が起こるおそれがあります。",
+     "mechanism": "この薬にも血圧を下げる作用があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "中枢神経抑制剤（バルビツール酸誘導体等）",
+     "effect": "この薬の作用が強まるおそれがあります。",
+     "mechanism": "中枢神経を抑える作用が強まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:maoi"
+     ],
+     "targetLabel": "モノアミン酸化酵素阻害剤",
+     "effect": "この薬の作用が強まるおそれがあります。少ない量から慎重に始めます。",
+     "mechanism": "脳内のセロトニン濃度が高まるおそれがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "digoxin",
+      "class:digitalis",
+      "phenytoin"
+     ],
+     "targetLabel": "強心配糖体（ジゴキシン等）、フェニトイン",
+     "effect": "ジゴキシンやフェニトインの血中濃度が上がるおそれがあります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin",
+      "rivaroxaban",
+      "dabigatran",
+      "class:anticoagulant",
+      "aspirin",
+      "clopidogrel",
+      "class:antiplatelet",
+      "class:nsaid"
+     ],
+     "targetLabel": "抗凝固薬（ワルファリン、リバーロキサバン、ダビガトラン等）、抗血小板薬（アスピリン、クロピドグレル等）、非ステロイド性抗炎症薬",
+     "effect": "出血しやすくなるなど、血液の固まり方が変わったとの報告があります。",
+     "mechanism": "セロトニンを介する血小板凝集の経路を妨げる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine"
+     ],
+     "targetLabel": "カルバマゼピン",
+     "effect": "この薬の血中濃度が下がり、効きが弱まるおそれがあります。",
+     "mechanism": "CYP3A4が誘導され、この薬の分解が早まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "ritonavir",
+      "nirmatrelvir_ritonavir",
+      "indinavir",
+      "class:strong_cyp3a4_inhibitor"
+     ],
+     "targetLabel": "CYP3A4阻害剤（リトナビル、ニルマトレルビル・リトナビル、インジナビル）",
+     "effect": "この薬の血中濃度が上がり、作用が強まるおそれがあります。必要に応じて量が調整されます。",
+     "mechanism": "相手の薬がCYP3A4を阻害し、この薬の分解が妨げられるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "paroxetine",
+      "class:ssri",
+      "class:serotonergic",
+      "class:tricyclic_antidepressant",
+      "tandospirone",
+      "lithium",
+      "class:triptan",
+      "tapentadol",
+      "dextromethorphan",
+      "tramadol",
+      "fentanyl",
+      "pethidine",
+      "pentazocine",
+      "methadone"
+     ],
+     "targetLabel": "セロトニン作動薬（SSRI、SNRI、三環系抗うつ薬、タンドスピロン、炭酸リチウム、トリプタン系薬剤、L-トリプトファン含有製剤、トラマドール、フェンタニル、ペンタゾシン、メサドン、デキストロメトルファン等）",
+     "effect": "セロトニン症候群が起こるおそれがあります。",
+     "mechanism": "機序は分かっていない。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール",
+     "level": "avoid",
+     "effect": "この薬の作用が強まるおそれがあります。できるだけお酒は避けてください。"
+    },
+    {
+     "item": "st_johns_wort",
+     "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+     "level": "caution",
+     "effect": "セロトニン症候群が起こるおそれがあります。"
+    }
+   ],
+   "source": {
+    "title": "デジレル錠25／デジレル錠50 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/672212_1179037F1037_5_06",
+    "revised": "2025年3月改訂（第3版）"
+   }
+  },
+  {
+   "id": "vortioxetine",
+   "genericName": "ボルチオキセチン臭化水素酸塩",
+   "displayName": "ボルチオキセチン",
+   "brandNames": [
+    "トリンテリックス"
+   ],
+   "category": "抗うつ薬",
+   "classes": [
+    "serotonergic"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "selegiline",
+      "rasagiline",
+      "safinamide",
+      "class:maoi"
+     ],
+     "targetLabel": "MAO阻害剤（セレギリン塩酸塩〈エフピー〉、ラサギリンメシル酸塩〈アジレクト〉、サフィナミドメシル酸塩〈エクフィナ〉）",
+     "effect": "セロトニン症候群が起こることがあるため、一緒に使えません。MAO阻害剤の中止後14日間以内も使えず、この薬からMAO阻害剤に切り替えるときも14日間以上あけます。",
+     "mechanism": "セロトニンの分解が妨げられ、脳内のセロトニン濃度が高まると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "linezolid",
+      "methylthioninium"
+     ],
+     "targetLabel": "リネゾリド、メチルチオニニウム塩化物水和物（メチレンブルー）",
+     "effect": "セロトニン症候群などが起こるおそれがあります。",
+     "mechanism": "相手の薬のMAO阻害作用でセロトニンの分解が妨げられるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "sumatriptan",
+      "class:triptan",
+      "class:ssri",
+      "class:serotonergic",
+      "tramadol",
+      "methadone",
+      "pethidine",
+      "tapentadol",
+      "fentanyl",
+      "pentazocine",
+      "dextromethorphan",
+      "lithium"
+     ],
+     "targetLabel": "セロトニン作用薬（トリプタン系薬剤、SSRI、SNRI、L-トリプトファン含有製剤、トラマドール、メサドン、ペチジン、タペンタドール、フェンタニル、ペンタゾシン、デキストロメトルファン、炭酸リチウム等）",
+     "effect": "セロトニン症候群などが起こるおそれがあります。",
+     "mechanism": "この薬もセロトニンの再取り込みを抑えるため、セロトニンの作用が強まるおそれがある。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "paroxetine",
+      "quinidine"
+     ],
+     "targetLabel": "CYP2D6阻害剤（パロキセチン、キニジン等）",
+     "effect": "この薬の血中濃度が上がり、副作用が出るおそれがあります。",
+     "mechanism": "この薬の分解が妨げられるおそれがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "rifampicin",
+      "carbamazepine",
+      "phenytoin",
+      "class:cyp3a4_inducer"
+     ],
+     "targetLabel": "代謝酵素を誘導する薬剤（リファンピシン、カルバマゼピン、フェニトイン等）",
+     "effect": "この薬の血中濃度が下がり、効きが弱まるおそれがあります。必要に応じて量が調整されます。",
+     "mechanism": "この薬の分解が早まるおそれがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin",
+      "class:anticoagulant",
+      "class:antiplatelet",
+      "class:nsaid",
+      "aspirin",
+      "class:antipsychotic",
+      "class:tricyclic_antidepressant"
+     ],
+     "targetLabel": "出血傾向が増強する薬剤（非定型抗精神病剤、フェノチアジン系抗精神病剤、三環系抗うつ剤、アスピリン等の非ステロイド系抗炎症剤、ワルファリン等）",
+     "effect": "出血しやすくなるおそれがあります。",
+     "mechanism": "この薬により血小板の凝集が妨げられるおそれがあるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "この薬を飲んでいる間はお酒を避けることが望ましいです。"
+    },
+    {
+     "item": "st_johns_wort",
+     "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+     "level": "caution",
+     "effect": "セロトニン症候群などが起こるおそれがあります。"
+    },
+    {
+     "item": "other",
+     "itemLabel": "L-トリプトファンを含有する製剤・食品",
+     "level": "caution",
+     "effect": "セロトニン症候群などが起こるおそれがあります。"
+    }
+   ],
+   "source": {
+    "title": "トリンテリックス錠10mg／トリンテリックス錠20mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400256_1179060F1028_1_07",
+    "revised": "2026年10月改訂（第4版）"
+   }
+  },
+  {
+   "id": "fluvoxamine",
+   "genericName": "フルボキサミンマレイン酸塩",
+   "displayName": "フルボキサミン",
+   "brandNames": [
+    "ルボックス",
+    "デプロメール"
+   ],
+   "category": "抗うつ薬（SSRI）",
+   "classes": [
+    "fluvoxamine",
+    "ssri",
+    "serotonergic"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "selegiline",
+      "rasagiline",
+      "safinamide",
+      "class:maoi"
+     ],
+     "targetLabel": "MAO阻害剤（セレギリン塩酸塩〈エフピー〉、ラサギリンメシル酸塩〈アジレクト〉、サフィナミドメシル酸塩〈エクフィナ〉）",
+     "effect": "お互いの作用が強まることがあり、セロトニン症候群の報告もあるため、一緒に使えません。MAO阻害剤の中止後2週間以上、この薬からMAO阻害剤に切り替えるときは1週間以上あけます。",
+     "mechanism": "脳内のセロトニン濃度が高まるためと考えられる。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "pimozide"
+     ],
+     "targetLabel": "ピモジド（オーラップ）",
+     "effect": "ピモジドの血中濃度が上がり、心電図の異常（QT延長）や危険な不整脈が起こるおそれがあるため、一緒に使えません。",
+     "mechanism": "この薬が肝臓でのピモジドの分解を妨げ、血中濃度を上げると考えられる。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "tizanidine"
+     ],
+     "targetLabel": "チザニジン塩酸塩（テルネリン）",
+     "effect": "チザニジンの血中濃度が上がり、ひどい血圧低下などが起こるおそれがあるため、一緒に使えません。",
+     "mechanism": "この薬が肝臓でのチザニジンの分解を妨げ、血中濃度を上げると考えられる。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "ramelteon",
+      "melatonin"
+     ],
+     "targetLabel": "ラメルテオン（ロゼレム）、メラトニン（メラトベル）",
+     "effect": "相手の薬の血中濃度が大きく上がり、作用が強く出るおそれがあるため、一緒に使えません。",
+     "mechanism": "この薬が肝臓での相手の薬の分解を妨げ、血中濃度を上げると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lithium",
+      "class:triptan",
+      "sumatriptan",
+      "class:ssri",
+      "class:serotonergic",
+      "tramadol",
+      "linezolid",
+      "methylthioninium"
+     ],
+     "targetLabel": "セロトニン作用を有する薬剤（炭酸リチウム、L-トリプトファン含有製剤、トリプタン系薬剤、選択的セロトニン再取り込み阻害剤、トラマドール、リネゾリド、メチレンブルー等）",
+     "effect": "セロトニン症候群などが起こるおそれがあります。必要に応じて量が減らされます。",
+     "mechanism": "セロトニンの作用をお互いに強めるためと考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "phenytoin",
+      "carbamazepine",
+      "class:tricyclic_antidepressant",
+      "alprazolam",
+      "bromazepam",
+      "diazepam",
+      "class:benzodiazepine",
+      "olanzapine",
+      "clozapine",
+      "ropinirole",
+      "mexiletine",
+      "sildenafil"
+     ],
+     "targetLabel": "抗てんかん剤（フェニトイン、カルバマゼピン）、三環系抗うつ剤、ベンゾジアゼピン系薬剤（アルプラゾラム、ブロマゼパム、ジアゼパム等）、オランザピン、クロザピン、ロピニロール、メキシレチン、シルデナフィル",
+     "effect": "相手の薬の血中濃度が上がることがあります。必要に応じて相手の薬の量が減らされます。",
+     "mechanism": "この薬が肝臓での相手の薬の分解を妨げるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "propranolol"
+     ],
+     "targetLabel": "β-遮断剤（プロプラノロール）",
+     "effect": "プロプラノロールの血中濃度が上がり、脈が遅くなる・血圧が下がるなどが報告されています。",
+     "mechanism": "この薬が肝臓でのプロプラノロールの分解を妨げるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "theophylline"
+     ],
+     "targetLabel": "キサンチン系気管支拡張剤（テオフィリン等）",
+     "effect": "テオフィリンの血中濃度が上がり、めまい、眠気、不整脈などが起きたとの報告があります。テオフィリンの量を1/3に減らすなどの調整が必要です。",
+     "mechanism": "この薬がテオフィリンの分解を妨げ、体から出る速さを1/3に下げることがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "cyclosporine",
+      "zolpidem"
+     ],
+     "targetLabel": "シクロスポリン、ゾルピデム酒石酸塩",
+     "effect": "相手の薬の血中濃度が上がったとの報告があります。",
+     "mechanism": "この薬が肝臓での相手の薬の分解を妨げるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin"
+     ],
+     "targetLabel": "クマリン系抗血液凝固剤（ワルファリン）",
+     "effect": "ワルファリンの血中濃度が上がることが報告されています。血液検査で確認し、量が調整されます。",
+     "mechanism": "この薬が肝臓でのワルファリンの分解を妨げるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin",
+      "class:anticoagulant",
+      "class:antiplatelet",
+      "class:nsaid",
+      "aspirin",
+      "class:antipsychotic",
+      "class:tricyclic_antidepressant"
+     ],
+     "targetLabel": "出血傾向が増強する薬剤（非定型抗精神病薬、フェノチアジン系薬剤、三環系抗うつ薬、アスピリン等の非ステロイド系抗炎症剤、ワルファリン等）",
+     "effect": "皮膚のあざや胃腸からの出血などが報告されています。",
+     "mechanism": "SSRIにより血小板の凝集が妨げられ、出血傾向が強まることがあるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "この薬を飲んでいる間はお酒を避けることが望ましいです。"
+    },
+    {
+     "item": "st_johns_wort",
+     "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+     "level": "caution",
+     "effect": "セロトニン症候群などが起こるおそれがあります。"
+    }
+   ],
+   "source": {
+    "title": "ルボックス錠25／ルボックス錠50／ルボックス錠75 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/112130_1179039F1036_3_17",
+    "revised": "2026年7月改訂（第7版）"
+   }
+  },
+  {
+   "id": "alprazolam",
+   "genericName": "アルプラゾラム",
+   "displayName": "アルプラゾラム",
+   "brandNames": [
+    "ソラナックス",
+    "コンスタン"
+   ],
+   "category": "抗不安薬（ベンゾジアゼピン系）",
+   "classes": [
+    "benzodiazepine",
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine",
+      "class:antipsychotic",
+      "class:maoi"
+     ],
+     "targetLabel": "中枢神経抑制剤（フェノチアジン誘導体、バルビツール酸誘導体等）、モノアミン酸化酵素阻害剤",
+     "effect": "眠気や、注意力・集中力・反射運動能力などの低下が強まることがあります。",
+     "mechanism": "お互いに中枢神経を抑える作用を強めると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "ritonavir",
+      "nirmatrelvir_ritonavir",
+      "lopinavir_ritonavir"
+     ],
+     "targetLabel": "リトナビル含有製剤",
+     "effect": "この薬の血中濃度が上がり（AUC約2.5倍）、眠気などの作用が強まるとの報告があります。",
+     "mechanism": "肝臓でのこの薬の分解が妨げられると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "ensitrelvir"
+     ],
+     "targetLabel": "エンシトレルビル フマル酸",
+     "effect": "この薬の血中濃度が上がり、副作用が出やすくなるおそれがあります。",
+     "mechanism": "相手の薬がCYP3Aを阻害し、この薬の分解が妨げられると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "itraconazole",
+      "posaconazole"
+     ],
+     "targetLabel": "イトラコナゾール、ポサコナゾール",
+     "effect": "この薬の血中濃度が上がり（イトラコナゾールでAUC約2.8倍）、眠気が長引いたり呼吸が弱くなったりするおそれがあります。ポサコナゾールとの併用はできるだけ避けます。",
+     "mechanism": "相手の薬がCYP3A4を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "fluvoxamine",
+      "class:fluvoxamine"
+     ],
+     "targetLabel": "フルボキサミンマレイン酸塩",
+     "effect": "この薬の血中濃度が上がり（AUC約2倍）、眠気などの作用が強まるとの報告があります。",
+     "mechanism": "肝臓でのこの薬の分解が妨げられると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "cimetidine"
+     ],
+     "targetLabel": "シメチジン",
+     "effect": "この薬の血中濃度が上がるとの報告があります。この薬を減らすか、別の胃薬に変えるなどの対応がとられます。",
+     "mechanism": "肝臓でのこの薬の分解が妨げられると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine"
+     ],
+     "targetLabel": "カルバマゼピン",
+     "effect": "この薬の血中濃度が半分以下に下がり、病状が悪化した例が報告されています。",
+     "mechanism": "肝臓でのこの薬の分解が早まると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "digoxin"
+     ],
+     "targetLabel": "ジゴキシン",
+     "effect": "ジゴキシンの血中濃度が上がるとの報告があります。特に高齢の方は注意が必要です。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "imipramine",
+      "desipramine"
+     ],
+     "targetLabel": "イミプラミン、デシプラミン",
+     "effect": "相手の薬の血中濃度が上がることが報告されています。",
+     "mechanism": "この薬が肝臓での相手の薬の分解を妨げると考えられる。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "眠気や、注意力・集中力・反射運動能力などの低下が強まることがあります。服用中はお酒を控えてください。"
+    }
+   ],
+   "source": {
+    "title": "ソラナックス0.4mg錠／ソラナックス0.8mg錠 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/671450_1124023F1037_5_05",
+    "revised": "2026年10月改訂（第4版）"
+   }
+  },
+  {
+   "id": "lorazepam",
+   "genericName": "ロラゼパム",
+   "displayName": "ロラゼパム",
+   "brandNames": [
+    "ワイパックス"
+   ],
+   "category": "抗不安薬（ベンゾジアゼピン系）",
+   "classes": [
+    "benzodiazepine",
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine",
+      "class:antipsychotic",
+      "class:maoi"
+     ],
+     "targetLabel": "中枢神経抑制剤（フェノチアジン誘導体、バルビツール酸誘導体等）、モノアミン酸化酵素阻害剤",
+     "effect": "眠気や、注意力・集中力・反射運動能力などの低下が強まることがあります。",
+     "mechanism": "お互いに中枢神経を抑える作用を強めることがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "maprotiline"
+     ],
+     "targetLabel": "マプロチリン",
+     "effect": "眠気などが強まることがあります。また、併用中にこの薬を急に減らしたりやめたりすると、けいれんが起こることがあります。",
+     "mechanism": "中枢神経を抑える作用が重なる。また、この薬で抑えられていたマプロチリンのけいれんを起こす作用が、減量・中止で現れることがある。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "dantrolene"
+     ],
+     "targetLabel": "ダントロレンナトリウム",
+     "effect": "筋肉をゆるめる作用が強まることがあります。",
+     "mechanism": "お互いに筋弛緩作用を強めることがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "pregabalin"
+     ],
+     "targetLabel": "プレガバリン",
+     "effect": "考える力や体の動きが低下する副作用が強まるおそれがあります。",
+     "mechanism": "作用が重なるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "clozapine"
+     ],
+     "targetLabel": "クロザピン",
+     "effect": "血圧が急に下がるなどの循環虚脱が起こりやすくなり、重い場合は心臓や呼吸が止まるおそれがあります。",
+     "mechanism": "心臓・血管系の副作用をお互いに強めると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "probenecid",
+      "valproate"
+     ],
+     "targetLabel": "プロベネシド、バルプロ酸",
+     "effect": "この薬が体から消えるまでの時間が長くなることがあります。プロベネシドでは必要に応じて量が減らされます。",
+     "mechanism": "相手の薬がこの薬のグルクロン酸抱合（分解）を妨げるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "rifampicin"
+     ],
+     "targetLabel": "リファンピシン",
+     "effect": "この薬の血中濃度が下がることがあります。",
+     "mechanism": "リファンピシンが肝臓の代謝酵素を誘導するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:oral_contraceptive"
+     ],
+     "targetLabel": "経口避妊ステロイド",
+     "effect": "この薬の血中濃度が下がることがあります。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（UGT）を誘導すると考えられる。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "眠気や、注意力・集中力・反射運動能力などの低下が強まることがあります。服用中はお酒を控えてください。"
+    }
+   ],
+   "source": {
+    "title": "ワイパックス錠0.5／ワイパックス錠1.0 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/672212_1124022F1067_3_05",
+    "revised": "2023年5月改訂（第2版）"
+   }
+  },
+  {
+   "id": "clotiazepam",
+   "genericName": "クロチアゼパム",
+   "displayName": "クロチアゼパム",
+   "brandNames": [
+    "リーゼ"
+   ],
+   "category": "抗不安薬（チエノジアゼピン系）",
+   "classes": [
+    "benzodiazepine",
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine",
+      "class:antipsychotic"
+     ],
+     "targetLabel": "中枢神経抑制剤（フェノチアジン誘導体、バルビツール酸誘導体等）",
+     "effect": "眠気、血圧低下、ふらつきなどが起こるおそれがあります。",
+     "mechanism": "作用が重なって強まると考えられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:maoi"
+     ],
+     "targetLabel": "MAO阻害剤",
+     "effect": "効きすぎて強い眠気、意識がなくなる、けいれん、興奮などが起こるおそれがあります。",
+     "mechanism": "MAO阻害剤がこの薬の肝臓での分解を抑え、血中濃度が上がると考えられる。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "考える力や、感じる・体を動かす機能が低下するおそれがあります。服用中はお酒を控えてください。"
+    }
+   ],
+   "source": {
+    "title": "リーゼ錠5mg／リーゼ錠10mg／リーゼ顆粒10% 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400315_1179012D1036_2_16",
+    "revised": "2025年12月改訂（第2版）"
+   }
+  },
+  {
+   "id": "eszopiclone",
+   "genericName": "エスゾピクロン",
+   "displayName": "エスゾピクロン",
+   "brandNames": [
+    "ルネスタ"
+   ],
+   "category": "睡眠薬（非ベンゾジアゼピン系）",
+   "classes": [
+    "benzodiazepine",
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine",
+      "class:antipsychotic",
+      "suxamethonium",
+      "tubocurarine",
+      "pancuronium"
+     ],
+     "targetLabel": "筋弛緩薬（スキサメトニウム、ツボクラリン、パンクロニウム）、中枢神経抑制剤（フェノチアジン誘導体、バルビツール酸誘導体等）",
+     "effect": "お互いの作用が強まることがあるため、できるだけ一緒に使わないことが望ましいとされています。",
+     "mechanism": "抗けいれん作用や中枢神経を抑える作用が重なって強まる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:anesthetic"
+     ],
+     "targetLabel": "麻酔剤（麻酔時）",
+     "effect": "呼吸が弱くなることがあります。手術などの際は医師に伝えてください。",
+     "mechanism": "この薬と麻酔の呼吸を抑える作用が重なる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "rifampicin",
+      "class:cyp3a4_inducer"
+     ],
+     "targetLabel": "CYP3A4を誘導する薬剤（リファンピシン等）",
+     "effect": "この薬の効きが弱まるおそれがあります。",
+     "mechanism": "相手の薬が肝臓の代謝酵素を誘導し、この薬の分解が早まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "itraconazole",
+      "class:strong_cyp3a4_inhibitor"
+     ],
+     "targetLabel": "CYP3A4阻害作用を有する薬剤（イトラコナゾール等）",
+     "effect": "この薬の作用が強まるおそれがあります。",
+     "mechanism": "相手の薬が肝臓の代謝酵素を阻害し、この薬の血中濃度が上がるおそれがあるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "お互いの作用が強まることがあります。服用中はお酒を控えてください。"
+    },
+    {
+     "item": "other",
+     "itemLabel": "食事（食事と同時・食直後の服用）",
+     "level": "avoid",
+     "effect": "食後に飲むと、空腹時に比べてこの薬の血中濃度が下がることがあります。食事と同時や食直後の服用は避けてください。"
+    }
+   ],
+   "source": {
+    "title": "ルネスタ錠1mg／ルネスタ錠2mg／ルネスタ錠3mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/170033_1129010F1028_1_13",
+    "revised": "2024年12月改訂（第2版）"
+   }
+  },
+  {
+   "id": "zopiclone",
+   "genericName": "ゾピクロン",
+   "displayName": "ゾピクロン",
+   "brandNames": [
+    "アモバン"
+   ],
+   "category": "睡眠薬（非ベンゾジアゼピン系）",
+   "classes": [
+    "benzodiazepine",
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine",
+      "class:antipsychotic",
+      "suxamethonium",
+      "tubocurarine",
+      "pancuronium"
+     ],
+     "targetLabel": "筋弛緩薬（スキサメトニウム、ツボクラリン、パンクロニウム）、中枢神経抑制剤（フェノチアジン誘導体、バルビツール酸誘導体等）",
+     "effect": "お互いの作用が強まることがあるため、できるだけ一緒に使わないことが望ましいとされています。",
+     "mechanism": "抗けいれん作用や中枢神経を抑える作用が重なって強まる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:anesthetic"
+     ],
+     "targetLabel": "麻酔剤（麻酔時）",
+     "effect": "呼吸が弱くなることがあります。手術などの際は医師に伝えてください。",
+     "mechanism": "この薬と麻酔の呼吸を抑える作用が重なる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "rifampicin",
+      "class:cyp3a4_inducer"
+     ],
+     "targetLabel": "CYP3A4を誘導する薬剤（リファンピシン等）",
+     "effect": "この薬の効きが弱まるおそれがあります。",
+     "mechanism": "相手の薬が肝臓の代謝酵素を誘導し、この薬の分解が早まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "erythromycin",
+      "itraconazole",
+      "class:strong_cyp3a4_inhibitor"
+     ],
+     "targetLabel": "CYP3A4を阻害する薬剤（エリスロマイシン、イトラコナゾール等）",
+     "effect": "この薬の作用が強まるおそれがあります。",
+     "mechanism": "相手の薬が肝臓の代謝酵素を阻害し、この薬の血中濃度が上がるおそれがあるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "お互いの作用が強まることがあります。服用中はお酒を控えてください。"
+    }
+   ],
+   "source": {
+    "title": "アモバン錠7.5／アモバン錠10 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/780069_1129007F1026_1_28",
+    "revised": "2026年1月改訂（第2版）"
+   }
+  },
+  {
+   "id": "quetiapine",
+   "genericName": "クエチアピンフマル酸塩",
+   "displayName": "クエチアピン",
+   "brandNames": [
+    "セロクエル"
+   ],
+   "category": "抗精神病薬（非定型）",
+   "classes": [
+    "antipsychotic",
+    "dopamine_antagonist",
+    "cns_depressant",
+    "qt_prolonging"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "adrenaline"
+     ],
+     "targetLabel": "アドレナリン（ボスミン）（アナフィラキシーの救急治療、又は歯科領域における浸潤麻酔もしくは伝達麻酔に使用する場合を除く）",
+     "effect": "アドレナリンの作用が逆になり、血圧が大きく下がることがあるため、一緒に使えません（アナフィラキシーの救急治療や歯科麻酔に使う場合を除く）。",
+     "mechanism": "この薬のα受容体遮断作用により、アドレナリンのβ受容体刺激作用が優位になり、血圧低下が強まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "中枢神経抑制剤",
+     "effect": "眠気などの中枢神経を抑える作用が強まることがあります。",
+     "mechanism": "薬の作用どうしが影響し合うため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "phenytoin",
+      "carbamazepine",
+      "phenobarbital",
+      "rifampicin",
+      "class:cyp3a4_inducer"
+     ],
+     "targetLabel": "CYP3A4誘導作用を有する薬剤（フェニトイン、カルバマゼピン、バルビツール酸誘導体、リファンピシン等）",
+     "effect": "この薬の効きが弱まることがあります。相手の薬をやめるときは、この薬の量を減らす必要があることがあります。",
+     "mechanism": "CYP3A4が誘導され、この薬が体から出やすくなるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "itraconazole",
+      "class:strong_cyp3a4_inhibitor"
+     ],
+     "targetLabel": "強いCYP3A4阻害作用を有する薬剤（イトラコナゾール等）",
+     "effect": "この薬の血中濃度が上がり、作用が強まったり心電図の異常（QT延長）が起こったりするおそれがあります。必要に応じて量が減らされます。",
+     "mechanism": "相手の薬がCYP3A4を強く阻害し、この薬の血中濃度が上がる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "erythromycin",
+      "clarithromycin",
+      "class:macrolide"
+     ],
+     "targetLabel": "CYP3A4阻害作用を有する薬剤（エリスロマイシン等）",
+     "effect": "この薬の作用が強まるおそれがあります。",
+     "mechanism": "相手の薬がCYP3A4を阻害し、この薬の血中濃度が上がる可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:qt_prolonging"
+     ],
+     "targetLabel": "QT延長を起こすことが知られている薬剤",
+     "effect": "心電図の異常（QT延長）が起こるおそれがあります。",
+     "mechanism": "QT延長作用が重なるおそれがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lidocaine_adrenaline"
+     ],
+     "targetLabel": "アドレナリン含有歯科麻酔剤（リドカイン・アドレナリン）",
+     "effect": "血圧が下がることがあります。歯科治療の際はこの薬を飲んでいることを伝えてください。",
+     "mechanism": "この薬のα受容体遮断作用により、アドレナリンのβ受容体刺激作用が優位になり、血圧低下が強まるおそれがあるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール",
+     "level": "avoid",
+     "effect": "眠気などの中枢神経を抑える作用が強まることがあります。服用中はお酒を控えてください。"
+    }
+   ],
+   "source": {
+    "title": "セロクエル25mg錠／100mg錠／200mg錠／細粒50% 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/171911_1179042C1023_3_02",
+    "revised": "2026年9月改訂（第6版）"
+   }
+  },
+  {
+   "id": "aripiprazole",
+   "genericName": "アリピプラゾール",
+   "displayName": "アリピプラゾール",
+   "brandNames": [
+    "エビリファイ"
+   ],
+   "category": "抗精神病薬（非定型）",
+   "classes": [
+    "antipsychotic",
+    "dopamine_antagonist",
+    "cns_depressant",
+    "anticholinergic"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "adrenaline"
+     ],
+     "targetLabel": "アドレナリン（ボスミン）（アナフィラキシーの救急治療、又は歯科領域における浸潤麻酔もしくは伝達麻酔に使用する場合を除く）",
+     "effect": "アドレナリンの作用が逆になり、血圧が大きく下がることがあるため、一緒に使えません（アナフィラキシーの救急治療や歯科麻酔に使う場合を除く）。",
+     "mechanism": "この薬のα受容体遮断作用により、アドレナリンのβ受容体刺激作用が優位になり、血圧低下が強まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lidocaine_adrenaline"
+     ],
+     "targetLabel": "アドレナリン含有歯科麻酔剤（リドカイン・アドレナリン）",
+     "effect": "血圧が下がることがあります。歯科治療の際はこの薬を飲んでいることを伝えてください。",
+     "mechanism": "この薬のα受容体遮断作用により、アドレナリンのβ受容体刺激作用が優位になり、血圧低下が強まるおそれがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine",
+      "class:anesthetic"
+     ],
+     "targetLabel": "中枢神経抑制剤（バルビツール酸誘導体、麻酔剤等）",
+     "effect": "眠気などの中枢神経を抑える作用が強まるおそれがあります。必要に応じて量が減らされます。",
+     "mechanism": "どちらも中枢神経を抑える作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:antihypertensive"
+     ],
+     "targetLabel": "降圧剤",
+     "effect": "お互いに血圧を下げる作用が強まることがあります。",
+     "mechanism": "どちらも血圧を下げる作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:anticholinergic"
+     ],
+     "targetLabel": "抗コリン作用を有する薬剤",
+     "effect": "口の渇き、便秘などの抗コリン作用が強まることがあります。",
+     "mechanism": "どちらも抗コリン作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "levodopa"
+     ],
+     "targetLabel": "ドパミン作動薬（レボドパ製剤）",
+     "effect": "相手の薬の作用が弱まるおそれがあります。",
+     "mechanism": "この薬はドパミン受容体をふさぐ作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "quinidine",
+      "paroxetine"
+     ],
+     "targetLabel": "CYP2D6阻害作用を有する薬剤（キニジン、パロキセチン等）",
+     "effect": "この薬の作用が強まるおそれがあります。必要に応じて量が減らされます。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP2D6）を阻害し、血中濃度が上がるおそれがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "itraconazole",
+      "clarithromycin",
+      "class:strong_cyp3a4_inhibitor"
+     ],
+     "targetLabel": "CYP3A4阻害作用を有する薬剤（イトラコナゾール、クラリスロマイシン等）",
+     "effect": "この薬の作用が強まるおそれがあります。必要に応じて量が減らされます。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP3A4）を阻害し、血中濃度が上がるおそれがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine",
+      "rifampicin",
+      "class:cyp3a4_inducer"
+     ],
+     "targetLabel": "肝代謝酵素（特にCYP3A4）誘導作用を有する薬剤（カルバマゼピン、リファンピシン等）",
+     "effect": "この薬の作用が弱まるおそれがあります。",
+     "mechanism": "CYP3A4が誘導され、この薬の血中濃度が下がるおそれがあるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール（飲酒）",
+     "level": "avoid",
+     "effect": "お互いに眠気などの中枢神経を抑える作用が強まることがあります。服用中はお酒を控えてください。"
+    }
+   ],
+   "source": {
+    "title": "エビリファイ錠1mg／3mg／6mg／12mg、エビリファイ散1% 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/180078_1179045B1021_1_39",
+    "revised": "2025年12月改訂（第6版）"
+   }
+  },
+  {
+   "id": "olanzapine",
+   "genericName": "オランザピン",
+   "displayName": "オランザピン",
+   "brandNames": [
+    "ジプレキサ"
+   ],
+   "category": "抗精神病薬（非定型）",
+   "classes": [
+    "antipsychotic",
+    "dopamine_antagonist",
+    "cns_depressant",
+    "anticholinergic"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "adrenaline"
+     ],
+     "targetLabel": "アドレナリン（ボスミン）（アナフィラキシーの救急治療、又は歯科領域における浸潤麻酔もしくは伝達麻酔に使用する場合を除く）",
+     "effect": "アドレナリンの作用が逆になり、血圧が大きく下がることがあるため、一緒に使えません（アナフィラキシーの救急治療や歯科麻酔に使う場合を除く）。",
+     "mechanism": "この薬のα受容体遮断作用により、アドレナリンのβ受容体刺激作用が優位になり、血圧低下が強まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "中枢神経抑制剤（バルビツール酸誘導体等）",
+     "effect": "眠気などの作用が強まることがあります。必要に応じて量が減らされます。",
+     "mechanism": "どちらも中枢神経を抑える作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:anticholinergic",
+      "class:tricyclic_antidepressant"
+     ],
+     "targetLabel": "抗コリン作用を有する薬剤（抗コリン性抗パーキンソン剤、フェノチアジン系化合物、三環系抗うつ剤等）",
+     "effect": "腸の動きが止まる（腸管麻痺）など、重い抗コリン性の副作用が強く出ることがあります。",
+     "mechanism": "どちらも抗コリン作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "levodopa"
+     ],
+     "targetLabel": "ドパミン作動薬（レボドパ製剤）",
+     "effect": "相手の薬の作用が弱まることがあります。",
+     "mechanism": "この薬が相手の薬の作用に拮抗するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "fluvoxamine",
+      "class:fluvoxamine"
+     ],
+     "targetLabel": "フルボキサミン",
+     "effect": "この薬の血中濃度が上がります。必要に応じて量が減らされます。",
+     "mechanism": "フルボキサミンがこの薬を分解する酵素（CYP1A2）を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "ciprofloxacin"
+     ],
+     "targetLabel": "シプロフロキサシン",
+     "effect": "この薬の血中濃度が上がる可能性があります。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP1A2）を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine",
+      "omeprazole",
+      "rifampicin"
+     ],
+     "targetLabel": "カルバマゼピン、オメプラゾール、リファンピシン",
+     "effect": "この薬の血中濃度が下がる（可能性がある）ことがあります。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP1A2）を誘導するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lidocaine_adrenaline"
+     ],
+     "targetLabel": "アドレナリン含有歯科麻酔剤（リドカイン・アドレナリン）",
+     "effect": "血圧が下がることがあります。歯科治療の際はこの薬を飲んでいることを伝えてください。",
+     "mechanism": "この薬のα受容体遮断作用により、アドレナリンのβ受容体刺激作用が優位になり、血圧低下が強まるおそれがあるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール",
+     "level": "avoid",
+     "effect": "お互いの作用が強まることがあります。服用中はお酒を控えてください。"
+    },
+    {
+     "item": "smoking",
+     "itemLabel": "喫煙",
+     "level": "caution",
+     "effect": "この薬の血中濃度が下がります。禁煙や喫煙本数の変化は医師に伝えてください。"
+    }
+   ],
+   "source": {
+    "title": "ジプレキサ錠2.5mg／5mg／10mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/450900_1179044F1029_2_02",
+    "revised": "2026年8月改訂（第4版）"
+   }
+  },
+  {
+   "id": "risperidone",
+   "genericName": "リスペリドン",
+   "displayName": "リスペリドン",
+   "brandNames": [
+    "リスパダール"
+   ],
+   "category": "抗精神病薬（非定型）",
+   "classes": [
+    "antipsychotic",
+    "dopamine_antagonist",
+    "cns_depressant",
+    "qt_prolonging"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "adrenaline"
+     ],
+     "targetLabel": "アドレナリン（ボスミン）（アナフィラキシーの救急治療、又は歯科領域における浸潤麻酔もしくは伝達麻酔に使用する場合を除く）",
+     "effect": "アドレナリンの作用が逆になり、血圧が大きく下がることがあるため、一緒に使えません（アナフィラキシーの救急治療や歯科麻酔に使う場合を除く）。",
+     "mechanism": "この薬のα受容体遮断作用により、アドレナリンのβ受容体刺激作用が優位になり、血圧低下が強まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "中枢神経抑制剤（バルビツール酸誘導体等）",
+     "effect": "お互いの作用が強まることがあります。必要に応じて量が減らされます。",
+     "mechanism": "どちらも中枢神経を抑える作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "levodopa"
+     ],
+     "targetLabel": "ドパミン作動薬",
+     "effect": "お互いの作用が弱まることがあります。",
+     "mechanism": "この薬はドパミンをふさぐ作用をもつため、作用が打ち消し合う可能性がある。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:antihypertensive"
+     ],
+     "targetLabel": "降圧薬",
+     "effect": "血圧を下げる作用が強まることがあります。",
+     "mechanism": "どちらも血圧を下げる作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "paroxetine"
+     ],
+     "targetLabel": "CYP2D6を阻害する薬剤（パロキセチン等）",
+     "effect": "この薬（と活性代謝物）の血中濃度が上がることがあります。",
+     "mechanism": "相手の薬がこの薬を分解する酵素を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine",
+      "phenytoin",
+      "rifampicin",
+      "phenobarbital",
+      "class:cyp3a4_inducer"
+     ],
+     "targetLabel": "CYP3A4を誘導する薬剤（カルバマゼピン、フェニトイン、リファンピシン、フェノバルビタール）",
+     "effect": "この薬（と活性代謝物）の血中濃度が下がることがあります。",
+     "mechanism": "相手の薬がCYP3A4を誘導するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "itraconazole",
+      "class:strong_cyp3a4_inhibitor"
+     ],
+     "targetLabel": "CYP3A4を阻害する薬剤（イトラコナゾール等）",
+     "effect": "この薬（と活性代謝物）の血中濃度が上がることがあります。",
+     "mechanism": "相手の薬がCYP3A4を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:qt_prolonging"
+     ],
+     "targetLabel": "QT延長を起こすことが知られている薬剤",
+     "effect": "心電図の異常（QT延長）が起こるおそれがあります。",
+     "mechanism": "QT延長作用が強まるおそれがあるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lidocaine_adrenaline"
+     ],
+     "targetLabel": "アドレナリン含有歯科麻酔剤（リドカイン・アドレナリン）",
+     "effect": "血圧が下がることがあります。歯科治療の際はこの薬を飲んでいることを伝えてください。",
+     "mechanism": "この薬のα受容体遮断作用により、アドレナリンのβ受容体刺激作用が優位になり、血圧低下が強まるおそれがあるため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール",
+     "level": "avoid",
+     "effect": "お互いの作用が強まることがあります。服用中はお酒を控えてください。"
+    }
+   ],
+   "source": {
+    "title": "リスパダール錠1mg／2mg／3mg、リスパダール細粒1% 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/800155_1179038C1027_1_41",
+    "revised": "2025年1月改訂（第5版）"
+   }
+  },
+  {
+   "id": "valproate",
+   "genericName": "バルプロ酸ナトリウム",
+   "displayName": "バルプロ酸",
+   "brandNames": [
+    "デパケンR",
+    "デパケン",
+    "セレニカR"
+   ],
+   "category": "抗てんかん薬・気分安定薬",
+   "classes": [
+    "antiepileptic"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "panipenem_betamipron",
+      "meropenem",
+      "imipenem_cilastatin",
+      "relebactam_imipenem_cilastatin",
+      "biapenem",
+      "doripenem",
+      "tebipenem",
+      "class:carbapenem"
+     ],
+     "targetLabel": "カルバペネム系抗生物質（パニペネム・ベタミプロン〈カルベニン〉、メロペネム〈メロペン〉、イミペネム・シラスタチン〈チエナム〉、レレバクタム・イミペネム・シラスタチン〈レカルブリオ〉、ビアペネム〈オメガシン〉、ドリペネム〈フィニバックス〉、テビペネム ピボキシル〈オラペネム〉）",
+     "effect": "この薬の血中濃度が下がり、てんかんの発作が再び起こることがあるため、一緒に使えません。",
+     "mechanism": "カルバペネム系抗生物質によりバルプロ酸の血中濃度が低下する。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "phenobarbital",
+      "phenytoin",
+      "carbamazepine",
+      "fosphenytoin"
+     ],
+     "targetLabel": "バルビツール酸剤（フェノバルビタール等）、フェニトイン、ホスフェニトイン、カルバマゼピン",
+     "effect": "この薬の効きが弱まり、相手の薬の作用が強まる（または弱まる）ことがあります。フェニトイン・フェノバルビタールなどでは、血液中のアンモニアが高くなるリスクが高まるおそれがあります。",
+     "mechanism": "相手の薬がこの薬の分解を早め、この薬の血中濃度が下がる。また、相手の薬の血中濃度を変化させる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "lamotrigine",
+      "lorazepam"
+     ],
+     "targetLabel": "ラモトリギン、ロラゼパム",
+     "effect": "相手の薬が体から消えるまでの時間が長くなることがあります（ラモトリギンでは約2倍との報告）。",
+     "mechanism": "肝臓でのグルクロン酸抱合（分解）を奪い合うため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "ethosuximide",
+      "amitriptyline",
+      "nortriptyline"
+     ],
+     "targetLabel": "エトスクシミド、アミトリプチリン、ノルトリプチリン",
+     "effect": "相手の薬の作用が強まることがあります。",
+     "mechanism": "相手の薬の血中濃度を上げるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "ritonavir",
+      "nirmatrelvir_ritonavir",
+      "lopinavir_ritonavir"
+     ],
+     "targetLabel": "グルクロン酸抱合を誘導する薬剤（リトナビル、ニルマトレルビル・リトナビル、ロピナビル・リトナビル配合剤等）",
+     "effect": "この薬の効きが弱まることがあります。",
+     "mechanism": "肝臓でのこの薬のグルクロン酸抱合（分解）が進むため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "warfarin",
+      "diazepam",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "ベンゾジアゼピン系薬剤（ジアゼパム等）、ワルファリン",
+     "effect": "相手の薬の作用が強まることがあります。",
+     "mechanism": "血液中のたんぱく質に結合していない（作用する）相手の薬が増えるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "aspirin"
+     ],
+     "targetLabel": "サリチル酸系薬剤（アスピリン等）",
+     "effect": "この薬の作用が強まることがあります。",
+     "mechanism": "作用するバルプロ酸が増え、またこの薬の分解が妨げられるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "erythromycin",
+      "cimetidine"
+     ],
+     "targetLabel": "エリスロマイシン、シメチジン",
+     "effect": "この薬の作用が強まることがあります。",
+     "mechanism": "相手の薬が肝臓での分解を抑え、この薬の血中濃度が上がるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "clozapine"
+     ],
+     "targetLabel": "クロザピン",
+     "effect": "クロザピンの副作用（心筋炎、好中球減少症）が強まる可能性があります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "clobazam",
+      "clonazepam"
+     ],
+     "targetLabel": "クロバザム、クロナゼパム",
+     "effect": "クロバザムではこの薬の作用が強まることがあります。クロナゼパムでは欠神発作が続く状態（アブサンス重積）が起きたとの報告があります。",
+     "mechanism": "機序は分かっていない。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "デパケンR錠100mg／デパケンR錠200mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/581120_1139004G1040_2_03",
+    "revised": "2026年3月改訂（第7版）"
+   }
+  },
+  {
+   "id": "levetiracetam",
+   "genericName": "レベチラセタム",
+   "displayName": "レベチラセタム",
+   "brandNames": [
+    "イーケプラ"
+   ],
+   "category": "抗てんかん薬",
+   "classes": [
+    "antiepileptic"
+   ],
+   "interactions": [],
+   "foods": [],
+   "source": {
+    "title": "イーケプラ錠250mg／イーケプラ錠500mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/820110_1139010F1024_1_27",
+    "revised": "2026年3月改訂（第6版）"
+   }
+  },
+  {
+   "id": "lamotrigine",
+   "genericName": "ラモトリギン",
+   "displayName": "ラモトリギン",
+   "brandNames": [
+    "ラミクタール"
+   ],
+   "category": "抗てんかん薬・双極性障害治療薬",
+   "classes": [
+    "antiepileptic"
+   ],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "valproate"
+     ],
+     "targetLabel": "バルプロ酸ナトリウム",
+     "effect": "この薬が体から消えるまでの時間が約2倍に延びるとの報告があります。",
+     "mechanism": "肝臓でのグルクロン酸抱合（分解）を奪い合うため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "phenytoin",
+      "carbamazepine",
+      "phenobarbital",
+      "primidone",
+      "rifampicin",
+      "lopinavir_ritonavir"
+     ],
+     "targetLabel": "この薬のグルクロン酸抱合を誘導する薬剤（フェニトイン、カルバマゼピン、フェノバルビタール、プリミドン、リファンピシン、ロピナビル・リトナビル配合剤）",
+     "effect": "この薬の血中濃度が下がります。",
+     "mechanism": "肝臓でのこの薬のグルクロン酸抱合（分解）が進むため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "atazanavir",
+      "ritonavir"
+     ],
+     "targetLabel": "アタザナビル＋リトナビル",
+     "effect": "この薬の血中濃度が下がったとの報告があります。開始・中止の際は、この薬の量の調整が考慮されます。",
+     "mechanism": "肝臓でのこの薬のグルクロン酸抱合（分解）が進むため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine"
+     ],
+     "targetLabel": "カルバマゼピン",
+     "effect": "めまい、ふらつき、物が二重に見える、かすんで見える、吐き気などが出たとの報告があります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "risperidone"
+     ],
+     "targetLabel": "リスペリドン",
+     "effect": "眠気の報告が多いとされています。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:oral_contraceptive"
+     ],
+     "targetLabel": "経口避妊薬（卵胞ホルモン・黄体ホルモン配合剤）",
+     "effect": "この薬の血中濃度が下がったとの報告があります。経口避妊薬を始めたりやめたりするときは、この薬の量の調整が考慮されます。経口避妊薬側の成分（レボノルゲストレル）の濃度が下がったとの報告もあります。",
+     "mechanism": "肝臓でのこの薬のグルクロン酸抱合（分解）が進むため。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "ラミクタール錠小児用2mg／5mg、ラミクタール錠25mg／100mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/340278_1139009F1021_1_27",
+    "revised": "2026年8月改訂（第8版）"
+   }
+  },
+  {
+   "id": "sumatriptan",
+   "genericName": "スマトリプタンコハク酸塩",
+   "displayName": "スマトリプタン",
+   "brandNames": [
+    "イミグラン"
+   ],
+   "category": "片頭痛治療薬（トリプタン系）",
+   "classes": [
+    "triptan",
+    "serotonergic"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "ergotamine_caffeine_isopropylantipyrine",
+      "dihydroergotamine",
+      "ergometrine",
+      "methylergometrine",
+      "class:ergot_alkaloid"
+     ],
+     "targetLabel": "エルゴタミン（クリアミン）、エルゴタミン誘導体含有製剤（ジヒドロエルゴタミン、エルゴメトリン〈エルゴメトリンF〉、メチルエルゴメトリン〈パルタンM〉）",
+     "effect": "血圧が上がったり、血管が強く縮んだりするおそれがあるため、一緒に使えません。どちらかを使った後は24時間以上あけます。",
+     "mechanism": "血管を縮める作用をお互いに強めるため。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "zolmitriptan",
+      "eletriptan",
+      "rizatriptan",
+      "naratriptan",
+      "class:triptan"
+     ],
+     "targetLabel": "5-HT1B/1D受容体作動薬（ゾルミトリプタン〈ゾーミッグ〉、エレトリプタン〈レルパックス〉、リザトリプタン〈マクサルト〉、ナラトリプタン〈アマージ〉）",
+     "effect": "血圧が上がったり、血管が強く縮んだりするおそれがあるため、一緒に使えません。どちらかを使った後24時間以内はもう一方を使えません。",
+     "mechanism": "お互いの作用を強めるため。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "class:maoi"
+     ],
+     "targetLabel": "MAO阻害剤",
+     "effect": "この薬の分解が妨げられ、作用が強く出るおそれがあるため、一緒に使えません。MAO阻害剤の中止後2週間以内も使えません。",
+     "mechanism": "この薬は主にMAO-Aで分解されるため、MAO阻害剤によりこの薬の分解が妨げられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "fluvoxamine",
+      "paroxetine",
+      "sertraline",
+      "class:ssri",
+      "milnacipran",
+      "duloxetine"
+     ],
+     "targetLabel": "選択的セロトニン再取り込み阻害薬（フルボキサミン、パロキセチン、セルトラリン）、セロトニン・ノルアドレナリン再取り込み阻害薬（ミルナシプラン、デュロキセチン）",
+     "effect": "セロトニン症候群（不安、いらいら、興奮、脈が速くなる、発熱、下痢など）が起こることがあります。",
+     "mechanism": "相手の薬がセロトニン濃度を上げるため、セロトニンの作用が強まる可能性がある。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "イミグラン錠50 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/340278_2160003F1022_1_13",
+    "revised": "2026年2月改訂（第3版）"
+   }
+  },
+  {
+   "id": "rizatriptan",
+   "genericName": "リザトリプタン安息香酸塩",
+   "displayName": "リザトリプタン",
+   "brandNames": [
+    "マクサルト"
+   ],
+   "category": "片頭痛治療薬（トリプタン系）",
+   "classes": [
+    "triptan",
+    "serotonergic"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "ergotamine_caffeine_isopropylantipyrine",
+      "dihydroergotamine",
+      "ergometrine",
+      "methylergometrine",
+      "class:ergot_alkaloid"
+     ],
+     "targetLabel": "エルゴタミン製剤（クリアミン）、エルゴタミン誘導体含有製剤（ジヒドロエルゴタミン〈ジヒデルゴット〉、エルゴメトリン、メチルエルゴメトリン〈メテルギン〉）",
+     "effect": "血圧が上がったり、血管が強く縮んだりするおそれがあるため、一緒に使えません。どちらかを使った後は24時間以上あけます。",
+     "mechanism": "血管を縮める作用をお互いに強めるため。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "sumatriptan",
+      "zolmitriptan",
+      "eletriptan",
+      "naratriptan",
+      "class:triptan"
+     ],
+     "targetLabel": "5-HT1B/1D受容体作動薬（スマトリプタン〈イミグラン〉、ゾルミトリプタン〈ゾーミッグ〉、エレトリプタン〈レルパックス〉、ナラトリプタン〈アマージ〉）",
+     "effect": "血圧が上がったり、血管が強く縮んだりするおそれがあるため、一緒に使えません。どちらかを使った後24時間以内はもう一方を使えません。",
+     "mechanism": "お互いの作用を強めるため。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "class:maoi"
+     ],
+     "targetLabel": "MAO阻害剤",
+     "effect": "この薬の血中濃度が上がり、作用が強く出るおそれがあるため、一緒に使えません。MAO阻害剤の中止後2週間以内も使えません。",
+     "mechanism": "A型MAO阻害剤によりこの薬の分解が妨げられるため。"
+    },
+    {
+     "level": "contraindicated",
+     "targets": [
+      "propranolol"
+     ],
+     "targetLabel": "プロプラノロール塩酸塩（インデラル）",
+     "effect": "この薬の血中濃度が上がるため、一緒に使えません。プロプラノロールの中止後、錠剤は24時間・徐放製剤は48時間たつまで使えません。",
+     "mechanism": "どちらの分解にもA型MAOがかかわるため、この薬の分解が妨げられる。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "fluvoxamine",
+      "paroxetine",
+      "class:ssri",
+      "milnacipran"
+     ],
+     "targetLabel": "選択的セロトニン再取り込み阻害剤（フルボキサミン、パロキセチン等）、セロトニン・ノルアドレナリン再取り込み阻害剤（ミルナシプラン）",
+     "effect": "セロトニン症候群（不安、いらいら、興奮、脈が速くなる、発熱、下痢など）が起こることがあります。",
+     "mechanism": "相手の薬がセロトニン濃度を上げるため、セロトニンの作用が強まる可能性がある。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "マクサルト錠10mg／マクサルトRPD錠10mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/181615_2160006F1026_4_01",
+    "revised": "2024年7月改訂（第3版）"
+   }
+  },
+  {
+   "id": "donepezil",
+   "genericName": "ドネペジル塩酸塩",
+   "displayName": "ドネペジル",
+   "brandNames": [
+    "アリセプト"
+   ],
+   "category": "認知症治療薬（コリンエステラーゼ阻害薬）",
+   "classes": [],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "suxamethonium"
+     ],
+     "targetLabel": "スキサメトニウム塩化物水和物",
+     "effect": "筋肉をゆるめる作用が強まる可能性があります。手術などの際は医師に伝えてください。",
+     "mechanism": "相手の薬の脱分極性筋弛緩作用を強める可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "acetylcholine",
+      "carpronium",
+      "bethanechol",
+      "ambenonium",
+      "distigmine",
+      "pyridostigmine",
+      "neostigmine"
+     ],
+     "targetLabel": "コリン賦活剤（アセチルコリン、カルプロニウム、ベタネコール）、コリンエステラーゼ阻害剤（アンベノニウム、ジスチグミン、ピリドスチグミン、ネオスチグミン等）",
+     "effect": "脈が遅くなるなど、コリン刺激作用が強まる可能性があります。",
+     "mechanism": "どちらもコリン作動性の作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "itraconazole",
+      "erythromycin",
+      "class:strong_cyp3a4_inhibitor",
+      "bromocriptine",
+      "istradefylline"
+     ],
+     "targetLabel": "CYP3A阻害剤（イトラコナゾール、エリスロマイシン等）、ブロモクリプチン、イストラデフィリン",
+     "effect": "この薬の作用が強まる可能性があります。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP3A4）を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "quinidine"
+     ],
+     "targetLabel": "キニジン硫酸塩水和物等",
+     "effect": "この薬の作用が強まる可能性があります。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP2D6）を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "carbamazepine",
+      "dexamethasone",
+      "phenytoin",
+      "phenobarbital",
+      "rifampicin",
+      "class:cyp3a4_inducer"
+     ],
+     "targetLabel": "カルバマゼピン、デキサメタゾン、フェニトイン、フェノバルビタール、リファンピシン等",
+     "effect": "この薬の作用が弱まる可能性があります。",
+     "mechanism": "相手の薬がCYP3A4を誘導し、この薬の分解を早めるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "trihexyphenidyl",
+      "piroheptine",
+      "biperiden",
+      "butylscopolamine",
+      "atropine",
+      "class:anticholinergic"
+     ],
+     "targetLabel": "中枢性抗コリン剤（トリヘキシフェニジル、ピロヘプチン、ビペリデン等）、アトロピン系抗コリン剤（ブチルスコポラミン、アトロピン等）",
+     "effect": "お互いの効果が弱まる可能性があります。",
+     "mechanism": "この薬と抗コリン剤の作用が打ち消し合うため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:nsaid"
+     ],
+     "targetLabel": "非ステロイド性消炎鎮痛剤",
+     "effect": "胃潰瘍などを起こす可能性があります。",
+     "mechanism": "コリン系が活発になり胃酸の分泌が増えるため。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "アリセプト錠3mg／5mg／10mg、アリセプト細粒0.5% 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/170033_1190012C1020_1_32",
+    "revised": "2026年5月改訂（第5版）"
+   }
+  },
+  {
+   "id": "memantine",
+   "genericName": "メマンチン塩酸塩",
+   "displayName": "メマンチン",
+   "brandNames": [
+    "メマリー"
+   ],
+   "category": "認知症治療薬（NMDA受容体拮抗薬）",
+   "classes": [],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "levodopa"
+     ],
+     "targetLabel": "ドパミン作動薬（レボドパ等）",
+     "effect": "相手の薬の作用が強まるおそれがあります。",
+     "mechanism": "この薬のNMDA受容体拮抗作用がドパミンの放出を促す可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "hydrochlorothiazide"
+     ],
+     "targetLabel": "ヒドロクロロチアジド",
+     "effect": "ヒドロクロロチアジドの血中濃度が下がります。",
+     "mechanism": "機序は分かっていない。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "cimetidine"
+     ],
+     "targetLabel": "腎尿細管分泌（カチオン輸送系）により排泄される薬剤（シメチジン等）",
+     "effect": "この薬の血中濃度が上がるおそれがあります。",
+     "mechanism": "腎臓から排泄される経路を奪い合う可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "acetazolamide"
+     ],
+     "targetLabel": "尿アルカリ化を起こす薬剤（アセタゾラミド等）",
+     "effect": "この薬の血中濃度が上がるおそれがあります。",
+     "mechanism": "尿がアルカリ性になると、この薬が尿に出にくくなるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "amantadine",
+      "dextromethorphan"
+     ],
+     "targetLabel": "NMDA受容体拮抗作用を有する薬剤（アマンタジン、デキストロメトルファン等）",
+     "effect": "お互いの作用が強まるおそれがあります。",
+     "mechanism": "どちらもNMDA受容体拮抗作用をもつため。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "メマリー錠5mg／10mg／20mg、メマリーOD錠5mg／10mg／20mg 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/430574_1190018F1023_1_19",
+    "revised": "2020年6月改訂（第2版）"
+   }
+  },
+  {
+   "id": "eperisone",
+   "genericName": "エペリゾン塩酸塩",
+   "displayName": "エペリゾン",
+   "brandNames": [
+    "ミオナール"
+   ],
+   "category": "筋緊張改善薬",
+   "classes": [],
+   "interactions": [
+    {
+     "level": "caution",
+     "targets": [
+      "methocarbamol"
+     ],
+     "targetLabel": "メトカルバモール",
+     "effect": "似た薬（トルペリゾン）との併用で、目のピント調節の障害が起きたとの報告があります。",
+     "mechanism": "機序は分かっていない。"
+    }
+   ],
+   "foods": [],
+   "source": {
+    "title": "ミオナール錠50mg／ミオナール顆粒10% 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/170033_1249009D1030_1_17",
+    "revised": "2025年4月改訂（第2版）"
+   }
+  },
+  {
+   "id": "tizanidine",
+   "genericName": "チザニジン塩酸塩",
+   "displayName": "チザニジン",
+   "brandNames": [
+    "テルネリン"
+   ],
+   "category": "筋緊張改善薬",
+   "classes": [
+    "cns_depressant"
+   ],
+   "interactions": [
+    {
+     "level": "contraindicated",
+     "targets": [
+      "fluvoxamine",
+      "class:fluvoxamine",
+      "ciprofloxacin"
+     ],
+     "targetLabel": "フルボキサミン（ルボックス、デプロメール）、シプロフロキサシン（シプロキサン等）",
+     "effect": "この薬の血中濃度が大きく上がり（AUC 33倍・10倍との報告）、ひどい血圧低下、強い眠気、めまいなどが起こることがあるため、一緒に使えません。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP1A2）を阻害するため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:antihypertensive",
+      "class:diuretic"
+     ],
+     "targetLabel": "降圧剤、降圧利尿剤等",
+     "effect": "血圧が下がりすぎたり、脈が遅くなったりすることがあります。",
+     "mechanism": "この薬の中枢性α2刺激作用で血圧を下げる作用が強まるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "class:cns_depressant",
+      "class:benzodiazepine"
+     ],
+     "targetLabel": "中枢神経抑制剤",
+     "effect": "眠気などの副作用が強まるおそれがあります。",
+     "mechanism": "どちらも中枢神経を抑える作用をもつため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "amiodarone",
+      "mexiletine",
+      "propafenone",
+      "cimetidine",
+      "enoxacin",
+      "norfloxacin",
+      "class:oral_contraceptive",
+      "ticlopidine"
+     ],
+     "targetLabel": "抗不整脈剤（アミオダロン、メキシレチン、プロパフェノン）、シメチジン、ニューキノロン系抗菌剤（エノキサシン、ノルフロキサシン）、黄体・卵胞ホルモン剤（経口避妊薬）、チクロピジン",
+     "effect": "この薬の血中濃度が上がり、副作用が強まるおそれがあります。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP1A2）を阻害する可能性があるため。"
+    },
+    {
+     "level": "caution",
+     "targets": [
+      "rifampicin"
+     ],
+     "targetLabel": "CYP1A2を誘導する薬剤（リファンピシン等）",
+     "effect": "この薬の血中濃度が下がり（リファンピシンで約50%低下との報告）、効きが弱まるおそれがあります。",
+     "mechanism": "相手の薬がこの薬を分解する酵素（CYP1A2）を誘導するため。"
+    }
+   ],
+   "foods": [
+    {
+     "item": "alcohol",
+     "itemLabel": "アルコール",
+     "level": "avoid",
+     "effect": "眠気などの副作用が強まるおそれがあります。服用中はお酒を控えてください。"
+    },
+    {
+     "item": "smoking",
+     "itemLabel": "喫煙",
+     "level": "caution",
+     "effect": "この薬の血中濃度が下がり、効きが弱まるおそれがあります。"
+    }
+   ],
+   "source": {
+    "title": "テルネリン錠1mg／テルネリン顆粒0.2% 添付文書",
+    "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/480866_1249010D1025_3_07",
+    "revised": "2024年7月改訂（第2版）"
+   }
+  }
+ ]
+}

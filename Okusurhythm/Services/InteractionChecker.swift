@@ -58,3 +58,21 @@ enum InteractionChecker {
             .sorted { ($0.level ?? .caution) < ($1.level ?? .caution) }
     }
 }
+
+/// 同じ成分の薬が2つ以上登録されている（別の病院で同じ薬が出た、など）
+struct DuplicateIngredient: Identifiable {
+    let drug: Drug
+    let names: [String]
+    var id: String { drug.id }
+}
+
+extension InteractionChecker {
+    static func duplicates(_ medications: [Medication]) -> [DuplicateIngredient] {
+        Dictionary(grouping: medications.filter { $0.drugID != nil }, by: { $0.drugID! })
+            .compactMap { id, meds in
+                guard meds.count > 1, let drug = DrugDatabase.shared.drug(id: id) else { return nil }
+                return DuplicateIngredient(drug: drug, names: meds.map(\.name))
+            }
+            .sorted { $0.drug.displayName < $1.drug.displayName }
+    }
+}

@@ -19,6 +19,8 @@ struct HomeView: View {
         InteractionChecker.checkAll(medications.compactMap { DrugDatabase.shared.drug(id: $0.drugID) })
     }
 
+    private var duplicates: [DuplicateIngredient] { InteractionChecker.duplicates(medications) }
+
     private var refillMeds: [Medication] { medications.filter(\.needsRefill) }
 
     /// 「まとめてチェックする」で記録する分（今の時刻までの未記録分）
@@ -33,7 +35,7 @@ struct HomeView: View {
                 VStack(alignment: .leading, spacing: 20) {
                     WeekStrip(selectedDay: $selectedDay)
 
-                    if !interactionAlerts.isEmpty { interactionBanner }
+                    if !interactionAlerts.isEmpty || !duplicates.isEmpty { interactionBanner }
                     if !refillMeds.isEmpty { refillBanner }
 
                     HStack {
@@ -116,12 +118,15 @@ struct HomeView: View {
             InteractionCheckView()
         } label: {
             let worst = interactionAlerts.first?.level ?? .caution
+            let items = duplicates.map { "\($0.drug.displayName)が重複" }
+                + interactionAlerts.map { "\($0.a.displayName)×\($0.b.displayName)" }
             HStack(spacing: 12) {
                 Image(systemName: worst.symbol).font(.title2).foregroundStyle(worst.color)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(worst == .contraindicated ? "一緒に飲めない組み合わせがあります" : "飲み合わせに注意が必要です")
+                    Text(worst == .contraindicated ? "一緒に飲めない組み合わせがあります"
+                         : interactionAlerts.isEmpty ? "同じ成分のお薬が重複しています" : "飲み合わせに注意が必要です")
                         .font(.subheadline.bold())
-                    Text(interactionAlerts.map { "\($0.a.displayName)×\($0.b.displayName)" }.joined(separator: "、"))
+                    Text(items.joined(separator: "、"))
                         .font(.caption)
                         .foregroundStyle(.secondary)
                         .lineLimit(2)

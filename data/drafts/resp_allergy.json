@@ -1,0 +1,1294 @@
+{
+  "version": "2026-10-20",
+  "drugs": [
+    {
+      "id": "carbocisteine",
+      "genericName": "L-カルボシステイン",
+      "displayName": "カルボシステイン",
+      "brandNames": [
+        "ムコダイン"
+      ],
+      "category": "去たん薬（気道粘液調整・粘膜正常化剤）",
+      "classes": [],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "ムコダイン錠250mg／ムコダイン錠500mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/231099_2233002F1174_2_03",
+        "revised": "2024年5月改訂（第2版）"
+      }
+    },
+    {
+      "id": "ambroxol",
+      "genericName": "アンブロキソール塩酸塩",
+      "displayName": "アンブロキソール",
+      "brandNames": [
+        "ムコソルバン"
+      ],
+      "category": "去たん薬（気道潤滑去痰剤）",
+      "classes": [],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "ムコソルバン錠15mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/470310_2239001F1696_1_03",
+        "revised": "2023年4月改訂（第1版）"
+      }
+    },
+    {
+      "id": "bromhexine",
+      "genericName": "ブロムヘキシン塩酸塩",
+      "displayName": "ブロムヘキシン",
+      "brandNames": [
+        "ビソルボン"
+      ],
+      "category": "去たん薬（気道粘液溶解剤）",
+      "classes": [],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "ブロムヘキシン塩酸塩錠4mg「サワイ」 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/300119_2234001F1363_1_02",
+        "revised": "2023年9月改訂（第1版）"
+      }
+    },
+    {
+      "id": "dextromethorphan",
+      "genericName": "デキストロメトルファン臭化水素酸塩水和物",
+      "displayName": "デキストロメトルファン",
+      "brandNames": [
+        "メジコン"
+      ],
+      "category": "せき止め（鎮咳剤）",
+      "classes": [
+        "serotonergic"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "selegiline",
+            "rasagiline",
+            "safinamide",
+            "class:maoi"
+          ],
+          "targetLabel": "選択的MAO-B阻害剤（セレギリン塩酸塩、ラサギリンメシル酸塩、サフィナミドメシル酸塩）",
+          "effect": "セロトニン症候群（体温上昇、ふるえ、興奮など）があらわれることがあります。",
+          "mechanism": "どちらの薬も脳内のセロトニン濃度を上げる作用があり、併用でさらに高くなるおそれがあるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "quinidine",
+            "amiodarone",
+            "terbinafine"
+          ],
+          "targetLabel": "薬物代謝酵素（CYP2D6）を阻害する薬剤（キニジン、アミオダロン、テルビナフィン等）",
+          "effect": "この薬の血中濃度が上がることがあります。",
+          "mechanism": "これらの薬のCYP2D6阻害作用で、この薬の代謝が妨げられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ssri",
+            "class:serotonergic"
+          ],
+          "targetLabel": "セロトニン作用薬（選択的セロトニン再取り込み阻害剤（SSRI）等）",
+          "effect": "セロトニン症候群などのセロトニン作用による症状があらわれることがあります。",
+          "mechanism": "セロトニン作用が強まるおそれがあるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "メジコン錠15mg／メジコン散10% 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/343018_2223001B1210_2_04",
+        "revised": "2022年6月改訂（第1版）"
+      }
+    },
+    {
+      "id": "tipepidine",
+      "genericName": "チペピジンヒベンズ酸塩",
+      "displayName": "チペピジン",
+      "brandNames": [
+        "アスベリン"
+      ],
+      "category": "せき止め（鎮咳剤）",
+      "classes": [],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "アスベリン錠10／錠20／散10％／ドライシロップ2％／シロップ0.5％／シロップ「調剤用」2％ 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/530100_2249003B1037_3_01",
+        "revised": "2025年4月作成（第1版）"
+      }
+    },
+    {
+      "id": "codeine",
+      "genericName": "コデインリン酸塩水和物",
+      "displayName": "コデインリン酸塩",
+      "brandNames": [
+        "コデインリン酸塩"
+      ],
+      "category": "せき止め・鎮痛薬（コデイン系製剤）",
+      "classes": [
+        "opioid",
+        "cns_depressant"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:cns_depressant",
+            "class:anesthetic",
+            "class:maoi",
+            "class:tricyclic_antidepressant",
+            "class:beta_blocker"
+          ],
+          "targetLabel": "中枢神経抑制剤（フェノチアジン系薬剤、バルビツール酸系薬剤等）、吸入麻酔剤、モノアミン酸化酵素阻害剤、三環系抗うつ剤、β-遮断剤、アルコール",
+          "effect": "呼吸が弱くなる、血圧が下がる、強い眠気や昏睡が起こることがあります。",
+          "mechanism": "中枢神経を抑える作用がたがいに上乗せされるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin",
+            "class:anticoagulant"
+          ],
+          "targetLabel": "クマリン系抗凝血剤（ワルファリン）",
+          "effect": "ワルファリンの血液をさらさらにする作用が強まることがあります。",
+          "mechanism": "機序はわかっていません。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:anticholinergic"
+          ],
+          "targetLabel": "抗コリン作動性薬剤",
+          "effect": "腸が動かなくなるほどの重い便秘（麻痺性イレウス）や、尿が出にくくなることがあります。",
+          "mechanism": "抗コリン作用がたがいに上乗せされるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "nalmefene"
+          ],
+          "targetLabel": "ナルメフェン塩酸塩水和物",
+          "effect": "この薬の効果が弱まるおそれがあります。",
+          "mechanism": "ナルメフェンのμオピオイド受容体拮抗作用で、この薬の作用が競合的に妨げられるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（お酒）",
+          "level": "caution",
+          "effect": "お酒と一緒だと呼吸が弱くなる、血圧が下がる、強い眠気などが起こることがあります。急性アルコール中毒の方はこの薬を使えません。"
+        }
+      ],
+      "source": {
+        "title": "コデインリン酸塩錠20mg「第一三共」 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/430574_8115001F1092_2_01",
+        "revised": "2025年4月改訂（第4版）"
+      }
+    },
+    {
+      "id": "epinastine",
+      "genericName": "エピナスチン塩酸塩",
+      "displayName": "エピナスチン",
+      "brandNames": [
+        "アレジオン"
+      ],
+      "category": "抗アレルギー薬（抗ヒスタミン薬）",
+      "classes": [
+        "antihistamine"
+      ],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "アレジオン錠10／アレジオン錠20 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/650168_4490014F1025_1_13",
+        "revised": "2025年4月改訂（第2版）"
+      }
+    },
+    {
+      "id": "olopatadine",
+      "genericName": "オロパタジン塩酸塩",
+      "displayName": "オロパタジン",
+      "brandNames": [
+        "アレロック"
+      ],
+      "category": "抗アレルギー薬（抗ヒスタミン薬）",
+      "classes": [
+        "antihistamine"
+      ],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "アレロック錠2.5／アレロック錠5 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/230124_4490025F1023_1_31",
+        "revised": "2020年10月改訂（第1版）"
+      }
+    },
+    {
+      "id": "bilastine",
+      "genericName": "ビラスチン",
+      "displayName": "ビラスチン",
+      "brandNames": [
+        "ビラノア"
+      ],
+      "category": "抗アレルギー薬（抗ヒスタミン薬）",
+      "classes": [
+        "antihistamine"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "erythromycin",
+            "diltiazem"
+          ],
+          "targetLabel": "エリスロマイシン、ジルチアゼム",
+          "effect": "この薬の血中濃度が上がるとの報告があります。",
+          "mechanism": "P糖蛋白が阻害され、この薬の吸収が増えるためと推定されています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "high_fat_meal",
+          "itemLabel": "食事（空腹時に服用）",
+          "level": "caution",
+          "effect": "食後に飲むと、空腹時に比べて薬の吸収が大きく下がります。この薬は空腹時に飲む薬です。"
+        },
+        {
+          "item": "grapefruit",
+          "itemLabel": "グレープフルーツジュース",
+          "level": "caution",
+          "effect": "グレープフルーツジュースで飲むと、薬の血中濃度が下がったとの報告があります。"
+        }
+      ],
+      "source": {
+        "title": "ビラノア錠20mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400107_4490033F1028_1_06",
+        "revised": "2026年1月改訂（第2版、再審査結果）"
+      }
+    },
+    {
+      "id": "desloratadine",
+      "genericName": "デスロラタジン",
+      "displayName": "デスロラタジン",
+      "brandNames": [
+        "デザレックス"
+      ],
+      "category": "抗アレルギー薬（抗ヒスタミン薬）",
+      "classes": [
+        "antihistamine"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "erythromycin",
+            "ketoconazole"
+          ],
+          "targetLabel": "エリスロマイシン、ケトコナゾール",
+          "effect": "この薬（および代謝物）の血中濃度が上がったとの報告があります。",
+          "mechanism": "機序はわかっていません。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "デザレックス錠5mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/181615_4490032F1023_2_06",
+        "revised": "2026年7月改訂（第6版）"
+      }
+    },
+    {
+      "id": "loratadine",
+      "genericName": "ロラタジン",
+      "displayName": "ロラタジン",
+      "brandNames": [
+        "クラリチン"
+      ],
+      "category": "抗アレルギー薬（抗ヒスタミン薬）",
+      "classes": [
+        "antihistamine"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "erythromycin",
+            "cimetidine"
+          ],
+          "targetLabel": "エリスロマイシン、シメチジン",
+          "effect": "この薬と、その活性代謝物の血中濃度が上がることがあります。体調の変化に注意が必要です。",
+          "mechanism": "これらの薬の代謝酵素（CYP3A4、CYP2D6）阻害作用で、この薬の代謝が妨げられるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "クラリチン錠10mg／クラリチンレディタブ錠10mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/630004_4490027F1022_4_07",
+        "revised": "2020年8月改訂（第1版）"
+      }
+    },
+    {
+      "id": "cetirizine",
+      "genericName": "セチリジン塩酸塩",
+      "displayName": "セチリジン",
+      "brandNames": [
+        "ジルテック"
+      ],
+      "category": "抗アレルギー薬（抗ヒスタミン薬）",
+      "classes": [
+        "antihistamine"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline"
+          ],
+          "targetLabel": "テオフィリン",
+          "effect": "テオフィリンの体内での動きは変わりませんが、この薬の量（曝露量）が増えたとの報告があります。",
+          "mechanism": "機序ははっきりしませんが、この薬のクリアランスが16%減少します。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "ritonavir",
+            "class:hiv_protease_inhibitor"
+          ],
+          "targetLabel": "リトナビル",
+          "effect": "この薬の量（曝露量）が約40%増えたとの報告があります。",
+          "mechanism": "リトナビルにより、この薬の腎臓からの排泄が妨げられる可能性が考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:cns_depressant"
+          ],
+          "targetLabel": "中枢神経抑制剤、アルコール",
+          "effect": "眠気など中枢神経への影響が強まる可能性があります。",
+          "mechanism": "中枢神経を抑える作用が強まる可能性があるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "pilsicainide"
+          ],
+          "targetLabel": "ピルシカイニド塩酸塩水和物",
+          "effect": "両方の薬の血中濃度が上がり、ピルシカイニドの副作用が出たとの報告があります。",
+          "mechanism": "機序ははっきりしていません。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（お酒）",
+          "level": "caution",
+          "effect": "お酒と一緒だと、眠気など中枢神経への影響が強まる可能性があります。"
+        }
+      ],
+      "source": {
+        "title": "ジルテック錠5／ジルテック錠10 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/820110_4490020F1020_2_25",
+        "revised": "2025年4月改訂（第2版）"
+      }
+    },
+    {
+      "id": "rupatadine",
+      "genericName": "ルパタジンフマル酸塩",
+      "displayName": "ルパタジン",
+      "brandNames": [
+        "ルパフィン"
+      ],
+      "category": "抗アレルギー薬（抗ヒスタミン薬・抗PAF作用）",
+      "classes": [
+        "antihistamine"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "erythromycin",
+            "ketoconazole",
+            "class:strong_cyp3a4_inhibitor"
+          ],
+          "targetLabel": "CYP3A4阻害剤（エリスロマイシン、ケトコナゾール等）",
+          "effect": "この薬の血中濃度が上がったとの報告があります。",
+          "mechanism": "CYP3A4が阻害され、この薬の代謝が妨げられるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "grapefruit",
+          "itemLabel": "グレープフルーツジュース",
+          "level": "caution",
+          "effect": "一緒にとると、この薬の血中濃度が上がったとの報告があります。"
+        },
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（お酒）",
+          "level": "caution",
+          "effect": "眠気など中枢神経への影響が強まる可能性があるため、お酒との併用は注意が必要です。"
+        }
+      ],
+      "source": {
+        "title": "ルパフィン錠10mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/470006_4490034F1022_1_06",
+        "revised": "2025年12月改訂（第3版）"
+      }
+    },
+    {
+      "id": "dexchlorpheniramine",
+      "genericName": "d-クロルフェニラミンマレイン酸塩",
+      "displayName": "d-クロルフェニラミン",
+      "brandNames": [
+        "ポララミン"
+      ],
+      "category": "抗ヒスタミン薬",
+      "classes": [
+        "antihistamine",
+        "anticholinergic",
+        "cns_depressant"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:cns_depressant",
+            "class:maoi",
+            "class:anticholinergic",
+            "phenobarbital",
+            "primidone"
+          ],
+          "targetLabel": "中枢神経抑制剤（バルビツール酸誘導体、プリミドン）、アルコール、MAO阻害剤、抗コリン作用を有する薬剤（チキジウム臭化物、アトロピン硫酸塩水和物、ブチルスコポラミン臭化物）",
+          "effect": "たがいに作用が強まることがあります。量を減らすなど慎重に使われます。",
+          "mechanism": "この薬の中枢抑制作用で作用が強まるため、またMAO阻害剤はこの薬の解毒のしくみに干渉して作用を長引かせ強めることがあるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "droxidopa",
+            "noradrenaline"
+          ],
+          "targetLabel": "ドロキシドパ、ノルアドレナリン",
+          "effect": "血圧が異常に上がるおそれがあります。",
+          "mechanism": "この薬がヒスタミンによる毛細血管の拡張を抑えるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（お酒）",
+          "level": "caution",
+          "effect": "お酒と一緒だと、たがいに作用が強まり、眠気などが出やすくなることがあります。"
+        }
+      ],
+      "source": {
+        "title": "ポララミン散1%／ポララミン錠2mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400186_4419002B1033_2_05",
+        "revised": "2023年8月改訂（第1版）"
+      }
+    },
+    {
+      "id": "pranlukast",
+      "genericName": "プランルカスト水和物",
+      "displayName": "プランルカスト",
+      "brandNames": [
+        "オノン"
+      ],
+      "category": "ぜんそく・アレルギー性鼻炎の薬（ロイコトリエン受容体拮抗剤）",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "itraconazole",
+            "erythromycin",
+            "class:strong_cyp3a4_inhibitor"
+          ],
+          "targetLabel": "CYP3A4を阻害する薬剤（イトラコナゾール、エリスロマイシン等）",
+          "effect": "この薬の血中濃度が上がる可能性があります。",
+          "mechanism": "これらの薬により、この薬の代謝が妨げられるとの報告があります。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "オノンカプセル112.5mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/180188_4490017M1036_1_18",
+        "revised": "2026年7月改訂（第3版）"
+      }
+    },
+    {
+      "id": "tulobuterol",
+      "genericName": "ツロブテロール",
+      "displayName": "ツロブテロール",
+      "brandNames": [
+        "ホクナリンテープ"
+      ],
+      "category": "気管支を広げる貼り薬（β2刺激薬）",
+      "classes": [
+        "beta2_agonist"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "epinephrine",
+            "isoprenaline",
+            "class:catecholamine"
+          ],
+          "targetLabel": "カテコールアミン製剤（アドレナリン、イソプロテレノール等）",
+          "effect": "不整脈、場合によっては心停止を起こすおそれがあります。",
+          "mechanism": "どちらも交感神経を刺激する作用を持つためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline",
+            "aminophylline",
+            "class:xanthine"
+          ],
+          "targetLabel": "キサンチン誘導体（テオフィリン、アミノフィリン水和物、ジプロフィリン等）",
+          "effect": "血液中のカリウムが減り（低カリウム血症）、不整脈を起こすおそれがあります。",
+          "mechanism": "どちらもカリウムを細胞内に移す作用を持つためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "prednisolone",
+            "class:corticosteroid"
+          ],
+          "targetLabel": "ステロイド剤（プレドニゾロン、ベタメタゾン、ヒドロコルチゾン等）",
+          "effect": "血液中のカリウムが減り（低カリウム血症）、不整脈を起こすおそれがあります。",
+          "mechanism": "ステロイド剤は尿へのカリウム排泄を増やすためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "furosemide",
+            "class:diuretic"
+          ],
+          "targetLabel": "利尿剤（トリクロルメチアジド、フロセミド、アセタゾラミド等）",
+          "effect": "血液中のカリウムが減り（低カリウム血症）、不整脈を起こすおそれがあります。",
+          "mechanism": "利尿剤は尿へのカリウム排泄を増やすためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ホクナリンテープ0.5mg／1mg／2mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/671450_2259707S1020_7_02",
+        "revised": "2024年7月改訂（第3版）"
+      }
+    },
+    {
+      "id": "theophylline",
+      "genericName": "テオフィリン",
+      "displayName": "テオフィリン",
+      "brandNames": [
+        "テオドール"
+      ],
+      "category": "ぜんそくの薬（キサンチン系気管支拡張剤）",
+      "classes": [
+        "xanthine"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "adenosine"
+          ],
+          "targetLabel": "アデノシン（アデノスキャン）",
+          "effect": "アデノシンを使う検査（心臓の虚血診断）の結果に影響することがあります。アデノシンを使う場合は12時間以上あける必要があります。",
+          "mechanism": "この薬がアデノシン受容体に拮抗し、アデノシンの作用を弱めるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "aminophylline",
+            "class:xanthine",
+            "class:ephedra_containing"
+          ],
+          "targetLabel": "他のキサンチン系薬剤（アミノフィリン水和物、ジプロフィリン、カフェイン等）、中枢神経興奮薬（エフェドリン塩酸塩、マオウ等）",
+          "effect": "神経が過度に興奮する症状があらわれることがあります。",
+          "mechanism": "併用で中枢神経を刺激する作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "tulobuterol",
+            "procaterol",
+            "class:beta2_agonist"
+          ],
+          "targetLabel": "交感神経刺激剤（β刺激剤）（ツロブテロール塩酸塩、プロカテロール塩酸塩水和物等）",
+          "effect": "低カリウム血症や、脈が速くなる・不整脈などβ刺激剤の副作用が強まることがあります。",
+          "mechanism": "どちらも心臓を刺激する作用を持ち、β刺激剤の作用を強めるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cimetidine",
+            "ciprofloxacin",
+            "erythromycin",
+            "clarithromycin",
+            "fluvoxamine",
+            "class:fluvoxamine",
+            "verapamil",
+            "diltiazem",
+            "amiodarone",
+            "fluconazole"
+          ],
+          "targetLabel": "シメチジン、シプロフロキサシン、エリスロマイシン、クラリスロマイシン、フルボキサミンマレイン酸塩、ベラパミル塩酸塩、ジルチアゼム塩酸塩、アミオダロン塩酸塩、フルコナゾール等",
+          "effect": "テオフィリンの中毒症状（吐き気、動悸、けいれんなど）があらわれることがあります。必要に応じて量が調整されます。",
+          "mechanism": "肝臓の代謝酵素が阻害され、テオフィリンの血中濃度が上がると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "acyclovir",
+            "valacyclovir",
+            "allopurinol",
+            "cyclosporine"
+          ],
+          "targetLabel": "アシクロビル、バラシクロビル塩酸塩、シクロスポリン、アロプリノール等",
+          "effect": "テオフィリンの中毒症状があらわれることがあります。",
+          "mechanism": "テオフィリンの血中濃度が上がるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin",
+            "phenobarbital",
+            "lansoprazole",
+            "ritonavir"
+          ],
+          "targetLabel": "リファンピシン、フェノバルビタール、ランソプラゾール、リトナビル",
+          "effect": "テオフィリンの効果が弱まることがあります。",
+          "mechanism": "肝臓の代謝酵素が誘導され、テオフィリンの血中濃度が下がると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "phenytoin",
+            "carbamazepine"
+          ],
+          "targetLabel": "フェニトイン、カルバマゼピン",
+          "effect": "テオフィリンと相手の薬の両方の効果が弱まることがあります。",
+          "mechanism": "肝臓の代謝酵素が誘導され、テオフィリンの血中濃度が下がると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "dipyridamole"
+          ],
+          "targetLabel": "ジピリダモール",
+          "effect": "ジピリダモールの作用を弱めることがあります。",
+          "mechanism": "この薬のアデノシン拮抗作用によるものです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "smoking",
+          "itemLabel": "タバコ（喫煙・禁煙）",
+          "level": "caution",
+          "effect": "喫煙中に禁煙すると（ニコチン製剤を使う禁煙を含む）、テオフィリンの血中濃度が上がり中毒症状が出ることがあります。禁煙を始めるときは医師に伝えましょう。"
+        },
+        {
+          "item": "st_johns_wort",
+          "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+          "level": "avoid",
+          "effect": "この薬の血中濃度が下がるおそれがあるため、摂取しないようにしましょう。"
+        },
+        {
+          "item": "caffeine",
+          "itemLabel": "カフェイン",
+          "level": "caution",
+          "effect": "カフェインなど他のキサンチン系と一緒だと、神経が過度に興奮する症状があらわれることがあります。"
+        }
+      ],
+      "source": {
+        "title": "テオドール錠100mg／テオドール錠200mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400315_2251001F2115_2_16",
+        "revised": "2026年6月改訂（第4版）"
+      }
+    },
+    {
+      "id": "procaterol",
+      "genericName": "プロカテロール塩酸塩水和物",
+      "displayName": "プロカテロール",
+      "brandNames": [
+        "メプチン"
+      ],
+      "category": "気管支拡張薬（β2刺激薬）",
+      "classes": [
+        "beta2_agonist"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "epinephrine",
+            "isoprenaline",
+            "class:catecholamine"
+          ],
+          "targetLabel": "カテコールアミン製剤（アドレナリン、イソプレナリン等）",
+          "effect": "不整脈、場合によっては心停止を起こすおそれがあります。",
+          "mechanism": "アドレナリン作動性神経への刺激が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline",
+            "aminophylline",
+            "class:xanthine"
+          ],
+          "targetLabel": "キサンチン誘導体（テオフィリン、アミノフィリン水和物、ジプロフィリン等）",
+          "effect": "低カリウム血症や、脈が速くなる・不整脈などの副作用が強まることがあります。",
+          "mechanism": "キサンチン誘導体がアドレナリン作動性神経への刺激を強めるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "prednisolone",
+            "class:corticosteroid",
+            "furosemide",
+            "class:diuretic"
+          ],
+          "targetLabel": "ステロイド剤（ベタメタゾン、プレドニゾロン等）、利尿剤（フロセミド等）",
+          "effect": "血液中のカリウムが減り（低カリウム血症）、不整脈を起こすおそれがあります。",
+          "mechanism": "ステロイド剤や利尿剤は尿へのカリウム排泄を増やすためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "メプチン錠50μg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/180078_2259004F2168_1_10",
+        "revised": "2021年8月改訂（第2版）"
+      }
+    },
+    {
+      "id": "azithromycin",
+      "genericName": "アジスロマイシン水和物",
+      "displayName": "アジスロマイシン",
+      "brandNames": [
+        "ジスロマック"
+      ],
+      "category": "抗菌薬（マクロライド系）",
+      "classes": [
+        "macrolide",
+        "antibiotic",
+        "qt_prolonging"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antacid_metal"
+          ],
+          "targetLabel": "制酸剤（水酸化マグネシウム、水酸化アルミニウム）",
+          "effect": "この薬の最高血中濃度が下がったとの報告があります。",
+          "mechanism": "機序はわかっていません。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "ワルファリン",
+          "effect": "ワルファリンの作用が強まり、血液が固まりにくくなった（INR上昇）との報告があります。",
+          "mechanism": "マクロライド系薬はワルファリンの代謝酵素を阻害することがありますが、この薬での詳しい機序は明らかではありません。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cyclosporine"
+          ],
+          "targetLabel": "シクロスポリン",
+          "effect": "シクロスポリンの血中濃度が上がったとの報告があります。",
+          "mechanism": "マクロライド系薬はシクロスポリンの代謝酵素を阻害することがありますが、この薬での詳しい機序は明らかではありません。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "nelfinavir"
+          ],
+          "targetLabel": "ネルフィナビル",
+          "effect": "この薬の血中濃度が上がったとの報告があります。",
+          "mechanism": "機序はわかっていません。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジゴキシン",
+          "effect": "ジゴキシン中毒（吐き気、不整脈など）が起こるリスクが上がったとの報告があります。",
+          "mechanism": "P糖蛋白を介したジゴキシンの輸送が妨げられ、血中濃度が上がることが示唆されています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "venetoclax"
+          ],
+          "targetLabel": "ベネトクラクス",
+          "effect": "ベネトクラクスの効果が弱まるおそれがあり、併用は避けることが望まれます。",
+          "mechanism": "機序は不明ですが、ベネトクラクスの血中濃度が下がる可能性があります。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ジスロマック錠250mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/672212_6149004F1028_3_03",
+        "revised": "2022年6月改訂（第1版）"
+      }
+    },
+    {
+      "id": "erythromycin",
+      "genericName": "エリスロマイシンステアリン酸塩",
+      "displayName": "エリスロマイシン",
+      "brandNames": [
+        "エリスロシン"
+      ],
+      "category": "抗菌薬（マクロライド系）",
+      "classes": [
+        "macrolide",
+        "antibiotic",
+        "qt_prolonging",
+        "p_gp_inhibitor"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "ergotamine",
+            "dihydroergotamine"
+          ],
+          "targetLabel": "エルゴタミン酒石酸塩・無水カフェイン・イソプロピルアンチピリン（クリアミン）、ジヒドロエルゴタミンメシル酸塩",
+          "effect": "手足の虚血や血管のけいれん（攣縮）などが報告されています。",
+          "mechanism": "この薬がCYP3Aと複合体をつくり、これらの薬の代謝を抑えて血中濃度を上げるためです。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "pimozide"
+          ],
+          "targetLabel": "ピモジド",
+          "effect": "QT延長や心室性不整脈（トルサード・ド・ポアンツを含む）などがあらわれるおそれがあります。",
+          "mechanism": "この薬がCYP3Aと複合体をつくり、ピモジドの代謝を抑えて血中濃度を上げるためです。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "lomitapide"
+          ],
+          "targetLabel": "ロミタピドメシル酸塩（ジャクスタピッド）",
+          "effect": "ロミタピドの血中濃度が著しく上がるおそれがあります。",
+          "mechanism": "この薬がCYP3Aと複合体をつくり、ロミタピドの代謝を抑えるためです。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "clindamycin",
+            "lincomycin"
+          ],
+          "targetLabel": "クリンダマイシン（注射剤、経口剤）（ダラシンS注射液、ダラシンカプセル）、リンコマイシン塩酸塩水和物（リンコシン）",
+          "effect": "併用してもこれらの薬の効果があらわれないと考えられます。",
+          "mechanism": "この薬の細菌のリボソーム（50Sサブユニット）への結合力が、これらの薬より強いと考えられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline",
+            "aminophylline"
+          ],
+          "targetLabel": "テオフィリン、アミノフィリン水和物",
+          "effect": "吐き気・嘔吐、不整脈、けいれんなどが報告されています。量を減らすなど慎重に使われます。",
+          "mechanism": "この薬がCYP3Aと複合体をつくり、これらの薬の代謝を抑えて血中濃度を上げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "ワルファリンカリウム",
+          "effect": "出血しやすくなる、プロトロンビン時間の延長などが報告されています。量を減らすなど慎重に使われます。",
+          "mechanism": "この薬がCYP3Aと複合体をつくり、ワルファリンの代謝を抑えて血中濃度を上げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "triazolam",
+            "midazolam"
+          ],
+          "targetLabel": "ミダゾラム、トリアゾラム",
+          "effect": "眠くなる作用（鎮静作用）が強まったとの報告があります。量を減らすなど慎重に使われます。",
+          "mechanism": "この薬がCYP3Aと複合体をつくり、これらの薬の代謝を抑えて血中濃度を上げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "simvastatin",
+            "atorvastatin"
+          ],
+          "targetLabel": "シンバスタチン、アトルバスタチンカルシウム水和物",
+          "effect": "筋肉痛、脱力感などを特徴とし、急激な腎機能悪化を伴う横紋筋融解症があらわれたとの報告があります。",
+          "mechanism": "この薬がCYP3Aと複合体をつくり、これらの薬の代謝を抑えて血中濃度を上げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "carbamazepine"
+          ],
+          "targetLabel": "カルバマゼピン",
+          "effect": "めまい、ふらつき（運動失調）などが報告されています。量を減らすなど慎重に使われます。",
+          "mechanism": "この薬がCYP3Aと複合体をつくり、カルバマゼピンの代謝を抑えて血中濃度を上げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cyclosporine",
+            "tacrolimus"
+          ],
+          "targetLabel": "シクロスポリン、タクロリムス水和物",
+          "effect": "腎障害などが報告されています。量を減らすなど慎重に使われます。",
+          "mechanism": "この薬がCYP3Aと複合体をつくり、これらの薬の代謝を抑えて血中濃度を上げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジゴキシン",
+          "effect": "ジゴキシンの作用が強まり、吐き気・嘔吐、不整脈などの中毒症状が報告されています。",
+          "mechanism": "この薬が腸内細菌に影響し、ジゴキシンの代謝が抑えられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "fexofenadine"
+          ],
+          "targetLabel": "フェキソフェナジン塩酸塩",
+          "effect": "フェキソフェナジンの血中濃度が上がるとの報告があります。",
+          "mechanism": "P糖蛋白の阻害により、フェキソフェナジンの排泄が減り吸収が増えるためと推定されています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin",
+            "rifabutin",
+            "phenytoin",
+            "phenobarbital",
+            "class:cyp3a4_inducer"
+          ],
+          "targetLabel": "CYP3A4誘導作用を有する薬剤（リファンピシン、リファブチン、フェニトイン、フェノバルビタール等）",
+          "effect": "この薬の作用が弱まるおそれがあります。",
+          "mechanism": "これらの薬のCYP3A誘導作用で、この薬の代謝が進み血中濃度が下がるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "st_johns_wort",
+          "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+          "level": "caution",
+          "effect": "この薬の代謝が進んで血中濃度が下がり、効果が弱まるおそれがあります。"
+        }
+      ],
+      "source": {
+        "title": "エリスロシン錠100mg／エリスロシン錠200mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/730869_6141004F1038_3_08",
+        "revised": "2026年7月改訂（第5版）"
+      }
+    },
+    {
+      "id": "cefditoren_pivoxil",
+      "genericName": "セフジトレン ピボキシル",
+      "displayName": "セフジトレン ピボキシル",
+      "brandNames": [
+        "メイアクト"
+      ],
+      "category": "抗菌薬（セフェム系）",
+      "classes": [
+        "antibiotic"
+      ],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "メイアクトMS錠100mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/780009_6132015F1037_1_11",
+        "revised": "2021年12月改訂（第1版）"
+      }
+    },
+    {
+      "id": "cefcapene_pivoxil",
+      "genericName": "セフカペン ピボキシル塩酸塩水和物",
+      "displayName": "セフカペン ピボキシル",
+      "brandNames": [
+        "フロモックス"
+      ],
+      "category": "抗菌薬（セフェム系）",
+      "classes": [
+        "antibiotic"
+      ],
+      "interactions": [],
+      "foods": [],
+      "source": {
+        "title": "フロモックス錠75mg／フロモックス錠100mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/340018_6132016F1023_1_25",
+        "revised": "2026年1月改訂（第4版）"
+      }
+    },
+    {
+      "id": "doxycycline",
+      "genericName": "ドキシサイクリン塩酸塩水和物",
+      "displayName": "ドキシサイクリン",
+      "brandNames": [
+        "ビブラマイシン"
+      ],
+      "category": "抗菌薬（テトラサイクリン系）",
+      "classes": [
+        "tetracycline",
+        "antibiotic"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "magnesium_oxide",
+            "class:antacid_metal"
+          ],
+          "targetLabel": "カルシウム、マグネシウム、アルミニウム、鉄剤、ビスマス塩",
+          "effect": "この薬の吸収が下がり、効果が弱まるおそれがあります。",
+          "mechanism": "金属イオンとこの薬がキレート（結合体）をつくり、腸からの吸収が妨げられるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin",
+            "class:anticoagulant"
+          ],
+          "targetLabel": "抗凝血剤（ワルファリン等）",
+          "effect": "血液が固まりにくくなる（プロトロンビン時間の延長）ことがあります。",
+          "mechanism": "腸内のビタミンKをつくる細菌が抑えられ、ビタミンKが不足するためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "carbamazepine",
+            "phenytoin",
+            "rifampicin",
+            "phenobarbital"
+          ],
+          "targetLabel": "カルバマゼピン、フェニトイン、リファンピシン、バルビツール酸誘導体",
+          "effect": "この薬が体から早くなくなる（半減期が短くなる）ことがあります。",
+          "mechanism": "これらの薬が肝臓の代謝酵素を誘導するためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:sulfonylurea"
+          ],
+          "targetLabel": "スルホニル尿素系血糖降下薬（グリクロピラミド、グリベンクラミド、グリメピリド等）",
+          "effect": "血糖を下げる作用が強まることがあります。",
+          "mechanism": "インスリンの作用が強まるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:oral_contraceptive"
+          ],
+          "targetLabel": "経口避妊薬",
+          "effect": "経口避妊薬の効果が弱まるおそれがあります。",
+          "mechanism": "この薬が腸内細菌を変化させ、経口避妊薬の再吸収（腸肝循環）を抑えると考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "iron_calcium_supplements",
+          "itemLabel": "カルシウム・マグネシウム・鉄などを含む製剤",
+          "level": "caution",
+          "effect": "一緒に飲むとこの薬の吸収が下がり、効果が弱まるおそれがあります。"
+        }
+      ],
+      "source": {
+        "title": "ビブラマイシン錠50mg／ビブラマイシン錠100mg 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/672212_6152004F1074_3_04",
+        "revised": "2024年3月改訂（第2版）"
+      }
+    },
+    {
+      "id": "oseltamivir",
+      "genericName": "オセルタミビルリン酸塩",
+      "displayName": "オセルタミビル",
+      "brandNames": [
+        "タミフル"
+      ],
+      "category": "抗インフルエンザウイルス薬",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "ワルファリン",
+          "effect": "併用後に血液が固まりにくくなった（プロトロンビン時間の延長）との報告があります。体調の変化に注意が必要です。",
+          "mechanism": "機序はわかっていません。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "live_attenuated_influenza_vaccine"
+          ],
+          "targetLabel": "経鼻弱毒生インフルエンザワクチン",
+          "effect": "経鼻の生ワクチンの効果が得られないおそれがあります。",
+          "mechanism": "ワクチンウイルスの増殖が抑えられ、ワクチンの効果が弱まる可能性があるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "タミフルカプセル75 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/450045_6250021M1027_1_40",
+        "revised": "2024年10月改訂（第2版）"
+      }
+    },
+    {
+      "id": "baloxavir_marboxil",
+      "genericName": "バロキサビル マルボキシル",
+      "displayName": "バロキサビル",
+      "brandNames": [
+        "ゾフルーザ"
+      ],
+      "category": "抗インフルエンザウイルス薬",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "ワルファリン",
+          "effect": "併用後に血液が固まりにくくなった（プロトロンビン時間の延長）との報告があります。体調の変化に注意が必要です。",
+          "mechanism": "機序はわかっていません。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ゾフルーザ錠10mg／錠20mg／顆粒2%分包 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/340018_6250047F1022_1_21",
+        "revised": "2026年9月改訂（第7版）"
+      }
+    },
+    {
+      "id": "valacyclovir",
+      "genericName": "バラシクロビル塩酸塩",
+      "displayName": "バラシクロビル",
+      "brandNames": [
+        "バルトレックス"
+      ],
+      "category": "抗ヘルペスウイルス薬",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "probenecid"
+          ],
+          "targetLabel": "プロベネシド",
+          "effect": "体内でできるアシクロビルの排泄が抑えられ、血中の量が約48%増えたとの報告があります。腎機能が低下しているかもしれない方（高齢者など）は特に注意が必要です。",
+          "mechanism": "プロベネシドが腎臓での排泄にかかわるOAT1・MATE1を阻害するためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cimetidine"
+          ],
+          "targetLabel": "シメチジン",
+          "effect": "体内でできるアシクロビルの排泄が抑えられ、血中の量が約27%増えたとの報告があります。腎機能が低下しているかもしれない方（高齢者など）は特に注意が必要です。",
+          "mechanism": "シメチジンが腎臓での排泄にかかわるOAT1・MATE1・MATE2-Kを阻害するためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "mycophenolate_mofetil"
+          ],
+          "targetLabel": "ミコフェノール酸 モフェチル",
+          "effect": "両方の薬の排泄が抑えられ、血中の量が増えたとの報告があります。腎機能が低下しているかもしれない方は特に注意が必要です。",
+          "mechanism": "腎臓の尿細管からの排泄で競合するためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline"
+          ],
+          "targetLabel": "テオフィリン",
+          "effect": "テオフィリンの中毒症状があらわれることがあります。",
+          "mechanism": "機序は不明ですが、アシクロビルがテオフィリンの代謝を妨げ、血中濃度が上がると考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "バルトレックス錠500 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/340278_6250019F1020_1_22",
+        "revised": "2026年2月改訂（第3版）"
+      }
+    },
+    {
+      "id": "acyclovir",
+      "genericName": "アシクロビル",
+      "displayName": "アシクロビル",
+      "brandNames": [
+        "ゾビラックス"
+      ],
+      "category": "抗ヘルペスウイルス薬",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "probenecid"
+          ],
+          "targetLabel": "プロベネシド",
+          "effect": "この薬の排泄が抑えられ、血中の量が約40%増えたとの報告があります。腎機能が低下しているかもしれない方（高齢者など）は特に注意が必要です。",
+          "mechanism": "プロベネシドが腎臓での排泄にかかわるOAT1・MATE1を阻害するためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cimetidine"
+          ],
+          "targetLabel": "シメチジン",
+          "effect": "この薬の排泄が抑えられ、血中の量が約27%増えたとの報告があります（バラシクロビルでのデータ）。腎機能が低下しているかもしれない方は特に注意が必要です。",
+          "mechanism": "シメチジンが腎臓での排泄にかかわるOAT1・MATE1・MATE2-Kを阻害するためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "mycophenolate_mofetil"
+          ],
+          "targetLabel": "ミコフェノール酸 モフェチル",
+          "effect": "両方の薬の排泄が抑えられ、血中の量が増えたとの報告があります。腎機能が低下しているかもしれない方は特に注意が必要です。",
+          "mechanism": "腎臓の尿細管からの排泄で競合するためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline"
+          ],
+          "targetLabel": "テオフィリン",
+          "effect": "テオフィリンの中毒症状があらわれることがあります。",
+          "mechanism": "機序は不明ですが、この薬がテオフィリンの代謝を妨げ、血中濃度が上がると考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ゾビラックス錠200／ゾビラックス錠400 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/340278_6250002F1025_W_20",
+        "revised": "2026年2月改訂（第3版）"
+      }
+    }
+  ]
+}

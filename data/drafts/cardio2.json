@@ -1,0 +1,2763 @@
+{
+  "version": "2026-10-20",
+  "drugs": [
+    {
+      "id": "azelnidipine",
+      "genericName": "アゼルニジピン",
+      "displayName": "アゼルニジピン",
+      "brandNames": [
+        "カルブロック"
+      ],
+      "category": "降圧薬（カルシウム拮抗薬）",
+      "classes": [
+        "calcium_channel_blocker",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "itraconazole",
+            "miconazole",
+            "fluconazole",
+            "fosfluconazole",
+            "voriconazole",
+            "posaconazole"
+          ],
+          "targetLabel": "アゾール系抗真菌剤（イトラコナゾール、ミコナゾール〔経口剤・注射剤・口腔用剤〕、フルコナゾール、ホスフルコナゾール、ボリコナゾール、ポサコナゾール）",
+          "effect": "この薬の血中濃度が大きく上がるおそれがあるため、一緒に使えません（イトラコナゾールとの併用でAUCが2.8倍に上がったとの報告があります）。",
+          "mechanism": "これらの薬がCYP3A4を阻害し、この薬が体から消えにくくなるためと考えられています。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "ritonavir",
+            "darunavir",
+            "cobicistat",
+            "nirmatrelvir_ritonavir",
+            "ensitrelvir"
+          ],
+          "targetLabel": "HIVプロテアーゼ阻害剤（リトナビル含有製剤、ダルナビル含有製剤）、コビシスタット含有製剤、ニルマトレルビル・リトナビル（パキロビッド）、エンシトレルビル（ゾコーバ）",
+          "effect": "この薬の作用が強まるおそれがあるため、一緒に使えません。",
+          "mechanism": "これらの薬がCYP3A4を阻害し、この薬が体から消えにくくなるためと考えられています。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "clarithromycin",
+            "ceritinib",
+            "tucatinib",
+            "lonafarnib"
+          ],
+          "targetLabel": "クラリスロマイシン、セリチニブ、ツカチニブ、ロナファルニブ",
+          "effect": "この薬の作用が強まるおそれがあるため、一緒に使えません。",
+          "mechanism": "これらの薬がCYP3A4を阻害し、この薬が体から消えにくくなるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antihypertensive",
+            "class:arb",
+            "class:ace_inhibitor",
+            "class:diuretic",
+            "class:beta_blocker",
+            "class:calcium_channel_blocker"
+          ],
+          "targetLabel": "他の降圧剤",
+          "effect": "血圧が下がりすぎるおそれがあります。必要に応じてどちらかの薬を減らします。",
+          "mechanism": "作用の仕組みが異なる降圧剤どうしで、血圧を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジゴキシン",
+          "effect": "ジゴキシンの血中濃度が上がる（Cmax 1.5倍、AUC 1.3倍）との報告があり、必要に応じてジゴキシンを減らします。",
+          "mechanism": "ジゴキシンの腎臓からの排泄などが妨げられるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:azole_antifungal",
+            "fosravuconazole",
+            "cimetidine",
+            "imatinib",
+            "class:macrolide",
+            "erythromycin"
+          ],
+          "targetLabel": "アゾール系抗真菌剤（併用禁忌の薬・外用剤を除く：ホスラブコナゾール等）、シメチジン、イマチニブ、マクロライド系抗生物質（エリスロマイシン等）",
+          "effect": "この薬の作用が強まるおそれがあります。必要に応じてこの薬を減らすか、相手の薬を中止します。",
+          "mechanism": "これらの薬がCYP3A4を阻害し、この薬が体から消えにくくなるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "simvastatin"
+          ],
+          "targetLabel": "シンバスタチン",
+          "effect": "シンバスタチンの血中濃度（AUC）が2.0倍に上がったとの報告があります。必要に応じてどちらかの薬を中止します。",
+          "mechanism": "お互いのCYP3A4での代謝を妨げ合うためと考えられています。腎機能障害のある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cyclosporine"
+          ],
+          "targetLabel": "シクロスポリン",
+          "effect": "この薬またはシクロスポリンの作用が強まるおそれがあり、必要に応じて減量します。",
+          "mechanism": "お互いのCYP3A4での代謝を妨げ合うためと考えられています。腎機能障害のある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:benzodiazepine",
+            "diazepam",
+            "midazolam",
+            "triazolam",
+            "class:oral_contraceptive"
+          ],
+          "targetLabel": "ベンゾジアゼピン系薬剤（ジアゼパム、ミダゾラム、トリアゾラム等）、経口黄体・卵胞ホルモン（経口避妊薬等）",
+          "effect": "この薬または相手の薬の作用が強まるおそれがあり、必要に応じて減量します。",
+          "mechanism": "お互いのCYP3A4での代謝を妨げ合うためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin",
+            "phenytoin",
+            "phenobarbital",
+            "class:cyp3a4_inducer"
+          ],
+          "targetLabel": "リファンピシン、フェニトイン、フェノバルビタール",
+          "effect": "この薬の作用が弱まるおそれがあります。",
+          "mechanism": "これらの薬が代謝酵素を増やし、この薬が体から消えやすくなるためと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "grapefruit",
+          "itemLabel": "グレープフルーツジュース",
+          "level": "avoid",
+          "effect": "この薬の血中濃度が上がり、血圧が下がりすぎるおそれがあります。この薬を飲んでいる間はグレープフルーツジュースを飲まないようにしてください。"
+        }
+      ],
+      "source": {
+        "title": "カルブロック錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/430574_2149043F1020_2_18",
+        "revised": "2026年8月改訂（第6版）"
+      }
+    },
+    {
+      "id": "cilnidipine",
+      "genericName": "シルニジピン",
+      "displayName": "シルニジピン",
+      "brandNames": [
+        "アテレック"
+      ],
+      "category": "降圧薬（カルシウム拮抗薬）",
+      "classes": [
+        "calcium_channel_blocker",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antihypertensive",
+            "class:arb",
+            "class:ace_inhibitor",
+            "class:diuretic",
+            "class:beta_blocker",
+            "class:calcium_channel_blocker"
+          ],
+          "targetLabel": "降圧作用を有する薬剤",
+          "effect": "血圧が下がりすぎるおそれがあります。",
+          "mechanism": "互いに血圧を下げる作用を強めると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジゴキシン",
+          "effect": "他のカルシウム拮抗剤でジゴキシンの血中濃度が上がったとの報告があります。吐き気・嘔吐、頭痛、見え方の異常、不整脈などの中毒症状に注意し、必要に応じて用量を調整します。",
+          "mechanism": "ジゴキシンが体から消えにくくなるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cimetidine"
+          ],
+          "targetLabel": "シメチジン",
+          "effect": "他のカルシウム拮抗剤（ニフェジピン等）の作用が強まったとの報告があります。",
+          "mechanism": "シメチジンが肝臓での代謝を抑え、胃酸を減らして吸収を増やすためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin",
+            "class:cyp3a4_inducer"
+          ],
+          "targetLabel": "リファンピシン",
+          "effect": "他のカルシウム拮抗剤（ニフェジピン等）の作用が弱まったとの報告があります。",
+          "mechanism": "リファンピシンが肝臓の代謝酵素を増やし、代謝を早めるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:azole_antifungal",
+            "itraconazole",
+            "miconazole"
+          ],
+          "targetLabel": "アゾール系抗真菌剤（イトラコナゾール、ミコナゾール等）",
+          "effect": "この薬の血中濃度が上がるおそれがあります。",
+          "mechanism": "これらの薬がこの薬の代謝酵素（CYP3A4）を阻害するためと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "grapefruit",
+          "itemLabel": "グレープフルーツジュース",
+          "level": "caution",
+          "effect": "この薬の血中濃度が上がることが確認されています。"
+        }
+      ],
+      "source": {
+        "title": "アテレック錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/111890_2149037F1032_2_08",
+        "revised": "2020年10月改訂（第1版）"
+      }
+    },
+    {
+      "id": "benidipine",
+      "genericName": "ベニジピン塩酸塩",
+      "displayName": "ベニジピン",
+      "brandNames": [
+        "コニール"
+      ],
+      "category": "降圧薬・狭心症治療薬（カルシウム拮抗薬）",
+      "classes": [
+        "calcium_channel_blocker",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antihypertensive",
+            "class:arb",
+            "class:ace_inhibitor",
+            "class:diuretic",
+            "class:beta_blocker",
+            "class:calcium_channel_blocker"
+          ],
+          "targetLabel": "降圧作用を有する薬剤",
+          "effect": "血圧が下がりすぎることがあります。",
+          "mechanism": "血圧を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジゴキシン",
+          "effect": "ジギタリス中毒が起こるおそれがあり、ジゴキシンの血中濃度や心臓の状態を確認します。",
+          "mechanism": "カルシウム拮抗剤がジゴキシンの排泄を妨げ、血中濃度を上げるとの報告があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cimetidine"
+          ],
+          "targetLabel": "シメチジン",
+          "effect": "血圧が下がりすぎるおそれがあります。",
+          "mechanism": "シメチジンがこの薬の代謝を抑え、胃酸を減らして吸収を増やすとの報告があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin",
+            "class:cyp3a4_inducer"
+          ],
+          "targetLabel": "リファンピシン",
+          "effect": "血圧を下げる作用が弱まるおそれがあります。",
+          "mechanism": "リファンピシンが肝臓の代謝酵素を増やし、この薬の血中濃度を下げるとの報告があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "itraconazole"
+          ],
+          "targetLabel": "イトラコナゾール",
+          "effect": "血圧が下がりすぎることがあります。",
+          "mechanism": "イトラコナゾールが肝臓でのこの薬の代謝を妨げ、血中濃度が上がるおそれがあります。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "grapefruit",
+          "itemLabel": "グレープフルーツジュース",
+          "level": "caution",
+          "effect": "この薬の血中濃度が上がり、血圧が下がりすぎることがあります。"
+        }
+      ],
+      "source": {
+        "title": "コニール錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/230124_2171021F1024_1_23",
+        "revised": "2021年4月改訂（第1版）"
+      }
+    },
+    {
+      "id": "telmisartan",
+      "genericName": "テルミサルタン",
+      "displayName": "テルミサルタン",
+      "brandNames": [
+        "ミカルディス"
+      ],
+      "category": "降圧薬（ARB）",
+      "classes": [
+        "arb",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "aliskiren"
+          ],
+          "targetLabel": "アリスキレンフマル酸塩（ラジレス）（糖尿病の方に使う場合。ただし他の降圧治療でも血圧のコントロールが著しく不良な場合を除く）",
+          "effect": "脳卒中、腎機能障害、高カリウム血症、低血圧のリスクが高まったとの報告があります。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジゴキシン",
+          "effect": "ジゴキシンの血中濃度が上がったとの報告があります。",
+          "mechanism": "機序はわかっていません。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:potassium_sparing_diuretic",
+            "spironolactone",
+            "class:potassium_supplement"
+          ],
+          "targetLabel": "カリウム保持性利尿剤（スピロノラクトン、トリアムテレン等）、カリウム補給剤",
+          "effect": "血液中のカリウムが高くなるおそれがあります。",
+          "mechanism": "カリウムをためる作用が強まるおそれがあります。腎機能障害のある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lithium"
+          ],
+          "targetLabel": "リチウム製剤（炭酸リチウム）",
+          "effect": "リチウム中毒が起こるおそれがあります（ACE阻害剤との併用で報告があります）。",
+          "mechanism": "この薬がナトリウムの排泄を促し、リチウムがたまりやすくなるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:diuretic",
+            "furosemide",
+            "trichlormethiazide"
+          ],
+          "targetLabel": "利尿降圧剤（フロセミド、トリクロルメチアジド等）",
+          "effect": "急に血圧が下がるおそれがあるため、少量から始めて徐々に増やします。",
+          "mechanism": "利尿剤を使っている方はレニン活性が高いことが多く、この薬が効きやすいためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "indomethacin",
+            "loxoprofen"
+          ],
+          "targetLabel": "非ステロイド性抗炎症薬（NSAIDs）",
+          "effect": "血圧を下げる作用が弱まることがあります。腎障害のある方では急性腎障害を起こす可能性があります。",
+          "mechanism": "NSAIDsがプロスタグランジンの合成を抑え、腎臓の血流を減らすためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ace_inhibitor",
+            "enalapril"
+          ],
+          "targetLabel": "アンジオテンシン変換酵素阻害剤",
+          "effect": "腎機能障害、高カリウム血症、低血圧を起こすおそれがあります。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "aliskiren"
+          ],
+          "targetLabel": "アリスキレンフマル酸塩",
+          "effect": "腎機能障害、高カリウム血症、低血圧を起こすおそれがあります。腎機能が低下している方（eGFR 60未満）では、やむを得ない場合を除き併用を避けます。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ミカルディス錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/650168_2149042F1025_1_27",
+        "revised": "2025年9月改訂（第3版）"
+      }
+    },
+    {
+      "id": "valsartan",
+      "genericName": "バルサルタン",
+      "displayName": "バルサルタン",
+      "brandNames": [
+        "ディオバン"
+      ],
+      "category": "降圧薬（ARB）",
+      "classes": [
+        "arb",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "aliskiren"
+          ],
+          "targetLabel": "アリスキレンフマル酸塩（ラジレス）（糖尿病の方に使う場合。ただし他の降圧治療でも血圧のコントロールが著しく不良な場合を除く）",
+          "effect": "脳卒中、腎機能障害、高カリウム血症、低血圧のリスクが高まったとの報告があります。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "aliskiren"
+          ],
+          "targetLabel": "アリスキレンフマル酸塩",
+          "effect": "腎機能障害、高カリウム血症、低血圧を起こすおそれがあります。腎機能が低下している方（eGFR 60未満）では、やむを得ない場合を除き併用を避けます。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ace_inhibitor",
+            "enalapril"
+          ],
+          "targetLabel": "アンジオテンシン変換酵素阻害剤",
+          "effect": "腎機能障害、高カリウム血症、低血圧を起こすおそれがあります。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:diuretic",
+            "furosemide",
+            "trichlormethiazide"
+          ],
+          "targetLabel": "利尿降圧剤（フロセミド、トリクロルメチアジド等）",
+          "effect": "飲み始めに一時的に急に血圧が下がる（失神や意識消失を伴う）おそれがあるため、少量から始めて徐々に増やします。",
+          "mechanism": "利尿剤を使っている方はレニン活性が高いことが多く、この薬が効きやすいためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:potassium_sparing_diuretic",
+            "spironolactone",
+            "class:potassium_supplement",
+            "potassium_chloride"
+          ],
+          "targetLabel": "カリウム保持性利尿剤（スピロノラクトン、トリアムテレン等）、カリウム補給製剤（塩化カリウム）",
+          "effect": "血液中のカリウムが高くなることがあります。",
+          "mechanism": "この薬のアルドステロン分泌を抑える作用で、カリウムがたまりやすくなるためです。腎機能障害のある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "drospirenone_ethinylestradiol",
+            "cyclosporine",
+            "sulfamethoxazole_trimethoprim"
+          ],
+          "targetLabel": "ドロスピレノン・エチニルエストラジオール、シクロスポリン、トリメトプリム含有製剤（スルファメトキサゾール・トリメトプリム）",
+          "effect": "血液中のカリウムが高くなることがあります。",
+          "mechanism": "カリウムを上げる作用が重なるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "indomethacin",
+            "loxoprofen"
+          ],
+          "targetLabel": "非ステロイド性消炎鎮痛剤（NSAIDs）（インドメタシン等）",
+          "effect": "血圧を下げる作用が弱まることがあります。腎機能が低下している方では、腎機能がさらに悪くなるおそれがあります。",
+          "mechanism": "NSAIDsがプロスタグランジンの合成を抑え、血管を広げる作用や腎臓の血流を減らすためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "bixalomer"
+          ],
+          "targetLabel": "ビキサロマー",
+          "effect": "この薬の血中濃度が約30〜40%に下がったとの報告があり、効き目が弱まるおそれがあります。",
+          "mechanism": "同時に飲むと、この薬の吸収が遅れたり減ったりする可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lithium"
+          ],
+          "targetLabel": "リチウム",
+          "effect": "リチウム中毒を起こしたとの報告があります。",
+          "mechanism": "この薬がナトリウムの排泄を促し、リチウムがたまるためと考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ディオバン錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/300242_2149041F1020_2_25",
+        "revised": "2025年9月改訂（第3版）"
+      }
+    },
+    {
+      "id": "azilsartan",
+      "genericName": "アジルサルタン",
+      "displayName": "アジルサルタン",
+      "brandNames": [
+        "アジルバ"
+      ],
+      "category": "降圧薬（ARB）",
+      "classes": [
+        "arb",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "aliskiren"
+          ],
+          "targetLabel": "アリスキレンフマル酸塩（ラジレス）（糖尿病の方に使う場合。ただし他の降圧治療でも血圧のコントロールが著しく不良な場合を除く）",
+          "effect": "脳卒中、腎機能障害、高カリウム血症、低血圧のリスクが高まったとの報告があります。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:potassium_sparing_diuretic",
+            "spironolactone",
+            "eplerenone",
+            "class:potassium_supplement",
+            "potassium_chloride"
+          ],
+          "targetLabel": "カリウム保持性利尿剤（スピロノラクトン、トリアムテレン、エプレレノン等）、カリウム補給剤（塩化カリウム等）",
+          "effect": "血液中のカリウムが高くなることがあります。",
+          "mechanism": "この薬のアルドステロン分泌を抑える作用で、カリウムがたまりやすくなるためです。腎機能障害のある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:diuretic",
+            "furosemide",
+            "trichlormethiazide"
+          ],
+          "targetLabel": "利尿降圧剤（フロセミド、トリクロルメチアジド等）",
+          "effect": "この薬を初めて飲むときに血圧を下げる作用が強まるおそれがあり、少量から始めるなどの注意が必要です。",
+          "mechanism": "利尿剤を使っている方はレニン活性が高いことが多く、この薬が効きやすいためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "aliskiren"
+          ],
+          "targetLabel": "アリスキレンフマル酸塩",
+          "effect": "腎機能障害、高カリウム血症、低血圧を起こすおそれがあります。腎機能が低下している方（eGFR 60未満）では、やむを得ない場合を除き併用を避けます。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ace_inhibitor",
+            "enalapril"
+          ],
+          "targetLabel": "アンジオテンシン変換酵素阻害剤",
+          "effect": "腎機能障害、高カリウム血症、低血圧を起こすおそれがあります。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lithium"
+          ],
+          "targetLabel": "リチウム",
+          "effect": "リチウム中毒が起こるおそれがあります。",
+          "mechanism": "腎臓でのリチウムの再吸収が促されるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "indomethacin",
+            "loxoprofen"
+          ],
+          "targetLabel": "非ステロイド性消炎鎮痛剤（NSAIDs）（インドメタシン等）",
+          "effect": "血圧を下げる作用が弱まることがあります。腎機能が低下している方では、腎機能がさらに悪くなるおそれがあります。",
+          "mechanism": "NSAIDsがプロスタグランジンの合成を抑え、血管を広げる作用や腎臓の血流を減らすためと考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "アジルバ錠／アジルバ顆粒 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400256_2149048F1022_1_20",
+        "revised": "2025年9月改訂（第6版）"
+      }
+    },
+    {
+      "id": "irbesartan",
+      "genericName": "イルベサルタン",
+      "displayName": "イルベサルタン",
+      "brandNames": [
+        "アバプロ",
+        "イルベタン"
+      ],
+      "category": "降圧薬（ARB）",
+      "classes": [
+        "arb",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "aliskiren"
+          ],
+          "targetLabel": "アリスキレンフマル酸塩（ラジレス）（糖尿病の方に使う場合。ただし他の降圧治療でも血圧のコントロールが著しく不良な場合を除く）",
+          "effect": "脳卒中、腎機能障害、高カリウム血症、低血圧のリスクが高まったとの報告があります。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:potassium_sparing_diuretic",
+            "spironolactone",
+            "class:potassium_supplement",
+            "potassium_chloride"
+          ],
+          "targetLabel": "カリウム保持性利尿剤（スピロノラクトン、トリアムテレン等）、カリウム補給剤（塩化カリウム）",
+          "effect": "血液中のカリウムが高くなることがあります。",
+          "mechanism": "この薬のアルドステロン分泌を抑える作用で、カリウムがたまりやすくなるためです。腎機能障害のある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:diuretic",
+            "furosemide",
+            "trichlormethiazide"
+          ],
+          "targetLabel": "利尿降圧剤（フロセミド、トリクロルメチアジド等）",
+          "effect": "一時的に急に血圧が下がるおそれがあるため、少量から始めて徐々に増やします。",
+          "mechanism": "利尿剤を使っている方は体液量が減ってレニン活性が高く、血圧を下げる作用が強まるおそれがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "aliskiren"
+          ],
+          "targetLabel": "アリスキレンフマル酸塩",
+          "effect": "腎機能障害、高カリウム血症、低血圧を起こすおそれがあります。腎機能が低下している方（eGFR 60未満）では、やむを得ない場合を除き併用を避けます。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ace_inhibitor",
+            "enalapril",
+            "imidapril"
+          ],
+          "targetLabel": "アンジオテンシン変換酵素阻害剤（エナラプリル、イミダプリル等）",
+          "effect": "腎機能障害、高カリウム血症、低血圧を起こすおそれがあります。",
+          "mechanism": "レニン-アンジオテンシン系を抑える作用が強まる可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "indomethacin",
+            "loxoprofen"
+          ],
+          "targetLabel": "非ステロイド性抗炎症薬（NSAIDs）（ロキソプロフェン、インドメタシン等）",
+          "effect": "血圧を下げる作用が弱まることがあります。腎機能が低下している方では、腎機能がさらに悪くなるおそれがあります。",
+          "mechanism": "NSAIDsがプロスタグランジンの合成を抑え、血管を広げる作用や腎臓の血流を減らすためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lithium"
+          ],
+          "targetLabel": "リチウム（炭酸リチウム）",
+          "effect": "リチウム中毒が報告されています。",
+          "mechanism": "この薬のナトリウム排泄作用で、リチウムの再吸収が促されると考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "アバプロ錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400093_2149046F1023_1_19",
+        "revised": "2026年4月改訂（第7版）"
+      }
+    },
+    {
+      "id": "bisoprolol",
+      "genericName": "ビソプロロールフマル酸塩",
+      "displayName": "ビソプロロール",
+      "brandNames": [
+        "メインテート"
+      ],
+      "category": "降圧薬・心臓の薬（β遮断薬）",
+      "classes": [
+        "beta_blocker",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "reserpine"
+          ],
+          "targetLabel": "交感神経系に対し抑制的に作用する薬剤（レセルピン等）",
+          "effect": "脈が遅くなる、血圧が下がるなど、作用が強く出すぎることがあります。",
+          "mechanism": "交感神経を抑える作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic",
+            "class:insulin",
+            "class:sulfonylurea"
+          ],
+          "targetLabel": "血糖降下剤（インスリン製剤等）",
+          "effect": "血糖を下げる作用が強まることがあります。また、低血糖の症状（脈が速くなる、汗をかく等）に気づきにくくなることがあります。血糖値に注意します。",
+          "mechanism": "肝臓での糖の放出が抑えられ、低血糖時に出るアドレナリンによる症状が隠されるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "verapamil",
+            "diltiazem"
+          ],
+          "targetLabel": "Ca拮抗剤（ベラパミル、ジルチアゼム等）",
+          "effect": "脈が遅くなる、房室ブロックなどが起こることがあります。定期的に脈拍を測り、必要に応じて心電図検査を行います。",
+          "mechanism": "心臓の拍動や伝導を抑える作用・血圧を下げる作用が重なるためです。ジギタリス製剤との3剤併用では特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis",
+            "metildigoxin"
+          ],
+          "targetLabel": "ジギタリス製剤（ジゴキシン、メチルジゴキシン）",
+          "effect": "脈が遅くなる、房室ブロックなどが起こることがあります。定期的に心電図検査を行います。",
+          "mechanism": "心臓の拍動や伝導を抑える作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "clonidine",
+            "guanabenz"
+          ],
+          "targetLabel": "クロニジン、グアナベンズ",
+          "effect": "これらの薬をやめた後の急な血圧上昇（リバウンド）が強く出ることがあります。クロニジンをやめる場合は、先にこの薬を中止するなどの対応をします。",
+          "mechanism": "β遮断薬と一緒だと、クロニジン中止後に増えるノルアドレナリンのα作用が強く出るためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "disopyramide",
+            "procainamide",
+            "amiodarone"
+          ],
+          "targetLabel": "クラスⅠ抗不整脈剤（ジソピラミド、プロカインアミド等）、クラスⅢ抗不整脈剤（アミオダロン）",
+          "effect": "心臓の働きが抑えられすぎる（脈が遅くなる、血圧が下がる等）ことがあります。",
+          "mechanism": "交感神経を抑える作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "indomethacin"
+          ],
+          "targetLabel": "非ステロイド性抗炎症剤（インドメタシン等）",
+          "effect": "この薬の血圧を下げる作用が弱まることがあります。",
+          "mechanism": "NSAIDsが血管を広げるプロスタグランジンの合成を妨げるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antihypertensive",
+            "class:arb",
+            "class:ace_inhibitor",
+            "class:diuretic",
+            "class:beta_blocker",
+            "class:calcium_channel_blocker",
+            "class:nitrate"
+          ],
+          "targetLabel": "降圧作用を有する薬剤（降圧剤、硝酸剤）",
+          "effect": "血圧を下げる作用が強まることがあります。定期的に血圧を測り、用量を調整します。",
+          "mechanism": "血圧を下げる作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "fingolimod",
+            "ozanimod"
+          ],
+          "targetLabel": "スフィンゴシン1-リン酸受容体調節剤（フィンゴリモド、オザニモド等）",
+          "effect": "これらの薬を飲み始めるときに併用すると、重い徐脈や心ブロックが起こることがあります。",
+          "mechanism": "どちらも徐脈や心ブロックを起こすおそれがあるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "メインテート錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400315_2123016F1107_1_21",
+        "revised": "2026年9月改訂（第4版）"
+      }
+    },
+    {
+      "id": "carvedilol",
+      "genericName": "カルベジロール",
+      "displayName": "カルベジロール",
+      "brandNames": [
+        "アーチスト"
+      ],
+      "category": "降圧薬・心臓の薬（αβ遮断薬）",
+      "classes": [
+        "beta_blocker",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic",
+            "class:insulin",
+            "class:sulfonylurea"
+          ],
+          "targetLabel": "血糖降下薬（インスリン等）",
+          "effect": "血糖を下げる作用が強まることがあります。",
+          "mechanism": "肝臓での糖新生が抑えられるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:calcium_channel_blocker",
+            "verapamil"
+          ],
+          "targetLabel": "カルシウム拮抗薬（ベラパミル等）",
+          "effect": "心不全や低血圧を起こすことがあります。",
+          "mechanism": "心臓の収縮や伝導を抑える作用、血圧を下げる作用が重なるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "clonidine"
+          ],
+          "targetLabel": "クロニジン",
+          "effect": "クロニジンをやめた後の急な血圧上昇（リバウンド）が強く出る可能性があります。切り替えや中止の順番に注意が必要です。",
+          "mechanism": "クロニジン中止で増えるノルアドレナリンのα作用が強く出るためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "disopyramide",
+            "procainamide",
+            "amiodarone"
+          ],
+          "targetLabel": "クラスⅠ抗不整脈薬（ジソピラミド、プロカインアミド等）、アミオダロン",
+          "effect": "心臓の働きが抑えられすぎることがあります。アミオダロンとの併用では徐脈や心停止などのおそれがあり、定期的に心電図を確認します。",
+          "mechanism": "心機能を抑える作用が重なるためです。アミオダロンはこの薬の血中濃度を上げる可能性もあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cyclosporine"
+          ],
+          "targetLabel": "シクロスポリン",
+          "effect": "シクロスポリンの血中濃度が上がるおそれがあり、用量を調整します。",
+          "mechanism": "機序はわかっていません。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin",
+            "class:cyp3a4_inducer"
+          ],
+          "targetLabel": "リファンピシン",
+          "effect": "この薬の作用が弱まるおそれがあります。",
+          "mechanism": "リファンピシンが代謝酵素（主にCYP3A4）を増やし、この薬の血中濃度が下がるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cimetidine",
+            "class:ssri",
+            "paroxetine"
+          ],
+          "targetLabel": "シメチジン、選択的セロトニン再取り込み阻害剤（パロキセチン等）",
+          "effect": "この薬の作用が強まるおそれがあります。",
+          "mechanism": "これらの薬が代謝酵素を妨げ、この薬の血中濃度が上がるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジギタリス製剤（ジゴキシン等）",
+          "effect": "脈が遅くなる、房室ブロックなどが起こるおそれがあります。ジギタリスの血中濃度が上がり中毒症状が出る可能性もあります。",
+          "mechanism": "伝導を抑える作用が重なり、ジギタリスの吸収も増えるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:diuretic",
+            "furosemide",
+            "trichlormethiazide",
+            "spironolactone"
+          ],
+          "targetLabel": "利尿降圧剤（フロセミド、トリクロルメチアジド、スピロノラクトン等）",
+          "effect": "血圧を下げる作用が強まることがあります。",
+          "mechanism": "血圧を下げる作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "indomethacin",
+            "loxoprofen",
+            "aspirin"
+          ],
+          "targetLabel": "非ステロイド性消炎鎮痛剤（インドメタシン、ロキソプロフェン、アスピリン等）",
+          "effect": "この薬の血圧を下げる作用が弱まるおそれがあります。",
+          "mechanism": "NSAIDsが血管を広げるプロスタグランジンの合成を妨げるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "アーチスト錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/430574_2149032F1021_2_15",
+        "revised": "2024年4月改訂（第2版）"
+      }
+    },
+    {
+      "id": "furosemide",
+      "genericName": "フロセミド",
+      "displayName": "フロセミド",
+      "brandNames": [
+        "ラシックス"
+      ],
+      "category": "利尿薬（ループ利尿薬）",
+      "classes": [
+        "diuretic",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "desmopressin"
+          ],
+          "targetLabel": "デスモプレシン酢酸塩水和物（ミニリンメルト）（男性における夜間多尿による夜間頻尿）",
+          "effect": "血液中のナトリウムが低くなる（低ナトリウム血症）おそれがあるため、一緒に使えません。",
+          "mechanism": "どちらも低ナトリウム血症を起こすおそれがあるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antihypertensive",
+            "class:beta_blocker",
+            "class:calcium_channel_blocker"
+          ],
+          "targetLabel": "他の降圧剤（β遮断剤等）",
+          "effect": "血圧を下げる作用が強まるおそれがあり、用量を調整します。",
+          "mechanism": "作用の仕組みが異なる降圧剤どうしで、作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ace_inhibitor",
+            "class:arb",
+            "enalapril",
+            "candesartan",
+            "olmesartan"
+          ],
+          "targetLabel": "ACE阻害剤、A-II受容体拮抗剤",
+          "effect": "この薬を飲んでいる間にこれらの薬を始めたり増やしたりすると、血圧が大きく下がったり腎機能が悪くなることがあります。この薬の一時休薬や減量が検討されます。",
+          "mechanism": "この薬でレニン活性が上がっているところに、レニン-アンジオテンシン系を抑えるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジギタリス剤（ジギトキシン、ジゴキシン）",
+          "effect": "ジギタリスの心臓への作用が強まるおそれがあり、血液中のカリウムやジギタリス濃度に注意します。",
+          "mechanism": "この薬で血液中のカリウムが下がると、ジギタリスが効きすぎて不整脈などが起こるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:corticosteroid",
+            "class:licorice_containing",
+            "glycyrrhizin"
+          ],
+          "targetLabel": "糖質副腎皮質ホルモン剤（ヒドロコルチゾン）、ACTH、グリチルリチン製剤、甘草含有製剤",
+          "effect": "血液中のカリウムが低くなる（低カリウム血症）おそれがあります。",
+          "mechanism": "どちらもカリウムを体外に出す作用があるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:sulfonylurea",
+            "class:insulin"
+          ],
+          "targetLabel": "糖尿病用剤（スルホニルウレア剤、インスリン）",
+          "effect": "糖尿病の薬の作用が大きく弱まるおそれがあります。",
+          "mechanism": "カリウムが失われることで、インスリンの分泌や効き方が低下するためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:sglt2_inhibitor"
+          ],
+          "targetLabel": "SGLT2阻害剤",
+          "effect": "尿を出す作用が強まるおそれがあり、脱水症状に注意が必要です。",
+          "mechanism": "利尿作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lithium"
+          ],
+          "targetLabel": "リチウム（炭酸リチウム）",
+          "effect": "リチウムの毒性が強まるおそれがあり、血中リチウム濃度に注意します。",
+          "mechanism": "腎臓でのリチウムの再吸収が増え、血中濃度が上がるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "aspirin"
+          ],
+          "targetLabel": "サリチル酸誘導体（サリチル酸ナトリウム、アスピリン）",
+          "effect": "サリチル酸中毒が起こるおそれがあります。",
+          "mechanism": "腎臓での排泄が競合し、サリチル酸の排泄が遅れるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "indomethacin"
+          ],
+          "targetLabel": "非ステロイド性消炎鎮痛剤（インドメタシン）",
+          "effect": "この薬の尿を出す作用が弱まるおそれがあります。",
+          "mechanism": "NSAIDsが腎臓でのプロスタグランジン合成を妨げ、水や塩分がたまりやすくなるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "gentamicin",
+            "amikacin",
+            "cisplatin"
+          ],
+          "targetLabel": "アミノグリコシド系抗生物質（ゲンタマイシン、アミカシン）、シスプラチン",
+          "effect": "聴覚障害（耳の障害）が強まるおそれがあります。アミノグリコシド系では腎臓への毒性も強まるおそれがあります。",
+          "mechanism": "内耳の細胞での薬の濃度が上がるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "carbamazepine"
+          ],
+          "targetLabel": "カルバマゼピン",
+          "effect": "症状を伴う低ナトリウム血症が起こるおそれがあります。",
+          "mechanism": "ナトリウムを排泄する作用が強まるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ラシックス錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/780069_2139005F1052_1_07",
+        "revised": "2026年4月改訂（第3版）"
+      }
+    },
+    {
+      "id": "spironolactone",
+      "genericName": "スピロノラクトン",
+      "displayName": "スピロノラクトン",
+      "brandNames": [
+        "アルダクトンA"
+      ],
+      "category": "利尿薬（カリウム保持性利尿薬）",
+      "classes": [
+        "potassium_sparing_diuretic",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "tacrolimus",
+            "eplerenone",
+            "esaxerenone"
+          ],
+          "targetLabel": "タクロリムス（プログラフ）、エプレレノン（セララ）、エサキセレノン（ミネブロ）",
+          "effect": "血液中のカリウムが高くなる（高カリウム血症）ことがあるため、一緒に使えません。",
+          "mechanism": "カリウムを上げる作用が重なるためです。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "mitotane"
+          ],
+          "targetLabel": "ミトタン（オペプリム）",
+          "effect": "ミトタンの作用を妨げるため、一緒に使えません。",
+          "mechanism": "この薬がミトタンの効果を妨げるとの報告があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antihypertensive",
+            "class:arb",
+            "class:ace_inhibitor",
+            "class:diuretic",
+            "class:beta_blocker",
+            "class:calcium_channel_blocker"
+          ],
+          "targetLabel": "降圧剤（ACE阻害剤、カルシウム拮抗剤、β-遮断剤、利尿降圧剤等）",
+          "effect": "血圧を下げる作用が強まることがあり、用量を調整します。",
+          "mechanism": "作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:potassium_supplement",
+            "potassium_chloride",
+            "class:ace_inhibitor",
+            "enalapril",
+            "class:arb",
+            "candesartan",
+            "valsartan",
+            "aliskiren",
+            "triamterene",
+            "cyclosporine",
+            "voclosporin",
+            "drospirenone_ethinylestradiol"
+          ],
+          "targetLabel": "カリウム製剤（塩化カリウム等）、ACE阻害剤（エナラプリル等）、アンジオテンシンⅡ受容体拮抗剤（カンデサルタン、バルサルタン等）、アリスキレン、カリウム保持性利尿剤（トリアムテレン等）、シクロスポリン、ボクロスポリン、ドロスピレノン",
+          "effect": "血液中のカリウムが高くなる（高カリウム血症）ことがあり、カリウム値を確認するなど十分な注意が必要です。",
+          "mechanism": "カリウムを上げる作用が重なるためです。腎障害のある方や高齢の方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "finerenone"
+          ],
+          "targetLabel": "フィネレノン",
+          "effect": "高カリウム血症の危険が高まるおそれがあり、治療上必要な場合に限って併用し、カリウム値をこまめに確認します。",
+          "mechanism": "カリウムを上げる作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis",
+            "metildigoxin"
+          ],
+          "targetLabel": "ジゴキシン、メチルジゴキシン",
+          "effect": "ジゴキシンの血中濃度が上がることがあります。",
+          "mechanism": "この薬がジゴキシンの腎臓からの排泄を減らすためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lithium"
+          ],
+          "targetLabel": "リチウム製剤（炭酸リチウム）",
+          "effect": "リチウム中毒が報告されており、血中リチウム濃度に注意します。",
+          "mechanism": "ナトリウムの排泄が促され、リチウムがたまりやすくなるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "indomethacin"
+          ],
+          "targetLabel": "非ステロイド性消炎鎮痛剤（インドメタシン等）",
+          "effect": "血圧を下げる作用が弱まったり、腎機能障害のある方で重い高カリウム血症が起きたとの報告があります。",
+          "mechanism": "プロスタグランジンの産生が抑えられ、ナトリウムやカリウムがたまりやすくなるためと考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "アルダクトンA細粒／錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/672212_2133001C1097_3_05",
+        "revised": "2025年3月改訂（第4版）"
+      }
+    },
+    {
+      "id": "trichlormethiazide",
+      "genericName": "トリクロルメチアジド",
+      "displayName": "トリクロルメチアジド",
+      "brandNames": [
+        "フルイトラン"
+      ],
+      "category": "利尿薬・降圧薬（チアジド系利尿薬）",
+      "classes": [
+        "diuretic",
+        "thiazide_diuretic",
+        "antihypertensive"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "desmopressin"
+          ],
+          "targetLabel": "デスモプレシン酢酸塩水和物（ミニリンメルト）（男性における夜間多尿による夜間頻尿）",
+          "effect": "血液中のナトリウムが低くなる（低ナトリウム血症）おそれがあるため、一緒に使えません。",
+          "mechanism": "どちらも低ナトリウム血症を起こすおそれがあるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:opioid",
+            "phenobarbital"
+          ],
+          "targetLabel": "バルビツール酸誘導体、アヘンアルカロイド系麻薬",
+          "effect": "立ちくらみ（起立性低血圧）が強まることがあります。",
+          "mechanism": "これらの薬の血管を広げる作用で、この薬の血圧を下げる作用が強まると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ace_inhibitor",
+            "class:beta_blocker",
+            "class:antihypertensive",
+            "enalapril"
+          ],
+          "targetLabel": "他の降圧剤（ACE阻害剤、β遮断剤）",
+          "effect": "血圧を下げる作用が強まるおそれがあり、用量を調整します。",
+          "mechanism": "作用の仕組みが異なる降圧剤どうしで、作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "digoxin",
+            "class:digitalis"
+          ],
+          "targetLabel": "ジギタリス剤（ジゴキシン、ジギトキシン）",
+          "effect": "ジギタリスの作用が強まり、ジギタリス中毒を起こすおそれがあります。血液中のカリウムやジギタリス濃度に注意します。",
+          "mechanism": "この薬で血液中のカリウムが下がると、ジギタリスが効きすぎて不整脈などが起こるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:corticosteroid",
+            "class:licorice_containing",
+            "glycyrrhizin"
+          ],
+          "targetLabel": "糖質副腎皮質ホルモン剤、ACTH、グリチルリチン製剤、甘草含有製剤",
+          "effect": "血液中のカリウムが低くなる（低カリウム血症）おそれがあります。",
+          "mechanism": "カリウムを体外に出す作用や、偽アルドステロン症による低カリウム血症が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:sulfonylurea",
+            "class:insulin"
+          ],
+          "targetLabel": "糖尿病用剤（SU剤、インスリン）",
+          "effect": "糖尿病の薬の作用が大きく弱まるおそれがあります。",
+          "mechanism": "カリウムが失われることで、膵臓からのインスリン放出が低下すると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lithium"
+          ],
+          "targetLabel": "リチウム（炭酸リチウム）",
+          "effect": "リチウム中毒（ふるえ、胃腸症状等）が強まることがあり、血中リチウム濃度を確認します。",
+          "mechanism": "長く飲むとリチウムの再吸収が促され、血中濃度が上がるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "indomethacin",
+            "cholestyramine"
+          ],
+          "targetLabel": "非ステロイド系消炎鎮痛剤（インドメタシン等）、コレスチラミン",
+          "effect": "この薬の尿を出す作用・血圧を下げる作用が弱まることがあります。",
+          "mechanism": "NSAIDsは水やナトリウムをためる方向に働き、コレスチラミンはこの薬を吸着して吸収を妨げるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール",
+          "level": "caution",
+          "effect": "立ちくらみ（起立性低血圧）が強まることがあります。"
+        }
+      ],
+      "source": {
+        "title": "フルイトラン錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/343018_2132003F1257_2_04",
+        "revised": "2025年5月改訂（第3版）"
+      }
+    },
+    {
+      "id": "edoxaban",
+      "genericName": "エドキサバントシル酸塩水和物",
+      "displayName": "エドキサバン",
+      "brandNames": [
+        "リクシアナ"
+      ],
+      "category": "抗凝固薬（DOAC）",
+      "classes": [
+        "anticoagulant"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:anticoagulant",
+            "warfarin",
+            "heparin",
+            "enoxaparin",
+            "fondaparinux",
+            "dabigatran",
+            "class:thrombolytic",
+            "urokinase",
+            "alteplase"
+          ],
+          "targetLabel": "抗凝固剤（ヘパリン、ワルファリン、エノキサパリン、フォンダパリヌクス、ダビガトラン等）、血栓溶解剤（ウロキナーゼ、t-PA製剤等）",
+          "effect": "出血の危険が高まるおそれがあります。",
+          "mechanism": "互いに血液を固まりにくくする作用を強めると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antiplatelet",
+            "aspirin",
+            "dipyridamole",
+            "ticlopidine",
+            "clopidogrel"
+          ],
+          "targetLabel": "血小板凝集抑制作用を有する薬剤（アスピリン、ジピリダモール、チクロピジン、クロピドグレル等）",
+          "effect": "出血の危険が高まるおそれがあり、併用は慎重に判断されます。特に抗血小板薬2剤との併用は、利益が危険を上回る場合に限られます。",
+          "mechanism": "互いに血液を固まりにくくする作用を強めると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "diclofenac",
+            "naproxen",
+            "loxoprofen"
+          ],
+          "targetLabel": "非ステロイド性消炎鎮痛剤（ジクロフェナク、ナプロキセン等）",
+          "effect": "出血の危険が高まるおそれがあり、併用は慎重に判断されます。",
+          "mechanism": "互いに血液を固まりにくくする作用を強めると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ssri",
+            "sertraline",
+            "escitalopram",
+            "paroxetine",
+            "fluvoxamine",
+            "duloxetine",
+            "venlafaxine",
+            "milnacipran"
+          ],
+          "targetLabel": "選択的セロトニン再取り込み阻害剤（SSRI）、セロトニン・ノルアドレナリン再取り込み阻害剤（SNRI）",
+          "effect": "出血の危険が高まるおそれがあります。",
+          "mechanism": "互いに血液を固まりにくくする作用を強めると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:p_gp_inhibitor",
+            "quinidine",
+            "verapamil",
+            "erythromycin",
+            "cyclosporine",
+            "azithromycin",
+            "clarithromycin",
+            "itraconazole",
+            "diltiazem",
+            "amiodarone",
+            "class:hiv_protease_inhibitor",
+            "ritonavir"
+          ],
+          "targetLabel": "P糖蛋白阻害作用を有する薬剤（キニジン、ベラパミル、エリスロマイシン、シクロスポリン、アジスロマイシン、クラリスロマイシン、イトラコナゾール、ジルチアゼム、アミオダロン、HIVプロテアーゼ阻害剤〔リトナビル等〕等）",
+          "effect": "この薬の血中濃度が上がり、出血の危険が高まるおそれがあります。",
+          "mechanism": "P糖蛋白が阻害され、この薬の吸収量が増えると考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "リクシアナ錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/430574_3339002F1020_1_19",
+        "revised": "2025年11月改訂（第8版）"
+      }
+    },
+    {
+      "id": "rivaroxaban",
+      "genericName": "リバーロキサバン",
+      "displayName": "リバーロキサバン",
+      "brandNames": [
+        "イグザレルト"
+      ],
+      "category": "抗凝固薬（DOAC）",
+      "classes": [
+        "anticoagulant"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "ritonavir",
+            "nirmatrelvir_ritonavir",
+            "darunavir",
+            "fosamprenavir"
+          ],
+          "targetLabel": "リトナビルを含有する製剤（ノービア、カレトラ、パキロビッド）、ダルナビル（プリジスタ）、ホスアンプレナビル（レクシヴァ）",
+          "effect": "この薬の血中濃度が上がり、出血の危険が高まるおそれがあるため、一緒に使えません。",
+          "mechanism": "CYP3A4とP-糖タンパクが強く阻害され、この薬が体から消えにくくなるためです。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "cobicistat"
+          ],
+          "targetLabel": "コビシスタットを含有する製剤（ゲンボイヤ、プレジコビックス、シムツーザ）",
+          "effect": "この薬の血中濃度が上がり、出血の危険が高まるおそれがあるため、一緒に使えません。",
+          "mechanism": "CYP3A4が強く阻害され、この薬が体から消えにくくなるためです。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "itraconazole",
+            "posaconazole",
+            "voriconazole",
+            "miconazole",
+            "ketoconazole"
+          ],
+          "targetLabel": "イトラコナゾール、ポサコナゾール、ボリコナゾール、ミコナゾール、ケトコナゾール（経口剤・注射剤）",
+          "effect": "この薬の血中濃度が上がり、出血の危険が高まるおそれがあるため、一緒に使えません。",
+          "mechanism": "CYP3A4とP-糖タンパクが強く阻害され、この薬が体から消えにくくなるためです。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "ensitrelvir",
+            "lonafarnib"
+          ],
+          "targetLabel": "エンシトレルビル（ゾコーバ）、ロナファルニブ（ゾキンヴィ）",
+          "effect": "この薬の血中濃度が上がり、出血の危険が高まるおそれがあるため、一緒に使えません。",
+          "mechanism": "CYP3A4とP-糖タンパクが強く阻害され、この薬が体から消えにくくなるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:anticoagulant",
+            "heparin",
+            "enoxaparin",
+            "fondaparinux",
+            "warfarin"
+          ],
+          "targetLabel": "抗凝固剤（ヘパリン製剤、エノキサパリン、フォンダパリヌクス、ワルファリン等）",
+          "effect": "出血の危険が高まるおそれがあります。",
+          "mechanism": "血液を固まりにくくする作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antiplatelet",
+            "aspirin",
+            "clopidogrel",
+            "ticlopidine",
+            "class:nsaid",
+            "naproxen",
+            "diclofenac"
+          ],
+          "targetLabel": "血小板凝集抑制作用を有する薬剤（抗血小板剤：アスピリン、クロピドグレル、チクロピジン等／NSAIDs：ナプロキセン、ジクロフェナク等）",
+          "effect": "出血の危険が高まるおそれがあり、併用は慎重に判断されます。",
+          "mechanism": "この薬の抗凝固作用と血小板を抑える作用が重なり、出血しやすくなるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ssri",
+            "sertraline",
+            "escitalopram",
+            "paroxetine",
+            "fluvoxamine",
+            "duloxetine",
+            "venlafaxine",
+            "milnacipran"
+          ],
+          "targetLabel": "選択的セロトニン再取り込み阻害剤（SSRI）、セロトニン・ノルアドレナリン再取り込み阻害剤（SNRI）",
+          "effect": "出血の危険が高まるおそれがあります。",
+          "mechanism": "この薬の抗凝固作用と血小板を抑える作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:thrombolytic",
+            "urokinase",
+            "alteplase"
+          ],
+          "targetLabel": "血栓溶解剤（ウロキナーゼ、t-PA製剤〔アルテプラーゼ等〕）",
+          "effect": "出血の危険が高まるおそれがあります。",
+          "mechanism": "この薬の抗凝固作用と血栓を溶かす作用が重なるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "fluconazole",
+            "fosfluconazole",
+            "clarithromycin",
+            "erythromycin"
+          ],
+          "targetLabel": "フルコナゾール、ホスフルコナゾール、クラリスロマイシン、エリスロマイシン",
+          "effect": "この薬の血中濃度が上がったとの報告があります。病状によっては併用を避けるか、この薬の減量（10mg 1日1回）などが検討されます。",
+          "mechanism": "これらの薬がCYP3A4（とP-糖タンパク）を阻害し、この薬が体から消えにくくなるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin",
+            "phenytoin",
+            "carbamazepine",
+            "phenobarbital",
+            "class:cyp3a4_inducer"
+          ],
+          "targetLabel": "リファンピシン、フェニトイン、カルバマゼピン、フェノバルビタール",
+          "effect": "この薬の血中濃度が下がり、効き目が弱まるおそれがあります（リファンピシンでは報告があります）。",
+          "mechanism": "これらの薬がCYP3A4などを強く誘導し、この薬が体から消えやすくなるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "st_johns_wort",
+          "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+          "level": "caution",
+          "effect": "この薬の血中濃度が下がるおそれがあります。"
+        }
+      ],
+      "source": {
+        "title": "イグザレルト錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/630004_3339003F1024_1_28",
+        "revised": "2026年3月改訂（第10版）"
+      }
+    },
+    {
+      "id": "dabigatran",
+      "genericName": "ダビガトランエテキシラートメタンスルホン酸塩",
+      "displayName": "ダビガトラン",
+      "brandNames": [
+        "プラザキサ"
+      ],
+      "category": "抗凝固薬（DOAC）",
+      "classes": [
+        "anticoagulant"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "itraconazole"
+          ],
+          "targetLabel": "P-糖蛋白阻害剤（経口剤）：イトラコナゾール（経口剤）",
+          "effect": "この薬の血中濃度が上がり、出血の危険が高まることがあるため、一緒に使えません。",
+          "mechanism": "この薬の抗凝固作用が強まることがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:antiplatelet",
+            "aspirin",
+            "dipyridamole",
+            "ticlopidine",
+            "clopidogrel"
+          ],
+          "targetLabel": "血小板凝集抑制作用を有する薬剤（アスピリン、ジピリダモール、チクロピジン、クロピドグレル等）",
+          "effect": "大出血の危険が高まることがあります。やむを得ず併用する場合は、利益と危険を十分に考えて判断されます。",
+          "mechanism": "この薬が抗凝固作用を持つため、出血を助長するおそれがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:anticoagulant",
+            "warfarin",
+            "heparin",
+            "fondaparinux",
+            "class:thrombolytic",
+            "urokinase",
+            "class:nsaid",
+            "diclofenac"
+          ],
+          "targetLabel": "抗凝固剤（ワルファリン、ヘパリン類、フォンダパリヌクス等）、血栓溶解剤（ウロキナーゼ、t-PA製剤等）、非ステロイド性消炎鎮痛剤（ジクロフェナク等）",
+          "effect": "出血の危険が高まる可能性があります。",
+          "mechanism": "この薬が抗凝固作用を持つため、出血を助長するおそれがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "verapamil"
+          ],
+          "targetLabel": "P-糖蛋白阻害剤（経口剤）：ベラパミル",
+          "effect": "この薬の血中濃度が上がることがあるため、この薬の減量（1回110mg 1日2回）が検討されます。併用開始から3日間は、ベラパミルを飲む2時間以上前にこの薬を飲みます。",
+          "mechanism": "この薬の抗凝固作用が強まることがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "amiodarone",
+            "quinidine",
+            "tacrolimus",
+            "cyclosporine",
+            "ritonavir",
+            "nelfinavir",
+            "saquinavir",
+            "glecaprevir_pibrentasvir",
+            "class:p_gp_inhibitor"
+          ],
+          "targetLabel": "P-糖蛋白阻害剤（経口剤）（アミオダロン、キニジン、タクロリムス、シクロスポリン、リトナビル、ネルフィナビル、サキナビル、グレカプレビル・ピブレンタスビル等）",
+          "effect": "この薬の血中濃度が上がることがあるため、この薬の減量（1回110mg 1日2回）が検討されます。",
+          "mechanism": "この薬の抗凝固作用が強まることがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "clarithromycin"
+          ],
+          "targetLabel": "P-糖蛋白阻害剤（経口剤）：クラリスロマイシン",
+          "effect": "他のP-糖蛋白阻害剤ほどではありませんが、この薬の血中濃度が上がることがあります。",
+          "mechanism": "この薬の抗凝固作用が強まることがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin",
+            "carbamazepine"
+          ],
+          "targetLabel": "P-糖蛋白誘導剤（リファンピシン、カルバマゼピン等）",
+          "effect": "この薬の血中濃度が下がることがあります。",
+          "mechanism": "この薬の抗凝固作用が弱まることがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:ssri",
+            "sertraline",
+            "escitalopram",
+            "paroxetine",
+            "fluvoxamine",
+            "duloxetine",
+            "venlafaxine",
+            "milnacipran"
+          ],
+          "targetLabel": "選択的セロトニン再取り込み阻害剤（SSRI）、セロトニン・ノルアドレナリン再取り込み阻害剤（SNRI）",
+          "effect": "出血の危険が高まったとの報告があります。",
+          "mechanism": "機序はわかっていません。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "st_johns_wort",
+          "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+          "level": "caution",
+          "effect": "この薬の血中濃度が下がり、効果が弱まることがあります。"
+        }
+      ],
+      "source": {
+        "title": "プラザキサカプセル 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/650168_3339001M1024_1_19",
+        "revised": "2025年11月改訂（第5版）"
+      }
+    },
+    {
+      "id": "cilostazol",
+      "genericName": "シロスタゾール",
+      "displayName": "シロスタゾール",
+      "brandNames": [
+        "プレタール"
+      ],
+      "category": "抗血小板薬",
+      "classes": [
+        "antiplatelet"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:anticoagulant",
+            "warfarin",
+            "class:antiplatelet",
+            "aspirin",
+            "ticlopidine",
+            "clopidogrel",
+            "class:thrombolytic",
+            "urokinase",
+            "alteplase",
+            "alprostadil",
+            "limaprost"
+          ],
+          "targetLabel": "抗凝固剤（ワルファリン等）、血小板凝集を抑制する薬剤（アスピリン、チクロピジン、クロピドグレル等）、血栓溶解剤（ウロキナーゼ、アルテプラーゼ等）、プロスタグランジンE1製剤及びその誘導体（アルプロスタジル、リマプロスト アルファデクス等）",
+          "effect": "出血したときに、それを助長するおそれがあります。血液の固まりやすさの検査などを十分に行います。",
+          "mechanism": "この薬が血小板の働きを抑えるため、出血を助長するおそれがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:strong_cyp3a4_inhibitor",
+            "class:macrolide",
+            "erythromycin",
+            "clarithromycin",
+            "class:hiv_protease_inhibitor",
+            "ritonavir",
+            "class:azole_antifungal",
+            "itraconazole",
+            "miconazole",
+            "cimetidine",
+            "diltiazem"
+          ],
+          "targetLabel": "CYP3A4を阻害する薬剤（マクロライド系抗生物質〔エリスロマイシン等〕、HIVプロテアーゼ阻害剤〔リトナビル等〕、アゾール系抗真菌剤〔イトラコナゾール、ミコナゾール等〕、シメチジン、ジルチアゼム等）",
+          "effect": "この薬の作用が強まるおそれがあり、減量や少量からの開始が検討されます。",
+          "mechanism": "これらの薬がCYP3A4を阻害し、この薬の血中濃度が上がることがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "omeprazole"
+          ],
+          "targetLabel": "CYP2C19を阻害する薬剤（オメプラゾール等）",
+          "effect": "この薬の作用が強まるおそれがあり、減量や少量からの開始が検討されます。",
+          "mechanism": "これらの薬がCYP2C19を阻害し、この薬の血中濃度が上がることがあります。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "grapefruit",
+          "itemLabel": "グレープフルーツジュース",
+          "level": "avoid",
+          "effect": "この薬の血中濃度が上がり、作用が強まるおそれがあります。グレープフルーツジュースと同時に飲まないようにしてください。"
+        }
+      ],
+      "source": {
+        "title": "プレタールOD錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/180078_3399002F3020_1_11",
+        "revised": "2023年2月改訂（第3版）"
+      }
+    },
+    {
+      "id": "prasugrel",
+      "genericName": "プラスグレル塩酸塩",
+      "displayName": "プラスグレル",
+      "brandNames": [
+        "エフィエント"
+      ],
+      "category": "抗血小板薬",
+      "classes": [
+        "antiplatelet"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:anticoagulant",
+            "warfarin",
+            "heparin",
+            "edoxaban",
+            "class:antiplatelet",
+            "aspirin",
+            "class:thrombolytic",
+            "urokinase",
+            "alteplase"
+          ],
+          "targetLabel": "抗凝固剤（ワルファリン、ヘパリン、エドキサバン等）、血小板凝集抑制作用を有する薬剤（アスピリン等）、血栓溶解剤（ウロキナーゼ、アルテプラーゼ等）",
+          "effect": "出血の危険が高まるおそれがあります。",
+          "mechanism": "互いに血液を固まりにくくする作用を強めると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:nsaid",
+            "loxoprofen",
+            "naproxen"
+          ],
+          "targetLabel": "非ステロイド性消炎鎮痛剤（ロキソプロフェン、ナプロキセン等）",
+          "effect": "出血の危険が高まるおそれがあります。",
+          "mechanism": "互いに血液を固まりにくくする作用を強めると考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:opioid",
+            "morphine"
+          ],
+          "targetLabel": "オピオイド系鎮痛剤（モルヒネ等）",
+          "effect": "この薬の血中濃度が下がるおそれがあります。",
+          "mechanism": "オピオイドが胃腸の動きを抑え、この薬の吸収が遅れると考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "エフィエント錠／OD錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/430574_3399009F1020_1_22",
+        "revised": "2026年2月改訂（第4版）"
+      }
+    },
+    {
+      "id": "pitavastatin",
+      "genericName": "ピタバスタチンカルシウム",
+      "displayName": "ピタバスタチン",
+      "brandNames": [
+        "リバロ"
+      ],
+      "category": "脂質異常症治療薬（スタチン）",
+      "classes": [
+        "statin"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "cyclosporine"
+          ],
+          "targetLabel": "シクロスポリン（サンディミュン、ネオーラル）",
+          "effect": "急な腎機能の悪化を伴う横紋筋融解症などの重い副作用が起こりやすくなるため、一緒に使えません。",
+          "mechanism": "シクロスポリンによりこの薬の血中濃度が上がる（Cmax 6.6倍、AUC 4.6倍）ためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:fibrate",
+            "bezafibrate"
+          ],
+          "targetLabel": "フィブラート系薬剤（ベザフィブラート等）",
+          "effect": "筋肉痛、脱力感などを伴う横紋筋融解症（筋肉が壊れる副作用）が、急な腎機能の悪化とともに起こりやすくなります。症状やCK上昇などがあれば直ちに中止します。",
+          "mechanism": "どちらの薬でも横紋筋融解症が報告されているためです。腎機能の検査値に異常がある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "nicotinic_acid"
+          ],
+          "targetLabel": "ニコチン酸",
+          "effect": "筋肉痛、脱力感などを伴う横紋筋融解症（筋肉が壊れる副作用）が、急な腎機能の悪化とともに起こりやすくなります。症状やCK上昇などがあれば直ちに中止します。",
+          "mechanism": "腎障害がある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cholestyramine"
+          ],
+          "targetLabel": "コレスチラミン",
+          "effect": "この薬の血中濃度が下がる可能性があり、コレスチラミンを飲んでから十分に時間をあけてこの薬を飲むことが望ましいとされています。",
+          "mechanism": "同時に飲むと、この薬の吸収が減る可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "erythromycin"
+          ],
+          "targetLabel": "エリスロマイシン",
+          "effect": "急な腎機能の悪化を伴う横紋筋融解症が起こるおそれがあります。症状やCK上昇などがあれば直ちに中止します。",
+          "mechanism": "この薬の肝臓への取り込みが妨げられるためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin"
+          ],
+          "targetLabel": "リファンピシン",
+          "effect": "この薬の血中濃度が上がった（Cmax 2.0倍、AUC 1.3倍）との報告があります。",
+          "mechanism": "この薬の肝臓への取り込みが妨げられるためと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（アルコール中毒）",
+          "level": "caution",
+          "effect": "アルコール中毒の方は、横紋筋融解症（筋肉が壊れる副作用）が起こりやすいとの報告があります。"
+        }
+      ],
+      "source": {
+        "title": "リバロ錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/270072_2189016F1028_1_38",
+        "revised": "2023年7月改訂（第3版）"
+      }
+    },
+    {
+      "id": "pravastatin",
+      "genericName": "プラバスタチンナトリウム",
+      "displayName": "プラバスタチン",
+      "brandNames": [
+        "メバロチン"
+      ],
+      "category": "脂質異常症治療薬（スタチン）",
+      "classes": [
+        "statin"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:fibrate",
+            "bezafibrate"
+          ],
+          "targetLabel": "フィブラート系薬剤（ベザフィブラート等）",
+          "effect": "筋肉痛、脱力感などを伴う横紋筋融解症（筋肉が壊れる副作用）が、急な腎機能の悪化とともに起こりやすくなります。症状やCK上昇などがあれば直ちに中止します。",
+          "mechanism": "どちらの薬でも横紋筋融解症が報告されているためです。腎機能の検査値に異常がある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:immunosuppressant",
+            "cyclosporine",
+            "nicotinic_acid"
+          ],
+          "targetLabel": "免疫抑制剤（シクロスポリン等）、ニコチン酸",
+          "effect": "筋肉痛、脱力感などを伴う横紋筋融解症（筋肉が壊れる副作用）が、急な腎機能の悪化とともに起こりやすくなります。症状やCK上昇などがあれば直ちに中止します。",
+          "mechanism": "機序はわかっていません。重い腎機能障害のある方は特に注意が必要です。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（アルコール中毒）",
+          "level": "caution",
+          "effect": "アルコール中毒の方は、肝機能障害が悪化するおそれがあり、横紋筋融解症（筋肉が壊れる副作用）も起こりやすいとの報告があります。"
+        }
+      ],
+      "source": {
+        "title": "メバロチン錠／細粒 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/430574_2189010C1032_2_15",
+        "revised": "2023年7月改訂（第2版）"
+      }
+    },
+    {
+      "id": "ezetimibe",
+      "genericName": "エゼチミブ",
+      "displayName": "エゼチミブ",
+      "brandNames": [
+        "ゼチーア"
+      ],
+      "category": "脂質異常症治療薬（小腸コレステロールトランスポーター阻害薬）",
+      "classes": [],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "colestimide",
+            "cholestyramine"
+          ],
+          "targetLabel": "陰イオン交換樹脂（コレスチミド、コレスチラミン等）",
+          "effect": "この薬の血中濃度が下がりました。この薬は陰イオン交換樹脂を飲む2時間以上前か、飲んだ4時間以上後に飲みます。",
+          "mechanism": "この薬が樹脂に結合し、吸収が遅れたり減ったりする可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cyclosporine"
+          ],
+          "targetLabel": "シクロスポリン",
+          "effect": "この薬とシクロスポリンの両方の血中濃度が上がりました。シクロスポリンの血中濃度を十分に確認します。",
+          "mechanism": "機序はわかっていません。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "クマリン系抗凝固剤（ワルファリン等）",
+          "effect": "血液の固まりにくさの指標（INR）が上がりました。適宜INR検査を行います。",
+          "mechanism": "機序はわかっていません。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ゼチーア錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/181615_2189018F1027_3_03",
+        "revised": "2023年7月改訂（第4版）"
+      }
+    },
+    {
+      "id": "pemafibrate",
+      "genericName": "ペマフィブラート",
+      "displayName": "ペマフィブラート",
+      "brandNames": [
+        "パルモディア"
+      ],
+      "category": "脂質異常症治療薬（フィブラート系）",
+      "classes": [
+        "fibrate"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "cyclosporine"
+          ],
+          "targetLabel": "シクロスポリン（サンディミュン、ネオーラル）",
+          "effect": "この薬の血中濃度が上がったとの報告があるため、一緒に使えません。",
+          "mechanism": "シクロスポリンがOATP1B1・1B3やCYP2C8・2C9・3Aを阻害するためと考えられています。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "rifampicin"
+          ],
+          "targetLabel": "リファンピシン（リファジン）",
+          "effect": "この薬の血中濃度が上がったとの報告があるため、一緒に使えません。",
+          "mechanism": "リファンピシンがOATP1B1・1B3を阻害するためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:statin",
+            "pravastatin",
+            "simvastatin",
+            "fluvastatin"
+          ],
+          "targetLabel": "HMG-CoA還元酵素阻害薬（プラバスタチン、シンバスタチン、フルバスタチン等）",
+          "effect": "筋肉痛、脱力感などを伴う横紋筋融解症（筋肉が壊れる副作用）が、急な腎機能の悪化とともに起こりやすくなります。症状やCK上昇などがあれば直ちに中止します。",
+          "mechanism": "腎機能の検査値に異常がある方は特に注意が必要です。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "clopidogrel"
+          ],
+          "targetLabel": "クロピドグレル",
+          "effect": "この薬の血中濃度が上がったとの報告があり、必要に応じてこの薬の減量が検討されます。",
+          "mechanism": "クロピドグレルがCYP2C8とOATP1B1を阻害するためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "clarithromycin",
+            "class:hiv_protease_inhibitor",
+            "ritonavir"
+          ],
+          "targetLabel": "クラリスロマイシン、HIVプロテアーゼ阻害剤（リトナビル等）",
+          "effect": "この薬の血中濃度が上がったとの報告があり、必要に応じてこの薬の減量が検討されます。",
+          "mechanism": "これらの薬がCYP3AやOATP1B1・1B3を阻害するためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "fluconazole"
+          ],
+          "targetLabel": "フルコナゾール",
+          "effect": "この薬の血中濃度が上がったとの報告があります。",
+          "mechanism": "フルコナゾールがCYP2C9とCYP3Aを阻害するためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cholestyramine",
+            "colestimide"
+          ],
+          "targetLabel": "陰イオン交換樹脂（コレスチラミン、コレスチミド）",
+          "effect": "この薬の血中濃度が下がる可能性があるため、できるだけ時間をあけて飲むことが望ましいとされています。",
+          "mechanism": "同時に飲むと、この薬が樹脂に吸着されて吸収が減る可能性があります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:cyp3a4_inducer",
+            "carbamazepine",
+            "phenobarbital",
+            "phenytoin"
+          ],
+          "targetLabel": "強いCYP3A誘導剤（カルバマゼピン、フェノバルビタール、フェニトイン等）",
+          "effect": "この薬の血中濃度が下がり、効き目が弱まるおそれがあります。",
+          "mechanism": "これらの薬がCYP3Aを強く誘導し、この薬の代謝が早まるためと考えられています。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "st_johns_wort",
+          "itemLabel": "セイヨウオトギリソウ（セント・ジョーンズ・ワート）含有食品",
+          "level": "caution",
+          "effect": "この薬の血中濃度が下がり、効果が弱まるおそれがあります。"
+        }
+      ],
+      "source": {
+        "title": "パルモディア錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/270072_2183007F1025_1_14",
+        "revised": "2024年8月改訂（第2版）"
+      }
+    },
+    {
+      "id": "icosapent",
+      "genericName": "イコサペント酸エチル",
+      "displayName": "イコサペント酸エチル（EPA）",
+      "brandNames": [
+        "エパデール"
+      ],
+      "category": "脂質異常症・閉塞性動脈硬化症治療薬（EPA製剤）",
+      "classes": [
+        "antiplatelet"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "mifepristone_misoprostol"
+          ],
+          "targetLabel": "ミフェプリストン・ミソプロストール（メフィーゴパック）",
+          "effect": "ミフェプリストン・ミソプロストールによる子宮出血がひどくなるおそれがあるため、一緒に使えません。",
+          "mechanism": "この薬の血小板を抑える作用で出血が強まるおそれがあるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:anticoagulant",
+            "warfarin",
+            "class:antiplatelet",
+            "aspirin",
+            "indomethacin",
+            "ticlopidine",
+            "cilostazol"
+          ],
+          "targetLabel": "抗凝固剤（ワルファリン等）、血小板凝集を抑制する薬剤（アスピリン、インドメタシン、チクロピジン、シロスタゾール等）",
+          "effect": "出血しやすくなるおそれがあります。",
+          "mechanism": "この薬にも血小板を抑える作用があり、出血しやすさが重なると考えられています。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "エパデールS 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/790005_3399004M2022_1_22",
+        "revised": "2024年11月改訂（第3版）"
+      }
+    },
+    {
+      "id": "allopurinol",
+      "genericName": "アロプリノール",
+      "displayName": "アロプリノール",
+      "brandNames": [
+        "ザイロリック"
+      ],
+      "category": "高尿酸血症・痛風治療薬（尿酸生成抑制薬）",
+      "classes": [
+        "xanthine_oxidase_inhibitor"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "mercaptopurine",
+            "azathioprine"
+          ],
+          "targetLabel": "メルカプトプリン、アザチオプリン",
+          "effect": "骨髄抑制などの副作用が強まります。これらの薬の量を1/3〜1/4に減らします。",
+          "mechanism": "この薬がキサンチンオキシダーゼを阻害し、メルカプトプリンの血中濃度が上がるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "vidarabine"
+          ],
+          "targetLabel": "ビダラビン",
+          "effect": "ビダラビンの作用が強まり、幻覚、ふるえ、神経障害などが起きたとの報告があります。",
+          "mechanism": "この薬がビダラビンの代謝を抑えると報告されています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin"
+          ],
+          "targetLabel": "クマリン系抗凝血剤（ワルファリン）",
+          "effect": "ワルファリンの作用が強まるとの報告があり、血液の固まりやすさを確認して減量などが検討されます。",
+          "mechanism": "この薬がワルファリンの代謝を妨げ、作用時間が延びると報告されています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "chlorpropamide"
+          ],
+          "targetLabel": "クロルプロパミド",
+          "effect": "クロルプロパミドの作用が強まります。血糖値の変動に注意します。",
+          "mechanism": "腎臓での排泄が競合し、クロルプロパミドの作用時間が延びると報告されています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cyclophosphamide"
+          ],
+          "targetLabel": "シクロホスファミド",
+          "effect": "骨髄抑制が起きたとの報告があり、定期的に血液検査を行います。",
+          "mechanism": "シクロホスファミドの代謝や排泄が妨げられると報告されています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "cyclosporine",
+            "phenytoin"
+          ],
+          "targetLabel": "シクロスポリン、フェニトイン",
+          "effect": "これらの薬の血中濃度が上がり、シクロスポリンでは腎機能低下、フェニトインでは眠気が出たとの報告があります。",
+          "mechanism": "この薬がこれらの薬の肝臓での代謝を妨げると報告されています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "theophylline",
+            "class:xanthine"
+          ],
+          "targetLabel": "キサンチン系薬剤（テオフィリン等）",
+          "effect": "テオフィリンなどの血中濃度が上がります。",
+          "mechanism": "この薬がテオフィリンの代謝酵素（キサンチンオキシダーゼ）を阻害するためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "didanosine"
+          ],
+          "targetLabel": "ジダノシン",
+          "effect": "ジダノシンの血中濃度（Cmax、AUC）が2倍に上がったとの報告があります。",
+          "mechanism": "この薬がジダノシンの代謝酵素（キサンチンオキシダーゼ）を阻害するためと考えられています。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "pentostatin",
+            "captopril",
+            "hydrochlorothiazide",
+            "ampicillin"
+          ],
+          "targetLabel": "ペントスタチン、カプトプリル、ヒドロクロロチアジド、アンピシリン",
+          "effect": "重い過敏反応（発熱を伴う発疹など）や発疹が起きたとの報告があります。発熱を伴う発疹などが出たら、両方の薬をすぐに中止します。",
+          "mechanism": "機序はわかっていません。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "アロプリノール錠「VTRS」（旧ザイロリック錠） 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/343018_3943001F1713_1_03",
+        "revised": "2024年7月改訂（第2版）"
+      }
+    },
+    {
+      "id": "febuxostat",
+      "genericName": "フェブキソスタット",
+      "displayName": "フェブキソスタット",
+      "brandNames": [
+        "フェブリク"
+      ],
+      "category": "高尿酸血症・痛風治療薬（尿酸生成抑制薬）",
+      "classes": [
+        "xanthine_oxidase_inhibitor"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "mercaptopurine",
+            "azathioprine"
+          ],
+          "targetLabel": "メルカプトプリン（ロイケリン）、アザチオプリン（イムラン、アザニン）",
+          "effect": "骨髄抑制などの副作用が強まる可能性があるため、一緒に使えません。",
+          "mechanism": "この薬がキサンチンオキシダーゼを阻害し、メルカプトプリンの血中濃度が上がる可能性があるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "vidarabine"
+          ],
+          "targetLabel": "ビダラビン",
+          "effect": "幻覚、ふるえ、神経障害などのビダラビンの副作用が強まる可能性があります。",
+          "mechanism": "ビダラビンの代謝が抑えられる可能性があるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "didanosine"
+          ],
+          "targetLabel": "ジダノシン",
+          "effect": "ジダノシンの血中濃度が上がる可能性があり、用量に注意します。",
+          "mechanism": "ジダノシンの代謝が抑えられる可能性があるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rosuvastatin"
+          ],
+          "targetLabel": "ロスバスタチン",
+          "effect": "ロスバスタチンの血中濃度が上がる可能性があります（AUC約1.9倍、Cmax約2.1倍との報告があります）。",
+          "mechanism": "この薬がBCRPという輸送体を阻害するためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "フェブリク錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/470310_3949003F1023_1_18",
+        "revised": "2024年9月改訂（第6版）"
+      }
+    },
+    {
+      "id": "voglibose",
+      "genericName": "ボグリボース",
+      "displayName": "ボグリボース",
+      "brandNames": [
+        "ベイスン"
+      ],
+      "category": "糖尿病治療薬（α-グルコシダーゼ阻害薬）",
+      "classes": [
+        "antidiabetic"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic",
+            "class:sulfonylurea",
+            "class:insulin",
+            "metformin"
+          ],
+          "targetLabel": "糖尿病用薬（スルホニルアミド系・スルホニルウレア系薬剤、ビグアナイド系薬剤、インスリン製剤、インスリン抵抗性改善剤）",
+          "effect": "インスリンやスルホニルウレア系の薬との併用で低血糖が報告されており、少量から始めるなど慎重に使います。",
+          "mechanism": "糖尿病の薬の血糖を下げる作用に、この薬の糖の吸収を遅らせる作用が加わるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:beta_blocker",
+            "aspirin",
+            "class:maoi",
+            "class:fibrate",
+            "warfarin",
+            "class:corticosteroid",
+            "class:thyroid_hormone"
+          ],
+          "targetLabel": "糖尿病用薬の作用を強める薬（β-遮断剤、サリチル酸剤、MAO阻害剤、フィブラート系、ワルファリン等）や弱める薬（アドレナリン、副腎皮質ホルモン、甲状腺ホルモン等）を、他の糖尿病用薬と併用している場合",
+          "effect": "血糖への影響に十分注意が必要です。",
+          "mechanism": "これらの薬で強まったり弱まったりした血糖降下作用に、この薬の作用が加わるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "ベイスン錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/400061_3969004F1020_2_07",
+        "revised": "2025年11月改訂（第4版）"
+      }
+    },
+    {
+      "id": "glimepiride",
+      "genericName": "グリメピリド",
+      "displayName": "グリメピリド",
+      "brandNames": [
+        "アマリール"
+      ],
+      "category": "糖尿病治療薬（スルホニルウレア薬）",
+      "classes": [
+        "antidiabetic",
+        "sulfonylurea"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic",
+            "class:insulin",
+            "metformin",
+            "sitagliptin",
+            "class:sglt2_inhibitor"
+          ],
+          "targetLabel": "糖尿病用薬（インスリン製剤、ビグアナイド系、チアゾリジン系、α-グルコシダーゼ阻害剤、DPP-4阻害薬、GLP-1受容体作動薬、SGLT2阻害剤等）",
+          "effect": "低血糖の症状が起こることがあります。血糖値などを確認し、必要に応じて用量を調整します。",
+          "mechanism": "血糖を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "warfarin",
+            "aspirin",
+            "class:nsaid",
+            "naproxen",
+            "loxoprofen"
+          ],
+          "targetLabel": "ワルファリン、サリチル酸剤（アスピリン等）、プロピオン酸系・アリール酢酸系・オキシカム系消炎剤（ナプロキセン、ロキソプロフェン等）",
+          "effect": "低血糖の症状が起こることがあります。血糖値などを確認し、必要に応じて用量を調整します。",
+          "mechanism": "肝臓での代謝が抑えられたり、血液中の蛋白との結合が妨げられたりして、血糖を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:beta_blocker"
+          ],
+          "targetLabel": "β-遮断剤（プロプラノロール、アテノロール、ピンドロール等）",
+          "effect": "低血糖の症状が起こることがあります。血糖値などを確認し、必要に応じて用量を調整します。特にプロプラノロールなど非選択性のβ遮断剤との併用は避けることが望ましいとされています。",
+          "mechanism": "糖の産生や低血糖からの回復が抑えられ、低血糖の症状にも気づきにくくなるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "clarithromycin",
+            "class:tetracycline",
+            "minocycline",
+            "ciprofloxacin",
+            "levofloxacin",
+            "sulfamethoxazole_trimethoprim"
+          ],
+          "targetLabel": "クラリスロマイシン、テトラサイクリン系抗生物質（ミノサイクリン等）、シプロフロキサシン、レボフロキサシン、サルファ剤（スルファメトキサゾール等）",
+          "effect": "低血糖の症状が起こることがあります。血糖値などを確認し、必要に応じて用量を調整します。",
+          "mechanism": "血糖を下げる作用が強まるためです（機序が不明なものもあります）。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:azole_antifungal",
+            "miconazole",
+            "fluconazole"
+          ],
+          "targetLabel": "アゾール系抗真菌剤（ミコナゾール、フルコナゾール等）",
+          "effect": "低血糖の症状が起こることがあります。血糖値などを確認し、必要に応じて用量を調整します。",
+          "mechanism": "この薬の代謝（CYP2C9）が妨げられるなどして、血糖を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:fibrate",
+            "bezafibrate",
+            "class:maoi"
+          ],
+          "targetLabel": "フィブラート系薬剤（ベザフィブラート等）、モノアミン酸化酵素阻害剤",
+          "effect": "低血糖の症状が起こることがあります。血糖値などを確認し、必要に応じて用量を調整します。",
+          "mechanism": "血糖を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:corticosteroid",
+            "class:thyroid_hormone",
+            "levothyroxine",
+            "class:diuretic",
+            "trichlormethiazide",
+            "furosemide"
+          ],
+          "targetLabel": "副腎皮質ホルモン、甲状腺ホルモン（レボチロキシン等）、利尿剤（トリクロルメチアジド、フロセミド等）",
+          "effect": "高血糖の症状（吐き気・嘔吐、脱水、息のアセトン臭など）が起こることがあります。血糖値などを確認します。",
+          "mechanism": "血糖を下げる作用が弱まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "rifampicin"
+          ],
+          "targetLabel": "リファンピシン",
+          "effect": "高血糖の症状（吐き気・嘔吐、脱水、息のアセトン臭など）が起こることがあります。血糖値などを確認します。",
+          "mechanism": "この薬の肝臓での代謝が促され、血糖を下げる作用が弱まるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（過度の飲酒）",
+          "level": "caution",
+          "effect": "過度の飲酒をする方は、低血糖を起こすおそれがあります。"
+        }
+      ],
+      "source": {
+        "title": "アマリール錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/780069_3961008F1020_1_30",
+        "revised": "2024年3月改訂（第2版）"
+      }
+    },
+    {
+      "id": "dapagliflozin",
+      "genericName": "ダパグリフロジンプロピレングリコール水和物",
+      "displayName": "ダパグリフロジン",
+      "brandNames": [
+        "フォシーガ"
+      ],
+      "category": "糖尿病・心不全・慢性腎臓病治療薬（SGLT2阻害薬）",
+      "classes": [
+        "sglt2_inhibitor",
+        "antidiabetic"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic",
+            "class:insulin",
+            "class:sulfonylurea",
+            "metformin",
+            "sitagliptin"
+          ],
+          "targetLabel": "糖尿病用薬（インスリン製剤、スルホニルウレア剤、チアゾリジン系、ビグアナイド系、α-グルコシダーゼ阻害剤、速効型インスリン分泌促進剤、DPP-4阻害剤、GLP-1受容体作動薬等）",
+          "effect": "低血糖に注意が必要です。特にインスリン製剤・スルホニルウレア剤・速効型インスリン分泌促進剤は減量が検討されます（1型糖尿病でインスリンを減らしすぎるとケトアシドーシスの危険があります）。",
+          "mechanism": "血糖を下げる作用が重なるおそれがあります。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:beta_blocker",
+            "aspirin",
+            "class:maoi"
+          ],
+          "targetLabel": "血糖降下作用を増強する薬剤（β遮断薬、サリチル酸剤、モノアミン酸化酵素阻害剤等）",
+          "effect": "血糖が下がりやすくなるおそれがあり、血糖値の確認が必要です。",
+          "mechanism": "血糖を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:corticosteroid",
+            "class:thyroid_hormone"
+          ],
+          "targetLabel": "血糖降下作用を減弱する薬剤（副腎皮質ホルモン、甲状腺ホルモン、アドレナリン等）",
+          "effect": "血糖を下げる作用が弱まるおそれがあり、血糖値の確認が必要です。",
+          "mechanism": "血糖を下げる作用が弱まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:diuretic",
+            "class:thiazide_diuretic",
+            "furosemide",
+            "trichlormethiazide"
+          ],
+          "targetLabel": "利尿薬（ループ利尿薬、サイアザイド系利尿薬等）",
+          "effect": "尿を出す作用が強まるため、必要に応じて利尿薬の量を調整します。",
+          "mechanism": "利尿作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lithium"
+          ],
+          "targetLabel": "リチウム製剤（炭酸リチウム）",
+          "effect": "リチウムの作用が弱まるおそれがあります。",
+          "mechanism": "リチウムの腎臓からの排泄が促され、血中濃度が下がる可能性があるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（過度の飲酒）",
+          "level": "caution",
+          "effect": "過度の飲酒をする方は、低血糖を起こすおそれがあります。"
+        }
+      ],
+      "source": {
+        "title": "フォシーガ錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/670227_3969019F1027_2_17",
+        "revised": "2025年4月改訂（第7版）"
+      }
+    },
+    {
+      "id": "empagliflozin",
+      "genericName": "エンパグリフロジン",
+      "displayName": "エンパグリフロジン",
+      "brandNames": [
+        "ジャディアンス"
+      ],
+      "category": "糖尿病・心不全・慢性腎臓病治療薬（SGLT2阻害薬）",
+      "classes": [
+        "sglt2_inhibitor",
+        "antidiabetic"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic",
+            "class:insulin",
+            "class:sulfonylurea",
+            "metformin",
+            "sitagliptin"
+          ],
+          "targetLabel": "糖尿病用薬（スルホニルウレア剤、速効型インスリン分泌促進薬、α-グルコシダーゼ阻害薬、ビグアナイド系、チアゾリジン系、DPP-4阻害薬、GLP-1受容体作動薬、インスリン製剤等）",
+          "effect": "低血糖が起こるおそれがあります。特にスルホニルウレア剤やインスリン製剤は減量が検討されます。",
+          "mechanism": "血糖を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:beta_blocker",
+            "aspirin",
+            "class:maoi"
+          ],
+          "targetLabel": "血糖降下作用を増強する薬剤（β遮断薬、サリチル酸剤、モノアミン酸化酵素阻害剤等）",
+          "effect": "血糖が下がりやすくなるおそれがあり、血糖値の確認が必要です。",
+          "mechanism": "血糖を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:corticosteroid",
+            "class:thyroid_hormone"
+          ],
+          "targetLabel": "血糖降下作用を減弱する薬剤（副腎皮質ホルモン、甲状腺ホルモン、アドレナリン等）",
+          "effect": "血糖を下げる作用が弱まるおそれがあり、血糖値の確認が必要です。",
+          "mechanism": "血糖を下げる作用が弱まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:diuretic",
+            "class:thiazide_diuretic",
+            "furosemide",
+            "trichlormethiazide"
+          ],
+          "targetLabel": "利尿薬（チアジド系薬剤、ループ利尿薬等）",
+          "effect": "尿を出す作用が強まるおそれがあるため、必要に応じて利尿薬の量を調整します。",
+          "mechanism": "利尿作用が強まるおそれがあるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "lithium"
+          ],
+          "targetLabel": "リチウム製剤（炭酸リチウム）",
+          "effect": "リチウムの作用が弱まるおそれがあります。",
+          "mechanism": "リチウムの腎臓からの排泄が促され、血中濃度が下がる可能性があるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（過度の飲酒）",
+          "level": "caution",
+          "effect": "過度の飲酒をする方は、低血糖を起こすおそれがあります。"
+        }
+      ],
+      "source": {
+        "title": "ジャディアンス錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/650168_3969023F1023_1_19",
+        "revised": "2025年9月改訂（第8版）"
+      }
+    },
+    {
+      "id": "linagliptin",
+      "genericName": "リナグリプチン",
+      "displayName": "リナグリプチン",
+      "brandNames": [
+        "トラゼンタ"
+      ],
+      "category": "糖尿病治療薬（DPP-4阻害薬）",
+      "classes": [
+        "antidiabetic"
+      ],
+      "interactions": [
+        {
+          "level": "caution",
+          "targets": [
+            "class:antidiabetic",
+            "class:insulin",
+            "class:sulfonylurea",
+            "metformin",
+            "class:sglt2_inhibitor"
+          ],
+          "targetLabel": "糖尿病用薬（スルホニルアミド系、スルホニルウレア剤、ビグアナイド系、インスリン製剤、チアゾリジン系、α-グルコシダーゼ阻害剤、速効型インスリン分泌促進薬、GLP-1受容体作動薬、SGLT2阻害剤等）",
+          "effect": "低血糖に注意が必要です。特にスルホニルウレア剤やインスリン製剤と併用する場合は、それらの減量が検討されます。",
+          "mechanism": "この薬の血糖を下げる作用が強まるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "aspirin",
+            "class:maoi",
+            "ritonavir"
+          ],
+          "targetLabel": "血糖降下作用を増強する薬剤（サリチル酸剤、モノアミン酸化酵素阻害剤、リトナビル等）",
+          "effect": "さらに血糖が下がる可能性があり、血糖値の確認が必要です。",
+          "mechanism": "血糖を下げる作用が強まるおそれがあるためです。"
+        },
+        {
+          "level": "caution",
+          "targets": [
+            "class:corticosteroid",
+            "class:thyroid_hormone",
+            "rifampicin"
+          ],
+          "targetLabel": "血糖降下作用を減弱する薬剤（アドレナリン、副腎皮質ホルモン、甲状腺ホルモン、リファンピシン等）",
+          "effect": "血糖が上がる可能性があり、血糖値の確認が必要です。",
+          "mechanism": "血糖を下げる作用が弱まるおそれがあるためです。"
+        }
+      ],
+      "foods": [
+        {
+          "item": "alcohol",
+          "itemLabel": "アルコール（過度の飲酒）",
+          "level": "caution",
+          "effect": "過度の飲酒をする方は、低血糖を起こすおそれがあります。"
+        }
+      ],
+      "source": {
+        "title": "トラゼンタ錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/650168_3969014F1024_1_21",
+        "revised": "2025年10月改訂（第3版）"
+      }
+    },
+    {
+      "id": "nicorandil",
+      "genericName": "ニコランジル",
+      "displayName": "ニコランジル",
+      "brandNames": [
+        "シグマート"
+      ],
+      "category": "狭心症治療薬",
+      "classes": [
+        "nitrate"
+      ],
+      "interactions": [
+        {
+          "level": "contraindicated",
+          "targets": [
+            "class:pde5_inhibitor",
+            "sildenafil",
+            "vardenafil",
+            "tadalafil"
+          ],
+          "targetLabel": "ホスホジエステラーゼ5阻害作用を有する薬剤（シルデナフィル〔バイアグラ、レバチオ〕、バルデナフィル〔レビトラ〕、タダラフィル〔シアリス、アドシルカ、ザルティア〕）",
+          "effect": "血圧が下がりすぎることがあるため、一緒に使えません。この薬を飲む前後や飲んでいる間は、これらの薬を飲まないよう十分注意します。",
+          "mechanism": "両方の薬でcGMPという物質が増え、血圧を下げる作用が強まるためです。"
+        },
+        {
+          "level": "contraindicated",
+          "targets": [
+            "riociguat"
+          ],
+          "targetLabel": "グアニル酸シクラーゼ刺激作用を有する薬剤（リオシグアト〔アデムパス〕）",
+          "effect": "血圧が下がりすぎることがあるため、一緒に使えません。",
+          "mechanism": "両方の薬でcGMPという物質が増え、血圧を下げる作用が強まるためです。"
+        }
+      ],
+      "foods": [],
+      "source": {
+        "title": "シグマート錠 添付文書",
+        "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/450045_2171017F1028_1_17",
+        "revised": "2022年1月改訂（第1版）"
+      }
+    }
+  ]
+}
