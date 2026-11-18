@@ -36,7 +36,8 @@ open Okusurhythm.xcodeproj
 
 | コマンド | 内容 |
 |---|---|
-| `scripts/screenshots.sh` | サンプルデータで起動して App Store 用スクリーンショットを撮る |
+| `scripts/screenshots.sh` | サンプルデータで起動して App Store 用スクリーンショットを撮る（見出し付きは `screenshots/framed/`） |
+| `swift tools/frame_screenshots.swift <入力> <出力>` | 撮影済みの画像に見出しと端末の枠をつける（文言は中の `pages`） |
 | `swift tools/make_icon.swift <出力.png>` | アプリアイコンを描き直す |
 | 起動引数 `-uiPreview` | メモリ上のサンプルデータで起動（`-initialTab records` / `-screen interactions` など） |
 

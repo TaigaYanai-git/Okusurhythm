@@ -33,3 +33,6 @@ shoot 4_calendar -initialTab calendar
 shoot 5_records -initialTab records
 shoot 6_edit -screen edit
 shoot 7_settings -screen settings
+
+# 見出しと端末の枠をつけた App Store 用画像 → screenshots/framed/<デバイス名>/
+swift tools/frame_screenshots.swift "$OUT" "screenshots/framed/${DEVICE// /_}"
