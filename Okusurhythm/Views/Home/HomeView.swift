@@ -59,6 +59,7 @@ struct HomeView: View {
                                 DoseRow(dose: dose, log: logIndex[dose.id])
                             }
                         }
+                        .guideTarget(.todayDoses)
                         if !dueDoses.isEmpty, selectedDay <= Date() {
                             Button {
                                 withAnimation {
@@ -81,7 +82,11 @@ struct HomeView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("お薬を追加", systemImage: "plus") { editing = .new }
+                    // ガイドで位置を測れるよう、ラベルは SwiftUI の View で描く
+                    Button { editing = .new } label: {
+                        Image(systemName: "plus").guideTarget(.addToolbar)
+                    }
+                    .accessibilityLabel("お薬を追加")
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("通知設定", systemImage: "gearshape.fill") { showSettings = true }
@@ -108,9 +113,11 @@ struct HomeView: View {
                 .multilineTextAlignment(.center)
             Button("お薬を登録する") { editing = .new }
                 .buttonStyle(PrimaryButtonStyle())
+                .guideTarget(.addEmpty)
         }
         .frame(maxWidth: .infinity)
         .card()
+        .guideTarget(.todayDoses)
     }
 
     private var interactionBanner: some View {

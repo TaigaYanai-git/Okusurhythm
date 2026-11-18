@@ -48,6 +48,7 @@ struct OkusurhythmApp: App {
 struct RootView: View {
     @AppStorage(SlotSettings.onboardedKey) private var onboarded = false
     @State private var tab = AppTab(rawValue: UserDefaults.standard.string(forKey: "initialTab") ?? "") ?? .home
+    @ObservedObject private var guide = AppGuide.shared
 
     var body: some View {
         // スクリーンショット撮影用: -uiPreview -screen interactions など
@@ -75,6 +76,22 @@ struct RootView: View {
                 MenuView()
                     .tabItem { Label("メニュー", systemImage: "line.3.horizontal") }
                     .tag(AppTab.menu)
+            }
+            // はじめての人への使い方ガイド（画面の場所を照らして説明する）
+            .overlay { AppGuideOverlay() }
+            .onReceive(guide.$tab) { if let t = $0 { tab = t } }
+            .task {
+                let args = ProcessInfo.processInfo.arguments
+                // スクリーンショット用：-guide で必ず出す（-guideStep N でその手順から）
+                if args.contains("-guide") {
+                    guide.start()
+                    if let i = args.firstIndex(of: "-guideStep"), args.indices.contains(i + 1), let n = Int(args[i + 1]) {
+                        guide.stepIndex = n
+                    }
+                    return
+                }
+                guard !args.contains("-uiPreview") else { return }
+                guide.startIfNeeded()
             }
         } else {
             OnboardingView { onboarded = true }

@@ -49,6 +49,7 @@ struct CalendarView: View {
                         legend
                     }
                     .card()
+                    .guideTarget(.calendarGrid)
 
                     VStack(alignment: .leading, spacing: 10) {
                         Text("\(selectedDay.japaneseDayText)の服薬記録").font(.headline)

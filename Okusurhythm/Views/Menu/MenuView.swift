@@ -12,6 +12,7 @@ struct MenuView: View {
                     NavigationLink { InteractionCheckView() } label: {
                         Label("飲み合わせチェック", systemImage: "arrow.triangle.merge")
                     }
+                    .guideTarget(.interactionRow)
                     NavigationLink { FoodWarningsView() } label: {
                         Label("一緒にとってはいけない飲食物", systemImage: "cup.and.saucer")
                     }
@@ -30,6 +31,11 @@ struct MenuView: View {
                     }
                 }
                 Section("このアプリについて") {
+                    Button {
+                        AppGuide.shared.start()
+                    } label: {
+                        Label("使い方を見る", systemImage: "hand.point.up.left")
+                    }
                     NavigationLink { AboutView() } label: {
                         Label("データの出典・ご利用上の注意", systemImage: "info.circle")
                     }
