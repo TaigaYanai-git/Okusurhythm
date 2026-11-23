@@ -21,3 +21,6 @@ __pycache__/
 *.pyc
 screenshots/
 data/work/
+
+# アイコン案のプレビュー画像（大きいので入れない）
+Design/**/previews/
