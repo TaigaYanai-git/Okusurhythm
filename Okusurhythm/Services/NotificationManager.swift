@@ -14,10 +14,15 @@ final class NotificationManager: NSObject {
     static let doseCategory = "DOSE"
     static let takeAction = "TAKE"
     static let snoozeAction = "SNOOZE"
+    static let visitCategory = "VISIT"
+    static let visitBookedAction = "VISIT_BOOKED"
+    static let visitNotNeededAction = "VISIT_NOT_NEEDED"
+    private static let visitPrefix = "visit-"
     private static let dosePrefix = "dose-"
     private static let followUpPrefix = "followup-"
     private static let snoozePrefix = "snooze-"
     private static let daysAhead = 7
+    private static let maxVisitRequests = 20
 
     private let center = UNUserNotificationCenter.current()
 
@@ -27,7 +32,11 @@ final class NotificationManager: NSObject {
         let snooze = UNNotificationAction(identifier: Self.snoozeAction, title: "10分後にもう一度", options: [])
         let category = UNNotificationCategory(identifier: Self.doseCategory, actions: [take, snooze],
                                               intentIdentifiers: [], options: [])
-        center.setNotificationCategories([category])
+        let booked = UNNotificationAction(identifier: Self.visitBookedAction, title: "病院を予約した", options: [])
+        let notNeeded = UNNotificationAction(identifier: Self.visitNotNeededAction, title: "次は病院に行かなくていい", options: [])
+        let visit = UNNotificationCategory(identifier: Self.visitCategory, actions: [booked, notNeeded],
+                                           intentIdentifiers: [], options: [])
+        center.setNotificationCategories([category, visit])
     }
 
     @discardableResult
@@ -78,6 +87,25 @@ final class NotificationManager: NSObject {
             }
         }
 
+        // 病院予約のリマインド（なくなる日の10日前から、お薬ごとに毎日お昼に1回。近い日から数日分だけ予約する）
+        var visitRequests: [UNNotificationRequest] = []
+        if HospitalVisit.isEnabled {
+            let now = Date()
+            let items = meds.compactMap { HospitalVisit.runOut(of: $0, context: context) }
+                .filter { HospitalVisit.ack(for: $0.medication, runOut: $0.day) == nil }
+            for offset in 0...Self.daysAhead {
+                let day = calendar.date(byAdding: .day, value: offset, to: today)!
+                let fireDate = calendar.date(byAdding: .minute, value: HospitalVisit.notifyMinutes, to: day)!
+                guard fireDate > now else { continue }
+                let dueItems = items.filter {
+                    calendar.date(byAdding: .day, value: -HospitalVisit.leadDays, to: $0.day)! <= day
+                }.sorted { $0.day < $1.day }
+                for item in dueItems { visitRequests.append(visitRequest(item: item, on: day, at: fireDate)) }
+            }
+            // 服薬の通知の枠を残すため、病院予約は近いものから 20 件まで（アプリを開くたびに先の分を足す）
+            visitRequests = Array(visitRequests.prefix(Self.maxVisitRequests))
+        }
+
         let center = self.center
         let isOurs: (String) -> Bool = { id in
             [Self.dosePrefix, Self.followUpPrefix, Self.snoozePrefix].contains { id.hasPrefix($0) }
@@ -85,11 +113,12 @@ final class NotificationManager: NSObject {
         let isDone: (String) -> Bool = { id in !pendingKeys.contains { id.hasSuffix($0) } }
         center.getPendingNotificationRequests { pending in
             let stale = pending.map(\.identifier).filter { id in
-                id.hasPrefix(Self.dosePrefix) || id.hasPrefix(Self.followUpPrefix)
+                id.hasPrefix(Self.dosePrefix) || id.hasPrefix(Self.followUpPrefix) || id.hasPrefix(Self.visitPrefix)
                     || (id.hasPrefix(Self.snoozePrefix) && isDone(id))
             }
             center.removePendingNotificationRequests(withIdentifiers: stale)
-            for request in requests.prefix(60) { center.add(request) }
+            for request in requests.prefix(64 - visitRequests.count - 2) { center.add(request) }
+            for request in visitRequests { center.add(request) }
         }
         // 飲み終わったタイミングの通知は通知センターからも消す
         center.getDeliveredNotifications { delivered in
@@ -113,6 +142,32 @@ final class NotificationManager: NSObject {
         return UNNotificationRequest(identifier: id, content: content, trigger: trigger)
     }
 
+    private func visitRequest(item: HospitalVisit.RunOut, on day: Date, at date: Date) -> UNNotificationRequest {
+        let content = UNMutableNotificationContent()
+        let left = item.daysLeft(from: day)
+        content.title = "\(item.medication.name)の病院の予約はお済みですか？"
+        content.subtitle = left > 0 ? "あと\(left)日でなくなります（\(item.text)まで）" : "今日でなくなります（\(item.text)まで）"
+        content.body = "長押しで「病院を予約した」「次は病院に行かなくていい」を選べます。"
+        content.categoryIdentifier = Self.visitCategory
+        content.threadIdentifier = "visit"
+        content.sound = SlotSettings.soundEnabled ? .default : nil
+        content.userInfo = ["medIDs": [item.medication.id.uuidString]]
+        let components = Calendar.japanese.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+        let id = Self.visitPrefix + "\(item.medication.id.uuidString)-\(DayKey.string(from: day))"
+        return UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+    }
+
+    /// ボタンを押したら、届いている病院予約の通知も片付ける
+    func removeDeliveredVisitReminders(for medIDs: [UUID]) {
+        let center = self.center
+        let keys = medIDs.map { Self.visitPrefix + $0.uuidString }
+        center.getDeliveredNotifications { delivered in
+            let ids = delivered.map(\.request.identifier).filter { id in keys.contains { id.hasPrefix($0) } }
+            center.removeDeliveredNotifications(withIdentifiers: ids)
+        }
+    }
+
     func notifyRefill(for med: Medication) {
         let content = UNMutableNotificationContent()
         content.title = "お薬が残り少なくなっています"
@@ -126,6 +181,13 @@ final class NotificationManager: NSObject {
     // MARK: - 通知のボタン操作
 
     private func handle(action: String, content: UNNotificationContent) {
+        if action == Self.visitBookedAction || action == Self.visitNotNeededAction {
+            let ids = Set((content.userInfo["medIDs"] as? [String] ?? []).compactMap(UUID.init(uuidString:)))
+            let context = AppContainer.shared.mainContext
+            let meds = ((try? context.fetch(FetchDescriptor<Medication>())) ?? []).filter { ids.contains($0.id) }
+            HospitalVisit.mark(action == Self.visitBookedAction ? .booked : .notNeeded, medications: meds, context: context)
+            return
+        }
         guard let dayKey = content.userInfo["dayKey"] as? String,
               let slot = (content.userInfo["slot"] as? String).flatMap(DoseSlot.init(rawValue:)),
               let day = DayKey.date(from: dayKey) else { return }

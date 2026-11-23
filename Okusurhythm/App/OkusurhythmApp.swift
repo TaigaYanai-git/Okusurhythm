@@ -65,14 +65,14 @@ struct RootView: View {
         } else if onboarded {
             TabView(selection: $tab) {
                 HomeView(tab: $tab)
-                    .tabItem { Label("ホーム", systemImage: "house.fill") }
+                    .tabItem { Label("今日", systemImage: "checklist") }
                     .tag(AppTab.home)
-                RecordsView()
-                    .tabItem { Label("記録", systemImage: "chart.bar.doc.horizontal") }
+                HistoryView()
+                    .tabItem { Label("記録", systemImage: "calendar") }
                     .tag(AppTab.records)
-                CalendarView()
-                    .tabItem { Label("カレンダー", systemImage: "calendar") }
-                    .tag(AppTab.calendar)
+                MedicationsView()
+                    .tabItem { Label("お薬", systemImage: "pills.fill") }
+                    .tag(AppTab.medications)
                 MenuView()
                     .tabItem { Label("メニュー", systemImage: "line.3.horizontal") }
                     .tag(AppTab.menu)
@@ -99,4 +99,4 @@ struct RootView: View {
     }
 }
 
-enum AppTab: String, Hashable { case home, records, calendar, menu }
+enum AppTab: String, Hashable { case home, records, medications, menu }

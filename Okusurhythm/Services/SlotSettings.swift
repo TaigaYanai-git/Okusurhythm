@@ -19,6 +19,7 @@ enum SlotSettings {
             soundEnabledKey: true,
             followUpEnabledKey: true,
             followUpMinutesKey: 30,
+            HospitalVisit.enabledKey: true,
         ]
         for slot in DoseSlot.allCases {
             values[minutesKey(slot)] = slot.defaultMinutes

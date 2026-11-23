@@ -58,7 +58,7 @@ struct RecordsView: View {
         let total = buckets.map(\.total).reduce(0, +)
         let rate = total == 0 ? 0 : Double(taken) / Double(total)
 
-        NavigationStack {
+        Group {
             ScrollView {
                 VStack(spacing: 20) {
                     Picker("期間", selection: $range) {
@@ -115,8 +115,6 @@ struct RecordsView: View {
                 .padding()
             }
             .background(Theme.background)
-            .navigationTitle("服薬の記録")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 

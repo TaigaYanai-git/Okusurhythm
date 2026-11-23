@@ -19,7 +19,7 @@ struct CalendarView: View {
 
     var body: some View {
         let index = DoseSchedule.index(logs)
-        NavigationStack {
+        Group {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     VStack(spacing: 12) {
@@ -52,15 +52,19 @@ struct CalendarView: View {
                     .guideTarget(.calendarGrid)
 
                     VStack(alignment: .leading, spacing: 10) {
-                        Text("\(selectedDay.japaneseDayText)の服薬記録").font(.headline)
+                        Text(calendar.isDateInToday(selectedDay) ? "今日の服薬" : "\(selectedDay.japaneseDayText)の服薬").font(.headline)
                         let doses = DoseSchedule.doses(on: selectedDay, medications: medications)
                         if doses.isEmpty {
                             Text("この日の予定はありません。").foregroundStyle(.secondary)
                         }
-                        ForEach(doses) { dose in
-                            if selectedDay <= Date() {
-                                DoseRow(dose: dose, log: index[dose.id])
-                            } else {
+                        if selectedDay <= Date() {
+                            // 過ぎた日も、ホームと同じ形で記録を直せる
+                            ForEach(DoseSlot.allCases) { slot in
+                                let slotDoses = doses.filter { $0.slot == slot }
+                                if !slotDoses.isEmpty { SlotDoseCard(slot: slot, doses: slotDoses, index: index) }
+                            }
+                        } else {
+                            ForEach(doses) { dose in
                                 HStack(spacing: 14) {
                                     SlotIcon(slot: dose.slot, size: 36)
                                     Text("\(dose.slot.label) \(SlotSettings.timeText(for: dose.slot))").font(.subheadline.bold())
@@ -75,8 +79,6 @@ struct CalendarView: View {
                 .padding()
             }
             .background(Theme.background)
-            .navigationTitle("カレンダー")
-            .navigationBarTitleDisplayMode(.inline)
         }
     }
 

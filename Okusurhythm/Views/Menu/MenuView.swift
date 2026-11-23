@@ -5,10 +5,7 @@ struct MenuView: View {
     var body: some View {
         NavigationStack {
             List {
-                Section("お薬") {
-                    NavigationLink { MedicationListView() } label: {
-                        Label("お薬の一覧・登録", systemImage: "pills")
-                    }
+                Section("お薬について") {
                     NavigationLink { InteractionCheckView() } label: {
                         Label("飲み合わせチェック", systemImage: "arrow.triangle.merge")
                     }
@@ -56,55 +53,6 @@ extension Bundle {
     }
 }
 
-struct MedicationListView: View {
-    @Query(sort: \Medication.createdAt) private var medications: [Medication]
-    @State private var editing: MedicationEditTarget?
-
-    var body: some View {
-        List {
-            if medications.isEmpty {
-                Text("まだお薬が登録されていません。右上の＋から登録できます。").foregroundStyle(.secondary)
-            }
-            ForEach(medications) { med in
-                Button { editing = .edit(med) } label: {
-                    HStack(spacing: 12) {
-                        MedicationThumbnail(data: med.photoData)
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(med.name).font(.body.bold())
-                            Text(med.dosageSummary).font(.caption).foregroundStyle(.secondary)
-                            HStack(spacing: 6) {
-                                ForEach(med.slots) { slot in
-                                    Text(slot.label).font(.caption2.bold()).foregroundStyle(slot.tint)
-                                }
-                                if let remaining = med.remainingCount {
-                                    Text("残り\(remaining.formattedAmount)\(med.unit)")
-                                        .font(.caption2)
-                                        .foregroundStyle(med.needsRefill ? Theme.danger : .secondary)
-                                }
-                            }
-                        }
-                        Spacer()
-                        if !med.isActive { Text("休止中").font(.caption).foregroundStyle(.secondary) }
-                    }
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                .swipeActions(edge: .leading) {
-                    Button(med.isActive ? "休止" : "再開") { med.isActive.toggle() }
-                        .tint(med.isActive ? .gray : Theme.success)
-                }
-            }
-        }
-        .themedList()
-        .navigationTitle("お薬の一覧")
-        .toolbar {
-            Button("お薬を追加", systemImage: "plus") { editing = .new }
-        }
-        .sheet(item: $editing) { MedicationEditView(medication: $0.medication) }
-    }
-}
-
-/// 収録している薬の一覧から添付文書情報を見る
 struct DrugLibraryView: View {
     @State private var query = ""
 
@@ -190,6 +138,7 @@ struct NotificationSettingsView: View {
     @AppStorage(SlotSettings.soundEnabledKey) private var soundEnabled = true
     @AppStorage(SlotSettings.followUpEnabledKey) private var followUpEnabled = true
     @AppStorage(SlotSettings.followUpMinutesKey) private var followUpMinutes = 30
+    @AppStorage(HospitalVisit.enabledKey) private var hospitalEnabled = true
     @State private var authorized = true
 
     var body: some View {
@@ -227,6 +176,11 @@ struct NotificationSettingsView: View {
                 Text("記録がないときだけ、もう一度お知らせします。通知を長押しすると「服用を完了する」「10分後にもう一度」を選べます。")
             }
             .disabled(!remindersEnabled)
+            Section {
+                Toggle("病院予約のリマインド", isOn: $hospitalEnabled)
+            } footer: {
+                Text("毎回きちんと飲んだときにお薬がなくなる日の\(HospitalVisit.leadDays)日前から、毎日お昼にお知らせします。「病院を予約した」か「次は病院に行かなくていい」を押すと止まります。残りの数か処方日数を登録したお薬が対象です。")
+            }
         }
         .themedList()
         .navigationTitle("通知設定")

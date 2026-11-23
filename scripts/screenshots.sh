@@ -29,7 +29,7 @@ shoot() {  # 名前 起動引数...
 shoot 1_home -initialTab home
 shoot 2_interactions -screen interactions
 shoot 3_foods -screen foods
-shoot 4_calendar -initialTab calendar
+shoot 4_medications -initialTab medications
 shoot 5_records -initialTab records
 shoot 6_edit -screen edit
 shoot 7_settings -screen settings

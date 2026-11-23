@@ -35,6 +35,10 @@ final class Medication {
     var refillThreshold: Double = 7
     /// 補充の通知を一度出したら、残数が閾値を上回るまで再通知しない
     var refillNotified: Bool = false
+    /// 病院予約のリマインドで押したボタン（HospitalVisit.Ack.rawValue）。nil ならまだ押していない
+    var visitAckRaw: String?
+    /// ボタンを押したときの「お薬がなくなる日」。補充して大きく先に延びたら、また知らせる
+    var visitAckRunOut: Date?
     var isActive: Bool = true
     var createdAt: Date = Date()
 

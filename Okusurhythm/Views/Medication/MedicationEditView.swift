@@ -359,6 +359,7 @@ struct MedicationEditView: View {
 
     private func save() {
         let med = medication ?? Medication(name: name)
+        let oldRemaining = medication?.remainingCount, oldEnd = medication?.endDate
         med.name = name.trimmingCharacters(in: .whitespaces)
         med.drugID = drugID
         med.amountPerDose = amount
@@ -374,7 +375,10 @@ struct MedicationEditView: View {
         med.endDate = endMode == .days ? endDate(for: med.startSlot) : nil
         med.memo = memo
         med.photoData = photoData
+        // 補充した（残りが増えた・処方日数を延ばした）ら、次の受診のお知らせをまた出す
         med.remainingCount = tracksRemaining ? remaining : nil
+        if let oldRemaining, let new = med.remainingCount, new > oldRemaining { med.visitAckRaw = nil; med.visitAckRunOut = nil }
+        if let oldEnd, let newEnd = med.endDate, !med.untilRunsOut, newEnd > oldEnd { med.visitAckRaw = nil; med.visitAckRunOut = nil }
         med.refillThreshold = refillThreshold
         med.refillNotified = med.needsRefill
         if medication == nil { context.insert(med) }
