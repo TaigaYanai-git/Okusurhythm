@@ -14,7 +14,7 @@ enum SampleData {
         amlodipine.drugID = "amlodipine"
         amlodipine.slots = [.morning]
         amlodipine.startDate = start
-        amlodipine.remainingCount = 24
+        amlodipine.remainingCount = 8
         amlodipine.memo = "朝食後に服用"
         amlodipine.photoData = samplePhoto()
 

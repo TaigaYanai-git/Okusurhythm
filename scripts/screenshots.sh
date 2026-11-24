@@ -21,7 +21,7 @@ shoot() {  # 名前 起動引数...
   local name=$1; shift
   xcrun simctl terminate "$DEVICE" "$BUNDLE_ID" 2>/dev/null || true
   xcrun simctl launch "$DEVICE" "$BUNDLE_ID" -uiPreview "$@" >/dev/null
-  sleep 3
+  sleep ${SHOT_WAIT:-4}
   xcrun simctl io "$DEVICE" screenshot --type=png "$OUT/$name.png" >/dev/null
   echo "  $OUT/$name.png"
 }
@@ -30,9 +30,10 @@ shoot 1_home -initialTab home
 shoot 2_interactions -screen interactions
 shoot 3_foods -screen foods
 shoot 4_medications -initialTab medications
-shoot 5_records -initialTab records
-shoot 6_edit -screen edit
-shoot 7_settings -screen settings
+shoot 5_calendar -initialTab records -historyMode calendar
+shoot 6_stats -initialTab records -historyMode stats
+shoot 7_edit -screen edit
+shoot 8_settings -screen settings
 
 # 見出しと端末の枠をつけた App Store 用画像 → screenshots/framed/<デバイス名>/
-swift tools/frame_screenshots.swift "$OUT" "screenshots/framed/${DEVICE// /_}"
+[[ -n "${FRAME:-}" ]] && swift tools/frame_screenshots.swift "$OUT" "screenshots/framed/${DEVICE// /_}" || true
